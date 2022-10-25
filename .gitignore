@@ -1,5 +1,6 @@
 # PyTorch models
 *.pt
+data/
 
 # Prerequisites
 *.d

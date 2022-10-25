@@ -2,6 +2,7 @@ import torch
 import torch.nn.functional as F
 import torchvision
 
+
 def main():
 
     # Load a pre-trained PyTorch model
