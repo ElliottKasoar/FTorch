@@ -15,9 +15,9 @@ program inference
    real(c_float), dimension(:,:), allocatable, target :: out_data
 
    integer(c_int), parameter :: in_dims = 3
-   integer(c_int64_t) :: in_shape(in_dims) = [10, 28, 28]
+   integer(c_int64_t) :: in_shape(in_dims) = [1, 28, 28]
    integer(c_int), parameter :: out_dims = 2
-   integer(c_int64_t) :: out_shape(out_dims) = [10, 10]
+   integer(c_int64_t) :: out_shape(out_dims) = [1, 10]
 
    character(len=:), allocatable :: filename
 
@@ -32,11 +32,12 @@ program inference
    ! read data from file:
    open(unit=18, file='test_data.txt' , status='old', &
         access ='sequential',form='formatted')
-   do i = 1, 10
+   do i = 1, 1
       do j = 1, 28
-         read(18,*)(in_data(i,j,k),k=1,28)
+         read(18,*)(in_data(i,k,j),k=1,28)
       enddo
    enddo
+   close(18)
 
    ! Create input/output tensors from the above arrays
    in_tensor = torch_tensor_from_blob(c_loc(in_data), in_dims, in_shape, torch_kFloat32, torch_kCPU)
@@ -50,7 +51,8 @@ program inference
    ! write (*,*) out_data(1, 1000)
 
    write(*,*) 'TorchScript model predictions'
-   write(*,*) maxloc(out_data, dim = 1)
+   write(*,*) maxloc(out_data, dim = 2)
+   ! write(*,*) out_data
 
    ! Cleanup
    call torch_module_delete(model)
