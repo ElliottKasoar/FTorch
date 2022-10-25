@@ -21,6 +21,9 @@ program inference
 
    character(len=:), allocatable :: filename
 
+   integer :: i
+   real :: max_el
+
    ! Allocate one-dimensional input/output arrays, based on multiplication of all input/output dimension sizes
    allocate(in_data(in_shape(1), in_shape(2), in_shape(3), in_shape(4)))
    allocate(out_data(out_shape(1), out_shape(2)))
@@ -37,7 +40,13 @@ program inference
 
    ! Infer
    call torch_module_forward(model, in_tensor, out_tensor)
-   write (*,*) out_data(1, 1000)
+   ! write (*,*) out_data(1, 1000)
+
+   write(*,*) 'TorchScript model top 5 results:'
+   max_el = 1.0e5
+   do i = 1, 5
+      write(*,*) maxloc(out_data, mask=out_data < max_el)
+   end do
 
    ! Cleanup
    call torch_module_delete(model)
