@@ -276,4 +276,4 @@ if __name__ == "__main__":
                 torch.from_numpy(data_array[i, :, :].reshape((1, 28, 28))).float()
             )
             # pred = model(np.reshape(data_array[i, :, :], (28, 28)))
-            print(f"Predicted: {pred[0]} - {classes[pred[0].argmax(0)]}")
+            print(f"Predicted: {pred[0].argmax(0)} - {classes[pred[0].argmax(0)]}")

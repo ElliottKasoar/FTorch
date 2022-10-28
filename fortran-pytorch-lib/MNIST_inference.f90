@@ -25,8 +25,8 @@ program inference
    real :: max_el
 
    ! Allocate one-dimensional input/output arrays, based on multiplication of all input/output dimension sizes
-   allocate(in_data(in_shape(1), in_shape(2), in_shape(3)))
-   allocate(out_data(out_shape(1), out_shape(2)))
+   allocate(in_data(in_shape(3), in_shape(2), in_shape(1)))
+   allocate(out_data(out_shape(2), out_shape(1)))
 
    ! Initialise data
    ! read data from file:
@@ -34,9 +34,10 @@ program inference
         access ='sequential',form='formatted')
    do i = 1, 10
       do j = 1, 28
-         read(18,*)(in_data(i,j,k),k=1,28)
+         read(18,*)(in_data(j,k,i),k=1,28)
       enddo
    enddo
+   close(18)
 
    ! Create input/output tensors from the above arrays
    in_tensor = torch_tensor_from_blob(c_loc(in_data), in_dims, in_shape, torch_kFloat32, torch_kCPU)
@@ -51,6 +52,7 @@ program inference
 
    write(*,*) 'TorchScript model predictions'
    write(*,*) maxloc(out_data, dim = 1)
+   ! write(*,*) out_data
 
    ! Cleanup
    call torch_module_delete(model)
