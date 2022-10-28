@@ -84,6 +84,6 @@ target_link_libraries(ts_infer_fortran PRIVATE ${PROJECT_NAME}::${LIB_NAME})
 install(TARGETS ts_infer_fortran DESTINATION ${CMAKE_INSTALL_BINDIR})
 
 # Fortran MNIST eg
-add_executable(ts_infer_fortran MNIST_inference.f90)
+add_executable(MNIST_infer_fortran MNIST_inference.f90)
 target_link_libraries(MNIST_infer_fortran PRIVATE ${PROJECT_NAME}::${LIB_NAME})
 install(TARGETS MNIST_infer_fortran DESTINATION ${CMAKE_INSTALL_BINDIR})
