@@ -34,7 +34,7 @@ program inference
         access ='sequential',form='formatted')
    do i = 1, 10
       do j = 1, 28
-         read(18,*)(in_data(j,k,i),k=1,28)
+         read(18,*)(in_data(k,j,i),k=1,28)
       enddo
    enddo
    close(18)
