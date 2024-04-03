@@ -1,3 +1,5 @@
+
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -17,7 +19,8 @@
     <link href="./css/local.css" rel="stylesheet">
       <link  href="./tipuesearch/tipuesearch.css" rel="stylesheet">
 
-    <script src="https://code.jquery.com/jquery-3.7.0.slim.min.js" integrity="sha256-tG5mcZUtJsZvyKAxYLVXrmjKBVLd6VpVccqz/r4ypFE=" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <script src="./js/svg-pan-zoom.min.js"></script>
   </head>
 
   <body>
@@ -34,7 +37,7 @@
 
           <div id="navbar" class="navbar-collapse collapse">
             <ul class="navbar-nav">
-                <li class="nav-item"><a class="nav-link" href="page/index.html">Other documentation</a></li>
+                <li class="nav-item"><a class="nav-link" href="page/index.html">User Guide</a></li>
                   <li class="nav-item">
                     <a class="nav-link" href="./lists/files.html">Source Files</a>
                   </li>
@@ -59,14 +62,18 @@
     </div>
 
     <div class="container">
-      <!-- Main component for a primary marketing message or call to action -->
-      <div class="p-5 mb-4 bg-light border rounded-3" id="jumbotron">
-        <p>A library for coupling (Py)Torch machine learning models to Fortran</p>
-	<p> Find us on&hellip;</p>
-        <p>
-          <a class="btn btn-lg btn-primary" href="https://github.com/Cambridge-ICCS/FTorch" role="button">GitHub</a>
-        </p>
-      </div>
+  <!-- Main component for a primary marketing message or call to action -->
+    <div class="p-5 mb-4 bg-light border rounded-3" id="jumbotron">
+      <p>A library for coupling (Py)Torch machine learning models to Fortran</p>
+        <p> Find us on&hellip;</p>
+      <p>
+        <a class="btn btn-lg btn-primary" href="https://github.com/Cambridge-ICCS/FTorch" role="button">GitHub</a>
+        
+        
+        
+        
+      </p>
+    </div>
 
       <div class="row" id='text'>
         <div class=col-md-8>
@@ -91,9 +98,12 @@ There are also installation instructions for the library and examples of perform
 <h2 id="presentations">Presentations</h2>
 <p>The following presentations contain information about FTorch:</p>
 <ul>
-<li>Reducing the Overhead of Coupled Machine Learning Models between Python and Fortran<br>
-  RSECon23<br>
-<a href="https://jackatkinson.net/slides/RSECon23/RSECon23.html">Slides</a></li>
+<li>Reducing the overheads for coupling PyTorch machine learning models to Fortran\
+  ML &amp; DL Seminars, LSCE, IPSL, Paris - November 2023\
+  <a href="IPSL_FTorch/IPSL_FTorch.html">Slides</a> - <a href="https://www.youtube.com/watch?v=-NJGuV6Rz6U">Recording</a></li>
+<li>Reducing the Overhead of Coupled Machine Learning Models between Python and Fortran\
+  RSECon23, Swansea - September 2023\
+  <a href="https://jackatkinson.net/slides/RSECon23/RSECon23.html">Slides</a> - <a href="https://www.youtube.com/watch?v=Ei6H_BoQ7g4&amp;list=PL27mQJy8eDHmibt_aL3M68x-4gnXpxvZP&amp;index=33">Recording</a></li>
 </ul>
 <h2 id="license">License</h2>
 <p>The FTorch source code, related files and documentation are
@@ -102,17 +112,31 @@ distributed under an <a href="page/LICENSE.html">MIT License which can be viewed
 <p>The following projects make use of FTorch.<br>
 If you use our library in your work please let us know.</p>
 <ul>
-<li><a href="https://github.com/DataWaveProject/MiMA-machine-learning">MiMA Machine Learning - DataWave</a><br>
-  Using FTorch to couple a neural net parameterisation of gravity waves to an atmospheric model.</li>
+<li><a href="https://github.com/m2lines/CAM-ML">M2LInES CAM-ML</a>\
+  Using FTorch to couple a neural net parameterisation of convection to the CAM
+  atmospheric model in CESM.</li>
+<li><a href="https://github.com/DataWaveProject/CAM/">DataWave CAM-GW</a>\
+  Using FTorch to couple neural net parameterisations of gravity waves to the CAM
+  atmospheric model in CESM.</li>
+<li><a href="https://github.com/DataWaveProject/MiMA-machine-learning">MiMA Machine Learning</a>\
+  Using FTorch to couple a neural net parameterisation of gravity waves to the MiMA
+  atmospheric model.</li>
 </ul>
         </div>
           <div class="col-md-4">
-	        <div class="card card-body bg-light">
+            <div class="card card-body bg-light">
               <h2 class="card-title">Developer Info</h2>
               <h4 class="card-text">ICCS Cambridge</h4>
               <p class="card-text"></p>
                 <div class="text-center"><div class="btn-group" role="group">
-                      <a class="btn btn-lg btn-primary" href="https://github.com/Cambridge-ICCS"><i class="fa fa-github fa-lg"></i></a>
+                    
+                    <a class="btn btn-lg btn-primary" href="https://github.com/Cambridge-ICCS"><i class="fa fa-github fa-lg"></i></a>
+                    
+                    
+                    
+                    
+                    
+                    
                 </div></div>
             </div>
           </div>
@@ -122,7 +146,7 @@ If you use our library in your work please let us know.</p>
           <div class="col-xs-6 col-sm-3">
             <div>
               <h3>Source Files</h3>
-              <ul><li><a href='./sourcefile/ctorch.cpp.html'>ctorch.cpp</a></li><li><a href='./sourcefile/ctorch.h.html'>ctorch.h</a></li><li><a href='./sourcefile/ftorch.f90.html'>ftorch.f90</a></li><li><a href='./sourcefile/pt2ts.py.html'>pt2ts.py</a></li></ul>
+              <ul><li><a href='sourcefile/ctorch.cpp.html'>ctorch.cpp</a></li><li><a href='sourcefile/ctorch.h.html'>ctorch.h</a></li><li><a href='sourcefile/ftorch.f90.html'>ftorch.f90</a></li><li><a href='sourcefile/pt2ts.py.html'>pt2ts.py</a></li></ul>
             </div>
             <div>
               <ul>
@@ -133,7 +157,7 @@ If you use our library in your work please let us know.</p>
           <div class="col-xs-6 col-sm-3">
             <div>
               <h3>Modules</h3>
-              <ul><li><a href='./module/ftorch.html'>ftorch</a></li></ul>
+              <ul><li><a href='module/ftorch.html'>ftorch</a></li></ul>
             </div>
             <div>
               <ul>
@@ -144,7 +168,7 @@ If you use our library in your work please let us know.</p>
           <div class="col-xs-6 col-sm-3">
             <div>
               <h3>Procedures</h3>
-              <ul><li><a href='./proc/t_t_from_array.html'>t_t_from_array</a></li><li><a href='./proc/torch_module_delete.html'>torch_module_delete</a></li><li><a href='./proc/torch_module_forward.html'>torch_module_forward</a></li><li><a href='./proc/torch_module_load.html'>torch_module_load</a></li><li><a href='./proc/torch_tensor_delete.html'>torch_tensor_delete</a></li><li><a href='./interface/torch_tensor_from_array.html'>torch_tensor_from_array</a></li><li><a href='./proc/torch_tensor_from_array_c_double.html'>torch_tensor_from_array_c_double</a></li><li><a href='./proc/torch_tensor_from_array_c_float.html'>torch_tensor_from_array_c_float</a></li><li><a href='./proc/torch_tensor_from_blob.html'>torch_tensor_from_blob</a></li><li><a href='./proc/torch_tensor_ones.html'>torch_tensor_ones</a></li></ul>
+              <ul><li><a href='interface/torch_from_blob_c.html'>torch_from_blob_c</a></li><li><a href='proc/torch_module_delete.html'>torch_module_delete</a></li><li><a href='proc/torch_module_forward.html'>torch_module_forward</a></li><li><a href='proc/torch_module_load.html'>torch_module_load</a></li><li><a href='proc/torch_tensor_delete.html'>torch_tensor_delete</a></li><li><a href='interface/torch_tensor_from_array.html'>torch_tensor_from_array</a></li><li><a href='proc/torch_tensor_from_array_int16_1d.html'>torch_tensor_from_array_int16_1d</a></li><li><a href='proc/torch_tensor_from_array_int16_2d.html'>torch_tensor_from_array_int16_2d</a></li><li><a href='proc/torch_tensor_from_array_int16_3d.html'>torch_tensor_from_array_int16_3d</a></li><li><a href='proc/torch_tensor_from_array_int16_4d.html'>torch_tensor_from_array_int16_4d</a></li></ul>
             </div>
             <div>
               <ul>
@@ -155,7 +179,7 @@ If you use our library in your work please let us know.</p>
           <div class="col-xs-6 col-sm-3">
             <div>
               <h3>Derived Types</h3>
-              <ul><li><a href='./type/torch_module.html'>torch_module</a></li><li><a href='./type/torch_tensor.html'>torch_tensor</a></li></ul>
+              <ul><li><a href='type/torch_module.html'>torch_module</a></li><li><a href='type/torch_tensor.html'>torch_tensor</a></li></ul>
             </div>
             <div>
               <ul>
@@ -169,7 +193,10 @@ If you use our library in your work please let us know.</p>
     <footer>
       <div class="container">
         <div class="row justify-content-between">
-          <div class="col"><p>FTorch was developed by ICCS Cambridge<br>&copy; 2023 <a rel="license" href="https://opensource.org/licenses/MIT">MIT</a>
+          <div class="col">
+            <p>
+              FTorch
+ was developed by ICCS Cambridge<br>              &copy; 2024 <a rel="license" href="https://opensource.org/licenses/MIT">MIT</a>
 </p>
           </div>
           <div class="col">

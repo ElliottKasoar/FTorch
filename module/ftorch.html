@@ -1,3 +1,5 @@
+<!-- -*- mode: jinja2 -*- -->
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -17,7 +19,8 @@
     <link href="../css/local.css" rel="stylesheet">
       <link  href="../tipuesearch/tipuesearch.css" rel="stylesheet">
 
-    <script src="https://code.jquery.com/jquery-3.7.0.slim.min.js" integrity="sha256-tG5mcZUtJsZvyKAxYLVXrmjKBVLd6VpVccqz/r4ypFE=" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <script src="../js/svg-pan-zoom.min.js"></script>
   </head>
 
   <body>
@@ -34,7 +37,7 @@
 
           <div id="navbar" class="navbar-collapse collapse">
             <ul class="navbar-nav">
-                <li class="nav-item"><a class="nav-link" href="../page/index.html">Other documentation</a></li>
+                <li class="nav-item"><a class="nav-link" href="../page/index.html">User Guide</a></li>
                   <li class="nav-item">
                     <a class="nav-link" href="../lists/files.html">Source Files</a>
                   </li>
@@ -71,9 +74,8 @@
             <li class="list-inline-item" id="meta-license"><i class="fa fa-legal"></i> <a rel="license" href="https://opensource.org/licenses/MIT">MIT</a></li>
 
             <li class="list-inline-item" id="statements"><i class="fa fa-list-ol"></i>
-              <a data-bs-toggle="tooltip"
-                 data-bs-placement="bottom" data-html="true"
-                 title="100.0% of total for modules and submodules.">216 statements</a>
+              <a data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-html="true"
+                 title="100.0% of total for modules and submodules.">917 statements</a>
             </li>
 
             <li class="list-inline-item" id="source-file">
@@ -131,6 +133,7 @@
       </a>
       <div id="inters-0" class="collapse">
         <div class="list-group list-group-flush">
+            <a class="list-group-item" href="../module/ftorch.html#interface-torch_from_blob_c">torch_from_blob_c</a>
             <a class="list-group-item" href="../module/ftorch.html#interface-torch_tensor_from_array">torch_tensor_from_array</a>
         </div>
       </div>
@@ -157,11 +160,33 @@
       </a>
       <div id="funcs-0" class="collapse">
         <div class="list-group list-group-flush">
-            <a class="list-group-item" href="../module/ftorch.html#proc-t_t_from_array">t_t_from_array</a>
             <a class="list-group-item" href="../module/ftorch.html#proc-torch_module_load">torch_module_load</a>
-            <a class="list-group-item" href="../module/ftorch.html#proc-torch_tensor_from_array_c_double">torch_tensor_from_array_c_double</a>
-            <a class="list-group-item" href="../module/ftorch.html#proc-torch_tensor_from_array_c_float">torch_tensor_from_array_c_float</a>
+            <a class="list-group-item" href="../module/ftorch.html#proc-torch_tensor_from_array_int16_1d">torch_tensor_from_array_int16_1d</a>
+            <a class="list-group-item" href="../module/ftorch.html#proc-torch_tensor_from_array_int16_2d">torch_tensor_from_array_int16_2d</a>
+            <a class="list-group-item" href="../module/ftorch.html#proc-torch_tensor_from_array_int16_3d">torch_tensor_from_array_int16_3d</a>
+            <a class="list-group-item" href="../module/ftorch.html#proc-torch_tensor_from_array_int16_4d">torch_tensor_from_array_int16_4d</a>
+            <a class="list-group-item" href="../module/ftorch.html#proc-torch_tensor_from_array_int32_1d">torch_tensor_from_array_int32_1d</a>
+            <a class="list-group-item" href="../module/ftorch.html#proc-torch_tensor_from_array_int32_2d">torch_tensor_from_array_int32_2d</a>
+            <a class="list-group-item" href="../module/ftorch.html#proc-torch_tensor_from_array_int32_3d">torch_tensor_from_array_int32_3d</a>
+            <a class="list-group-item" href="../module/ftorch.html#proc-torch_tensor_from_array_int32_4d">torch_tensor_from_array_int32_4d</a>
+            <a class="list-group-item" href="../module/ftorch.html#proc-torch_tensor_from_array_int64_1d">torch_tensor_from_array_int64_1d</a>
+            <a class="list-group-item" href="../module/ftorch.html#proc-torch_tensor_from_array_int64_2d">torch_tensor_from_array_int64_2d</a>
+            <a class="list-group-item" href="../module/ftorch.html#proc-torch_tensor_from_array_int64_3d">torch_tensor_from_array_int64_3d</a>
+            <a class="list-group-item" href="../module/ftorch.html#proc-torch_tensor_from_array_int64_4d">torch_tensor_from_array_int64_4d</a>
+            <a class="list-group-item" href="../module/ftorch.html#proc-torch_tensor_from_array_int8_1d">torch_tensor_from_array_int8_1d</a>
+            <a class="list-group-item" href="../module/ftorch.html#proc-torch_tensor_from_array_int8_2d">torch_tensor_from_array_int8_2d</a>
+            <a class="list-group-item" href="../module/ftorch.html#proc-torch_tensor_from_array_int8_3d">torch_tensor_from_array_int8_3d</a>
+            <a class="list-group-item" href="../module/ftorch.html#proc-torch_tensor_from_array_int8_4d">torch_tensor_from_array_int8_4d</a>
+            <a class="list-group-item" href="../module/ftorch.html#proc-torch_tensor_from_array_real32_1d">torch_tensor_from_array_real32_1d</a>
+            <a class="list-group-item" href="../module/ftorch.html#proc-torch_tensor_from_array_real32_2d">torch_tensor_from_array_real32_2d</a>
+            <a class="list-group-item" href="../module/ftorch.html#proc-torch_tensor_from_array_real32_3d">torch_tensor_from_array_real32_3d</a>
+            <a class="list-group-item" href="../module/ftorch.html#proc-torch_tensor_from_array_real32_4d">torch_tensor_from_array_real32_4d</a>
+            <a class="list-group-item" href="../module/ftorch.html#proc-torch_tensor_from_array_real64_1d">torch_tensor_from_array_real64_1d</a>
+            <a class="list-group-item" href="../module/ftorch.html#proc-torch_tensor_from_array_real64_2d">torch_tensor_from_array_real64_2d</a>
+            <a class="list-group-item" href="../module/ftorch.html#proc-torch_tensor_from_array_real64_3d">torch_tensor_from_array_real64_3d</a>
+            <a class="list-group-item" href="../module/ftorch.html#proc-torch_tensor_from_array_real64_4d">torch_tensor_from_array_real64_4d</a>
             <a class="list-group-item" href="../module/ftorch.html#proc-torch_tensor_from_blob">torch_tensor_from_blob</a>
+            <a class="list-group-item" href="../module/ftorch.html#proc-torch_tensor_get_device_index">torch_tensor_get_device_index</a>
             <a class="list-group-item" href="../module/ftorch.html#proc-torch_tensor_ones">torch_tensor_ones</a>
             <a class="list-group-item" href="../module/ftorch.html#proc-torch_tensor_zeros">torch_tensor_zeros</a>
         </div>
@@ -197,13 +222,21 @@
     </div>
 
     <div class="col-md-9" id='text'>
-      <p>The ftorch module containing wrappers to access libtorch</p>
+      <p>Main module for FTorch containing types and procedures.
+ Generated from <code>ftorch.fypp</code> using the <a href="https://fypp.readthedocs.io/en/stable/index.html">fypp Fortran preprocessor</a>.</p>
+<ul>
+<li>License<br>
+   FTorch is released under an MIT license.
+   See the <a href="https://github.com/Cambridge-ICCS/FTorch/blob/main/LICENSE">LICENSE</a>
+   file for details.</li>
+</ul>
 <br>          <div class="card mb-4">
       <h3 class="card-header card-title bg-light">Uses</h3>
       <div class="card-body">
         <ul class="list-group list-group-flush">
             <li class="list-group-item">
               <ul class="list-inline">
+                  <li class="list-inline-item"><a href='http://fortranwiki.org/fortran/show/iso_fortran_env'>iso_fortran_env</a></li>
                   <li class="list-inline-item"><a href='http://fortranwiki.org/fortran/show/iso_c_binding'>iso_c_binding</a></li>
               </ul>
             </li>
@@ -258,6 +291,11 @@
             </tr>
         </tbody>
       </table>
+        <h4>Description</h4>
+        
+        <p>Enumerator for Torch data types<br>
+ From c_torch.h (torch_data_t)<br>
+ Note that 0 <code>torch_kUInt8</code> and 5 <code>torch_kFloat16</code> are not sypported in Fortran</p>
     </div>
   </div>
 
@@ -277,6 +315,10 @@
             </tr>
         </tbody>
       </table>
+        <h4>Description</h4>
+        
+        <p>Enumerator for Torch devices<br>
+ From c_torch.h (torch_device_t)</p>
     </div>
   </div>
 
@@ -287,17 +329,16 @@
           <h2>Interfaces</h2>
               <div class="card">
     <div class="card-header bg-light codesum">
-      <span class="anchor" id="interface-torch_tensor_from_array"></span>
-      <h3>public        interface <a href='../interface/torch_tensor_from_array.html'>torch_tensor_from_array</a> 
+      <span class="anchor" id="interface-torch_from_blob_c"></span>
+      <h3>        interface
       </h3>
     </div>
     <ul class="list-group">
-          <li class="list-group-item">
-                <h3>
-    public  function <a href='../proc/torch_tensor_from_array_c_float.html'>torch_tensor_from_array_c_float</a>(data_arr, tensor_shape, device) result(tensor)  
+        <li class="list-group-item">
+              <h3>
+    public  function torch_from_blob_c(data, ndims, tensor_shape, strides, dtype, device_type, device_index) result(tensor_p) bind(c, name = 'torch_from_blob')  
 
     </h3>
-    
   
 
   <h4>Arguments</h4>
@@ -313,22 +354,37 @@
     <tbody>
         <tr>
             <td>
-              <span class="anchor" id="variable-data_arr~3"></span>
-              real(kind=c_float),
+              <span class="anchor" id="variable-data"></span>
+              type(c_ptr),
             </td>
 <td>intent(in),</td>
               <td></td>            <td>
-              target
+              value
             </td>
             <td>::</td>
-            <td><strong>data_arr</strong>(*)</td>
+            <td><strong>data</strong></td>
             <td>
-<p>Fortran array of data</p>
+                
             </td>
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-tensor_shape~6"></span>
+              <span class="anchor" id="variable-ndims"></span>
+              integer(kind=c_int),
+            </td>
+<td>intent(in),</td>
+              <td></td>            <td>
+              value
+            </td>
+            <td>::</td>
+            <td><strong>ndims</strong></td>
+            <td>
+                
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-tensor_shape"></span>
               integer(kind=c_int64_t),
             </td>
 <td>intent(in)</td>
@@ -336,14 +392,146 @@
               
             </td>
             <td>::</td>
-            <td><strong>tensor_shape</strong>(:)</td>
+            <td><strong>tensor_shape</strong>(*)</td>
             <td>
-<p>Shape of the tensor</p>
+                
             </td>
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-device~6"></span>
+              <span class="anchor" id="variable-strides"></span>
+              integer(kind=c_int64_t),
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>strides</strong>(*)</td>
+            <td>
+                
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-dtype"></span>
+              integer(kind=c_int),
+            </td>
+<td>intent(in),</td>
+              <td></td>            <td>
+              value
+            </td>
+            <td>::</td>
+            <td><strong>dtype</strong></td>
+            <td>
+                
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-device_type"></span>
+              integer(kind=c_int),
+            </td>
+<td>intent(in),</td>
+              <td></td>            <td>
+              value
+            </td>
+            <td>::</td>
+            <td><strong>device_type</strong></td>
+            <td>
+                
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-device_index"></span>
+              integer(kind=c_int),
+            </td>
+<td>intent(in),</td>
+              <td></td>            <td>
+              value
+            </td>
+            <td>::</td>
+            <td><strong>device_index</strong></td>
+            <td>
+                
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+    <h4>
+    Return Value
+    <small>type(c_ptr)</small>
+    </h4>
+    
+
+        </li>
+    </ul>
+  </div>
+
+              <div class="card">
+    <div class="card-header bg-light codesum">
+      <span class="anchor" id="interface-torch_tensor_from_array"></span>
+      <h3>public        interface <a href='../interface/torch_tensor_from_array.html'>torch_tensor_from_array</a> 
+      </h3>
+    </div>
+      <div class="card-body">
+        <p>Interface for directing <code>torch_tensor_from_array</code> to possible input types and ranks</p>
+      </div>
+    <ul class="list-group">
+          <li class="list-group-item">
+                <h3>
+    public  function <a href='../proc/torch_tensor_from_array_int8_1d.html'>torch_tensor_from_array_int8_1d</a>(data_in, layout, c_device_type, device_index) result(tensor)  
+
+    </h3>
+    
+  <p>Return a Torch tensor pointing to data_in array of rank 1 containing data of type <code>int8</code></p>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-data_in"></span>
+              integer(kind=int8),
+            </td>
+<td>intent(in),</td>
+              <td></td>            <td>
+              target
+            </td>
+            <td>::</td>
+            <td><strong>data_in</strong>(:)</td>
+            <td>
+<p>Input data that tensor will point at</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-layout~2"></span>
+              integer,
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>layout</strong>(1)</td>
+            <td>
+<p>Control order of indices</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-c_device_type"></span>
               integer(kind=c_int),
             </td>
 <td>intent(in)</td>
@@ -351,9 +539,24 @@
               
             </td>
             <td>::</td>
-            <td><strong>device</strong></td>
+            <td><strong>c_device_type</strong></td>
             <td>
-<p>Device on which the tensor will live on (torch_kCPU or torch_kGPU)</p>
+<p>Device type the tensor will live on (<code>torch_kCPU</code> or <code>torch_kCUDA</code>)</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-device_index~11"></span>
+              integer(kind=c_int),
+            </td>
+<td>intent(in),</td>
+              <td>optional</td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>device_index</strong></td>
+            <td>
+<p>device index to use for <code>torch_kCUDA</code> case</p>
             </td>
         </tr>
     </tbody>
@@ -368,11 +571,11 @@
           </li>
           <li class="list-group-item">
                 <h3>
-    public  function <a href='../proc/torch_tensor_from_array_c_double.html'>torch_tensor_from_array_c_double</a>(data_arr, tensor_shape, device) result(tensor)  
+    public  function <a href='../proc/torch_tensor_from_array_int8_2d.html'>torch_tensor_from_array_int8_2d</a>(data_in, layout, c_device_type, device_index) result(tensor)  
 
     </h3>
     
-  
+  <p>Return a Torch tensor pointing to data_in array of rank 2 containing data of type <code>int8</code></p>
 
   <h4>Arguments</h4>
       <table class="table table-striped varlist">
@@ -387,37 +590,37 @@
     <tbody>
         <tr>
             <td>
-              <span class="anchor" id="variable-data_arr~2"></span>
-              real(kind=c_double),
+              <span class="anchor" id="variable-data_in~2"></span>
+              integer(kind=int8),
             </td>
 <td>intent(in),</td>
               <td></td>            <td>
               target
             </td>
             <td>::</td>
-            <td><strong>data_arr</strong>(*)</td>
+            <td><strong>data_in</strong>(:,:)</td>
             <td>
-<p>Fortran array of data</p>
+<p>Input data that tensor will point at</p>
             </td>
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-tensor_shape~5"></span>
-              integer(kind=c_int64_t),
+              <span class="anchor" id="variable-layout~3"></span>
+              integer,
             </td>
 <td>intent(in)</td>
               <td></td>            <td>
               
             </td>
             <td>::</td>
-            <td><strong>tensor_shape</strong>(:)</td>
+            <td><strong>layout</strong>(2)</td>
             <td>
-<p>Shape of the tensor</p>
+<p>Control order of indices</p>
             </td>
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-device~5"></span>
+              <span class="anchor" id="variable-c_device_type~2"></span>
               integer(kind=c_int),
             </td>
 <td>intent(in)</td>
@@ -425,9 +628,1982 @@
               
             </td>
             <td>::</td>
-            <td><strong>device</strong></td>
+            <td><strong>c_device_type</strong></td>
             <td>
-<p>Device on which the tensor will live on (torch_kCPU or torch_kGPU)</p>
+<p>Device type the tensor will live on (<code>torch_kCPU</code> or <code>torch_kCUDA</code>)</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-device_index~12"></span>
+              integer(kind=c_int),
+            </td>
+<td>intent(in),</td>
+              <td>optional</td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>device_index</strong></td>
+            <td>
+<p>device index to use for <code>torch_kCUDA</code> case</p>
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+    <h4>
+    Return Value
+    <small>type(<a href='../type/torch_tensor.html'>torch_tensor</a>)</small>
+    </h4>
+    <p>Returned tensor</p>
+
+          </li>
+          <li class="list-group-item">
+                <h3>
+    public  function <a href='../proc/torch_tensor_from_array_int8_3d.html'>torch_tensor_from_array_int8_3d</a>(data_in, layout, c_device_type, device_index) result(tensor)  
+
+    </h3>
+    
+  <p>Return a Torch tensor pointing to data_in array of rank 3 containing data of type <code>int8</code></p>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-data_in~3"></span>
+              integer(kind=int8),
+            </td>
+<td>intent(in),</td>
+              <td></td>            <td>
+              target
+            </td>
+            <td>::</td>
+            <td><strong>data_in</strong>(:,:,:)</td>
+            <td>
+<p>Input data that tensor will point at</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-layout~4"></span>
+              integer,
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>layout</strong>(3)</td>
+            <td>
+<p>Control order of indices</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-c_device_type~3"></span>
+              integer(kind=c_int),
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>c_device_type</strong></td>
+            <td>
+<p>Device type the tensor will live on (<code>torch_kCPU</code> or <code>torch_kCUDA</code>)</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-device_index~13"></span>
+              integer(kind=c_int),
+            </td>
+<td>intent(in),</td>
+              <td>optional</td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>device_index</strong></td>
+            <td>
+<p>device index to use for <code>torch_kCUDA</code> case</p>
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+    <h4>
+    Return Value
+    <small>type(<a href='../type/torch_tensor.html'>torch_tensor</a>)</small>
+    </h4>
+    <p>Returned tensor</p>
+
+          </li>
+          <li class="list-group-item">
+                <h3>
+    public  function <a href='../proc/torch_tensor_from_array_int8_4d.html'>torch_tensor_from_array_int8_4d</a>(data_in, layout, c_device_type, device_index) result(tensor)  
+
+    </h3>
+    
+  <p>Return a Torch tensor pointing to data_in array of rank 4 containing data of type <code>int8</code></p>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-data_in~4"></span>
+              integer(kind=int8),
+            </td>
+<td>intent(in),</td>
+              <td></td>            <td>
+              target
+            </td>
+            <td>::</td>
+            <td><strong>data_in</strong>(:,:,:,:)</td>
+            <td>
+<p>Input data that tensor will point at</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-layout~5"></span>
+              integer,
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>layout</strong>(4)</td>
+            <td>
+<p>Control order of indices</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-c_device_type~4"></span>
+              integer(kind=c_int),
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>c_device_type</strong></td>
+            <td>
+<p>Device type the tensor will live on (<code>torch_kCPU</code> or <code>torch_kCUDA</code>)</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-device_index~14"></span>
+              integer(kind=c_int),
+            </td>
+<td>intent(in),</td>
+              <td>optional</td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>device_index</strong></td>
+            <td>
+<p>device index to use for <code>torch_kCUDA</code> case</p>
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+    <h4>
+    Return Value
+    <small>type(<a href='../type/torch_tensor.html'>torch_tensor</a>)</small>
+    </h4>
+    <p>Returned tensor</p>
+
+          </li>
+          <li class="list-group-item">
+                <h3>
+    public  function <a href='../proc/torch_tensor_from_array_int16_1d.html'>torch_tensor_from_array_int16_1d</a>(data_in, layout, c_device_type, device_index) result(tensor)  
+
+    </h3>
+    
+  <p>Return a Torch tensor pointing to data_in array of rank 1 containing data of type <code>int16</code></p>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-data_in~5"></span>
+              integer(kind=int16),
+            </td>
+<td>intent(in),</td>
+              <td></td>            <td>
+              target
+            </td>
+            <td>::</td>
+            <td><strong>data_in</strong>(:)</td>
+            <td>
+<p>Input data that tensor will point at</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-layout~6"></span>
+              integer,
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>layout</strong>(1)</td>
+            <td>
+<p>Control order of indices</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-c_device_type~5"></span>
+              integer(kind=c_int),
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>c_device_type</strong></td>
+            <td>
+<p>Device type the tensor will live on (<code>torch_kCPU</code> or <code>torch_kCUDA</code>)</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-device_index~15"></span>
+              integer(kind=c_int),
+            </td>
+<td>intent(in),</td>
+              <td>optional</td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>device_index</strong></td>
+            <td>
+<p>device index to use for <code>torch_kCUDA</code> case</p>
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+    <h4>
+    Return Value
+    <small>type(<a href='../type/torch_tensor.html'>torch_tensor</a>)</small>
+    </h4>
+    <p>Returned tensor</p>
+
+          </li>
+          <li class="list-group-item">
+                <h3>
+    public  function <a href='../proc/torch_tensor_from_array_int16_2d.html'>torch_tensor_from_array_int16_2d</a>(data_in, layout, c_device_type, device_index) result(tensor)  
+
+    </h3>
+    
+  <p>Return a Torch tensor pointing to data_in array of rank 2 containing data of type <code>int16</code></p>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-data_in~6"></span>
+              integer(kind=int16),
+            </td>
+<td>intent(in),</td>
+              <td></td>            <td>
+              target
+            </td>
+            <td>::</td>
+            <td><strong>data_in</strong>(:,:)</td>
+            <td>
+<p>Input data that tensor will point at</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-layout~7"></span>
+              integer,
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>layout</strong>(2)</td>
+            <td>
+<p>Control order of indices</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-c_device_type~6"></span>
+              integer(kind=c_int),
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>c_device_type</strong></td>
+            <td>
+<p>Device type the tensor will live on (<code>torch_kCPU</code> or <code>torch_kCUDA</code>)</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-device_index~16"></span>
+              integer(kind=c_int),
+            </td>
+<td>intent(in),</td>
+              <td>optional</td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>device_index</strong></td>
+            <td>
+<p>device index to use for <code>torch_kCUDA</code> case</p>
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+    <h4>
+    Return Value
+    <small>type(<a href='../type/torch_tensor.html'>torch_tensor</a>)</small>
+    </h4>
+    <p>Returned tensor</p>
+
+          </li>
+          <li class="list-group-item">
+                <h3>
+    public  function <a href='../proc/torch_tensor_from_array_int16_3d.html'>torch_tensor_from_array_int16_3d</a>(data_in, layout, c_device_type, device_index) result(tensor)  
+
+    </h3>
+    
+  <p>Return a Torch tensor pointing to data_in array of rank 3 containing data of type <code>int16</code></p>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-data_in~7"></span>
+              integer(kind=int16),
+            </td>
+<td>intent(in),</td>
+              <td></td>            <td>
+              target
+            </td>
+            <td>::</td>
+            <td><strong>data_in</strong>(:,:,:)</td>
+            <td>
+<p>Input data that tensor will point at</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-layout~8"></span>
+              integer,
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>layout</strong>(3)</td>
+            <td>
+<p>Control order of indices</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-c_device_type~7"></span>
+              integer(kind=c_int),
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>c_device_type</strong></td>
+            <td>
+<p>Device type the tensor will live on (<code>torch_kCPU</code> or <code>torch_kCUDA</code>)</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-device_index~17"></span>
+              integer(kind=c_int),
+            </td>
+<td>intent(in),</td>
+              <td>optional</td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>device_index</strong></td>
+            <td>
+<p>device index to use for <code>torch_kCUDA</code> case</p>
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+    <h4>
+    Return Value
+    <small>type(<a href='../type/torch_tensor.html'>torch_tensor</a>)</small>
+    </h4>
+    <p>Returned tensor</p>
+
+          </li>
+          <li class="list-group-item">
+                <h3>
+    public  function <a href='../proc/torch_tensor_from_array_int16_4d.html'>torch_tensor_from_array_int16_4d</a>(data_in, layout, c_device_type, device_index) result(tensor)  
+
+    </h3>
+    
+  <p>Return a Torch tensor pointing to data_in array of rank 4 containing data of type <code>int16</code></p>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-data_in~8"></span>
+              integer(kind=int16),
+            </td>
+<td>intent(in),</td>
+              <td></td>            <td>
+              target
+            </td>
+            <td>::</td>
+            <td><strong>data_in</strong>(:,:,:,:)</td>
+            <td>
+<p>Input data that tensor will point at</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-layout~9"></span>
+              integer,
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>layout</strong>(4)</td>
+            <td>
+<p>Control order of indices</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-c_device_type~8"></span>
+              integer(kind=c_int),
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>c_device_type</strong></td>
+            <td>
+<p>Device type the tensor will live on (<code>torch_kCPU</code> or <code>torch_kCUDA</code>)</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-device_index~18"></span>
+              integer(kind=c_int),
+            </td>
+<td>intent(in),</td>
+              <td>optional</td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>device_index</strong></td>
+            <td>
+<p>device index to use for <code>torch_kCUDA</code> case</p>
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+    <h4>
+    Return Value
+    <small>type(<a href='../type/torch_tensor.html'>torch_tensor</a>)</small>
+    </h4>
+    <p>Returned tensor</p>
+
+          </li>
+          <li class="list-group-item">
+                <h3>
+    public  function <a href='../proc/torch_tensor_from_array_int32_1d.html'>torch_tensor_from_array_int32_1d</a>(data_in, layout, c_device_type, device_index) result(tensor)  
+
+    </h3>
+    
+  <p>Return a Torch tensor pointing to data_in array of rank 1 containing data of type <code>int32</code></p>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-data_in~9"></span>
+              integer(kind=int32),
+            </td>
+<td>intent(in),</td>
+              <td></td>            <td>
+              target
+            </td>
+            <td>::</td>
+            <td><strong>data_in</strong>(:)</td>
+            <td>
+<p>Input data that tensor will point at</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-layout~10"></span>
+              integer,
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>layout</strong>(1)</td>
+            <td>
+<p>Control order of indices</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-c_device_type~9"></span>
+              integer(kind=c_int),
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>c_device_type</strong></td>
+            <td>
+<p>Device type the tensor will live on (<code>torch_kCPU</code> or <code>torch_kCUDA</code>)</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-device_index~19"></span>
+              integer(kind=c_int),
+            </td>
+<td>intent(in),</td>
+              <td>optional</td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>device_index</strong></td>
+            <td>
+<p>device index to use for <code>torch_kCUDA</code> case</p>
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+    <h4>
+    Return Value
+    <small>type(<a href='../type/torch_tensor.html'>torch_tensor</a>)</small>
+    </h4>
+    <p>Returned tensor</p>
+
+          </li>
+          <li class="list-group-item">
+                <h3>
+    public  function <a href='../proc/torch_tensor_from_array_int32_2d.html'>torch_tensor_from_array_int32_2d</a>(data_in, layout, c_device_type, device_index) result(tensor)  
+
+    </h3>
+    
+  <p>Return a Torch tensor pointing to data_in array of rank 2 containing data of type <code>int32</code></p>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-data_in~10"></span>
+              integer(kind=int32),
+            </td>
+<td>intent(in),</td>
+              <td></td>            <td>
+              target
+            </td>
+            <td>::</td>
+            <td><strong>data_in</strong>(:,:)</td>
+            <td>
+<p>Input data that tensor will point at</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-layout~11"></span>
+              integer,
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>layout</strong>(2)</td>
+            <td>
+<p>Control order of indices</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-c_device_type~10"></span>
+              integer(kind=c_int),
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>c_device_type</strong></td>
+            <td>
+<p>Device type the tensor will live on (<code>torch_kCPU</code> or <code>torch_kCUDA</code>)</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-device_index~20"></span>
+              integer(kind=c_int),
+            </td>
+<td>intent(in),</td>
+              <td>optional</td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>device_index</strong></td>
+            <td>
+<p>device index to use for <code>torch_kCUDA</code> case</p>
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+    <h4>
+    Return Value
+    <small>type(<a href='../type/torch_tensor.html'>torch_tensor</a>)</small>
+    </h4>
+    <p>Returned tensor</p>
+
+          </li>
+          <li class="list-group-item">
+                <h3>
+    public  function <a href='../proc/torch_tensor_from_array_int32_3d.html'>torch_tensor_from_array_int32_3d</a>(data_in, layout, c_device_type, device_index) result(tensor)  
+
+    </h3>
+    
+  <p>Return a Torch tensor pointing to data_in array of rank 3 containing data of type <code>int32</code></p>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-data_in~11"></span>
+              integer(kind=int32),
+            </td>
+<td>intent(in),</td>
+              <td></td>            <td>
+              target
+            </td>
+            <td>::</td>
+            <td><strong>data_in</strong>(:,:,:)</td>
+            <td>
+<p>Input data that tensor will point at</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-layout~12"></span>
+              integer,
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>layout</strong>(3)</td>
+            <td>
+<p>Control order of indices</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-c_device_type~11"></span>
+              integer(kind=c_int),
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>c_device_type</strong></td>
+            <td>
+<p>Device type the tensor will live on (<code>torch_kCPU</code> or <code>torch_kCUDA</code>)</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-device_index~21"></span>
+              integer(kind=c_int),
+            </td>
+<td>intent(in),</td>
+              <td>optional</td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>device_index</strong></td>
+            <td>
+<p>device index to use for <code>torch_kCUDA</code> case</p>
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+    <h4>
+    Return Value
+    <small>type(<a href='../type/torch_tensor.html'>torch_tensor</a>)</small>
+    </h4>
+    <p>Returned tensor</p>
+
+          </li>
+          <li class="list-group-item">
+                <h3>
+    public  function <a href='../proc/torch_tensor_from_array_int32_4d.html'>torch_tensor_from_array_int32_4d</a>(data_in, layout, c_device_type, device_index) result(tensor)  
+
+    </h3>
+    
+  <p>Return a Torch tensor pointing to data_in array of rank 4 containing data of type <code>int32</code></p>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-data_in~12"></span>
+              integer(kind=int32),
+            </td>
+<td>intent(in),</td>
+              <td></td>            <td>
+              target
+            </td>
+            <td>::</td>
+            <td><strong>data_in</strong>(:,:,:,:)</td>
+            <td>
+<p>Input data that tensor will point at</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-layout~13"></span>
+              integer,
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>layout</strong>(4)</td>
+            <td>
+<p>Control order of indices</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-c_device_type~12"></span>
+              integer(kind=c_int),
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>c_device_type</strong></td>
+            <td>
+<p>Device type the tensor will live on (<code>torch_kCPU</code> or <code>torch_kCUDA</code>)</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-device_index~22"></span>
+              integer(kind=c_int),
+            </td>
+<td>intent(in),</td>
+              <td>optional</td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>device_index</strong></td>
+            <td>
+<p>device index to use for <code>torch_kCUDA</code> case</p>
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+    <h4>
+    Return Value
+    <small>type(<a href='../type/torch_tensor.html'>torch_tensor</a>)</small>
+    </h4>
+    <p>Returned tensor</p>
+
+          </li>
+          <li class="list-group-item">
+                <h3>
+    public  function <a href='../proc/torch_tensor_from_array_int64_1d.html'>torch_tensor_from_array_int64_1d</a>(data_in, layout, c_device_type, device_index) result(tensor)  
+
+    </h3>
+    
+  <p>Return a Torch tensor pointing to data_in array of rank 1 containing data of type <code>int64</code></p>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-data_in~13"></span>
+              integer(kind=int64),
+            </td>
+<td>intent(in),</td>
+              <td></td>            <td>
+              target
+            </td>
+            <td>::</td>
+            <td><strong>data_in</strong>(:)</td>
+            <td>
+<p>Input data that tensor will point at</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-layout~14"></span>
+              integer,
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>layout</strong>(1)</td>
+            <td>
+<p>Control order of indices</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-c_device_type~13"></span>
+              integer(kind=c_int),
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>c_device_type</strong></td>
+            <td>
+<p>Device type the tensor will live on (<code>torch_kCPU</code> or <code>torch_kCUDA</code>)</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-device_index~23"></span>
+              integer(kind=c_int),
+            </td>
+<td>intent(in),</td>
+              <td>optional</td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>device_index</strong></td>
+            <td>
+<p>device index to use for <code>torch_kCUDA</code> case</p>
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+    <h4>
+    Return Value
+    <small>type(<a href='../type/torch_tensor.html'>torch_tensor</a>)</small>
+    </h4>
+    <p>Returned tensor</p>
+
+          </li>
+          <li class="list-group-item">
+                <h3>
+    public  function <a href='../proc/torch_tensor_from_array_int64_2d.html'>torch_tensor_from_array_int64_2d</a>(data_in, layout, c_device_type, device_index) result(tensor)  
+
+    </h3>
+    
+  <p>Return a Torch tensor pointing to data_in array of rank 2 containing data of type <code>int64</code></p>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-data_in~14"></span>
+              integer(kind=int64),
+            </td>
+<td>intent(in),</td>
+              <td></td>            <td>
+              target
+            </td>
+            <td>::</td>
+            <td><strong>data_in</strong>(:,:)</td>
+            <td>
+<p>Input data that tensor will point at</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-layout~15"></span>
+              integer,
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>layout</strong>(2)</td>
+            <td>
+<p>Control order of indices</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-c_device_type~14"></span>
+              integer(kind=c_int),
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>c_device_type</strong></td>
+            <td>
+<p>Device type the tensor will live on (<code>torch_kCPU</code> or <code>torch_kCUDA</code>)</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-device_index~24"></span>
+              integer(kind=c_int),
+            </td>
+<td>intent(in),</td>
+              <td>optional</td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>device_index</strong></td>
+            <td>
+<p>device index to use for <code>torch_kCUDA</code> case</p>
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+    <h4>
+    Return Value
+    <small>type(<a href='../type/torch_tensor.html'>torch_tensor</a>)</small>
+    </h4>
+    <p>Returned tensor</p>
+
+          </li>
+          <li class="list-group-item">
+                <h3>
+    public  function <a href='../proc/torch_tensor_from_array_int64_3d.html'>torch_tensor_from_array_int64_3d</a>(data_in, layout, c_device_type, device_index) result(tensor)  
+
+    </h3>
+    
+  <p>Return a Torch tensor pointing to data_in array of rank 3 containing data of type <code>int64</code></p>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-data_in~15"></span>
+              integer(kind=int64),
+            </td>
+<td>intent(in),</td>
+              <td></td>            <td>
+              target
+            </td>
+            <td>::</td>
+            <td><strong>data_in</strong>(:,:,:)</td>
+            <td>
+<p>Input data that tensor will point at</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-layout~16"></span>
+              integer,
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>layout</strong>(3)</td>
+            <td>
+<p>Control order of indices</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-c_device_type~15"></span>
+              integer(kind=c_int),
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>c_device_type</strong></td>
+            <td>
+<p>Device type the tensor will live on (<code>torch_kCPU</code> or <code>torch_kCUDA</code>)</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-device_index~25"></span>
+              integer(kind=c_int),
+            </td>
+<td>intent(in),</td>
+              <td>optional</td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>device_index</strong></td>
+            <td>
+<p>device index to use for <code>torch_kCUDA</code> case</p>
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+    <h4>
+    Return Value
+    <small>type(<a href='../type/torch_tensor.html'>torch_tensor</a>)</small>
+    </h4>
+    <p>Returned tensor</p>
+
+          </li>
+          <li class="list-group-item">
+                <h3>
+    public  function <a href='../proc/torch_tensor_from_array_int64_4d.html'>torch_tensor_from_array_int64_4d</a>(data_in, layout, c_device_type, device_index) result(tensor)  
+
+    </h3>
+    
+  <p>Return a Torch tensor pointing to data_in array of rank 4 containing data of type <code>int64</code></p>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-data_in~16"></span>
+              integer(kind=int64),
+            </td>
+<td>intent(in),</td>
+              <td></td>            <td>
+              target
+            </td>
+            <td>::</td>
+            <td><strong>data_in</strong>(:,:,:,:)</td>
+            <td>
+<p>Input data that tensor will point at</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-layout~17"></span>
+              integer,
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>layout</strong>(4)</td>
+            <td>
+<p>Control order of indices</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-c_device_type~16"></span>
+              integer(kind=c_int),
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>c_device_type</strong></td>
+            <td>
+<p>Device type the tensor will live on (<code>torch_kCPU</code> or <code>torch_kCUDA</code>)</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-device_index~26"></span>
+              integer(kind=c_int),
+            </td>
+<td>intent(in),</td>
+              <td>optional</td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>device_index</strong></td>
+            <td>
+<p>device index to use for <code>torch_kCUDA</code> case</p>
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+    <h4>
+    Return Value
+    <small>type(<a href='../type/torch_tensor.html'>torch_tensor</a>)</small>
+    </h4>
+    <p>Returned tensor</p>
+
+          </li>
+          <li class="list-group-item">
+                <h3>
+    public  function <a href='../proc/torch_tensor_from_array_real32_1d.html'>torch_tensor_from_array_real32_1d</a>(data_in, layout, c_device_type, device_index) result(tensor)  
+
+    </h3>
+    
+  <p>Return a Torch tensor pointing to data_in array of rank 1 containing data of type <code>real32</code></p>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-data_in~17"></span>
+              real(kind=real32),
+            </td>
+<td>intent(in),</td>
+              <td></td>            <td>
+              target
+            </td>
+            <td>::</td>
+            <td><strong>data_in</strong>(:)</td>
+            <td>
+<p>Input data that tensor will point at</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-layout~18"></span>
+              integer,
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>layout</strong>(1)</td>
+            <td>
+<p>Control order of indices</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-c_device_type~17"></span>
+              integer(kind=c_int),
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>c_device_type</strong></td>
+            <td>
+<p>Device type the tensor will live on (<code>torch_kCPU</code> or <code>torch_kCUDA</code>)</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-device_index~27"></span>
+              integer(kind=c_int),
+            </td>
+<td>intent(in),</td>
+              <td>optional</td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>device_index</strong></td>
+            <td>
+<p>device index to use for <code>torch_kCUDA</code> case</p>
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+    <h4>
+    Return Value
+    <small>type(<a href='../type/torch_tensor.html'>torch_tensor</a>)</small>
+    </h4>
+    <p>Returned tensor</p>
+
+          </li>
+          <li class="list-group-item">
+                <h3>
+    public  function <a href='../proc/torch_tensor_from_array_real32_2d.html'>torch_tensor_from_array_real32_2d</a>(data_in, layout, c_device_type, device_index) result(tensor)  
+
+    </h3>
+    
+  <p>Return a Torch tensor pointing to data_in array of rank 2 containing data of type <code>real32</code></p>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-data_in~18"></span>
+              real(kind=real32),
+            </td>
+<td>intent(in),</td>
+              <td></td>            <td>
+              target
+            </td>
+            <td>::</td>
+            <td><strong>data_in</strong>(:,:)</td>
+            <td>
+<p>Input data that tensor will point at</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-layout~19"></span>
+              integer,
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>layout</strong>(2)</td>
+            <td>
+<p>Control order of indices</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-c_device_type~18"></span>
+              integer(kind=c_int),
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>c_device_type</strong></td>
+            <td>
+<p>Device type the tensor will live on (<code>torch_kCPU</code> or <code>torch_kCUDA</code>)</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-device_index~28"></span>
+              integer(kind=c_int),
+            </td>
+<td>intent(in),</td>
+              <td>optional</td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>device_index</strong></td>
+            <td>
+<p>device index to use for <code>torch_kCUDA</code> case</p>
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+    <h4>
+    Return Value
+    <small>type(<a href='../type/torch_tensor.html'>torch_tensor</a>)</small>
+    </h4>
+    <p>Returned tensor</p>
+
+          </li>
+          <li class="list-group-item">
+                <h3>
+    public  function <a href='../proc/torch_tensor_from_array_real32_3d.html'>torch_tensor_from_array_real32_3d</a>(data_in, layout, c_device_type, device_index) result(tensor)  
+
+    </h3>
+    
+  <p>Return a Torch tensor pointing to data_in array of rank 3 containing data of type <code>real32</code></p>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-data_in~19"></span>
+              real(kind=real32),
+            </td>
+<td>intent(in),</td>
+              <td></td>            <td>
+              target
+            </td>
+            <td>::</td>
+            <td><strong>data_in</strong>(:,:,:)</td>
+            <td>
+<p>Input data that tensor will point at</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-layout~20"></span>
+              integer,
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>layout</strong>(3)</td>
+            <td>
+<p>Control order of indices</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-c_device_type~19"></span>
+              integer(kind=c_int),
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>c_device_type</strong></td>
+            <td>
+<p>Device type the tensor will live on (<code>torch_kCPU</code> or <code>torch_kCUDA</code>)</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-device_index~29"></span>
+              integer(kind=c_int),
+            </td>
+<td>intent(in),</td>
+              <td>optional</td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>device_index</strong></td>
+            <td>
+<p>device index to use for <code>torch_kCUDA</code> case</p>
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+    <h4>
+    Return Value
+    <small>type(<a href='../type/torch_tensor.html'>torch_tensor</a>)</small>
+    </h4>
+    <p>Returned tensor</p>
+
+          </li>
+          <li class="list-group-item">
+                <h3>
+    public  function <a href='../proc/torch_tensor_from_array_real32_4d.html'>torch_tensor_from_array_real32_4d</a>(data_in, layout, c_device_type, device_index) result(tensor)  
+
+    </h3>
+    
+  <p>Return a Torch tensor pointing to data_in array of rank 4 containing data of type <code>real32</code></p>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-data_in~20"></span>
+              real(kind=real32),
+            </td>
+<td>intent(in),</td>
+              <td></td>            <td>
+              target
+            </td>
+            <td>::</td>
+            <td><strong>data_in</strong>(:,:,:,:)</td>
+            <td>
+<p>Input data that tensor will point at</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-layout~21"></span>
+              integer,
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>layout</strong>(4)</td>
+            <td>
+<p>Control order of indices</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-c_device_type~20"></span>
+              integer(kind=c_int),
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>c_device_type</strong></td>
+            <td>
+<p>Device type the tensor will live on (<code>torch_kCPU</code> or <code>torch_kCUDA</code>)</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-device_index~30"></span>
+              integer(kind=c_int),
+            </td>
+<td>intent(in),</td>
+              <td>optional</td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>device_index</strong></td>
+            <td>
+<p>device index to use for <code>torch_kCUDA</code> case</p>
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+    <h4>
+    Return Value
+    <small>type(<a href='../type/torch_tensor.html'>torch_tensor</a>)</small>
+    </h4>
+    <p>Returned tensor</p>
+
+          </li>
+          <li class="list-group-item">
+                <h3>
+    public  function <a href='../proc/torch_tensor_from_array_real64_1d.html'>torch_tensor_from_array_real64_1d</a>(data_in, layout, c_device_type, device_index) result(tensor)  
+
+    </h3>
+    
+  <p>Return a Torch tensor pointing to data_in array of rank 1 containing data of type <code>real64</code></p>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-data_in~21"></span>
+              real(kind=real64),
+            </td>
+<td>intent(in),</td>
+              <td></td>            <td>
+              target
+            </td>
+            <td>::</td>
+            <td><strong>data_in</strong>(:)</td>
+            <td>
+<p>Input data that tensor will point at</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-layout~22"></span>
+              integer,
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>layout</strong>(1)</td>
+            <td>
+<p>Control order of indices</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-c_device_type~21"></span>
+              integer(kind=c_int),
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>c_device_type</strong></td>
+            <td>
+<p>Device type the tensor will live on (<code>torch_kCPU</code> or <code>torch_kCUDA</code>)</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-device_index~31"></span>
+              integer(kind=c_int),
+            </td>
+<td>intent(in),</td>
+              <td>optional</td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>device_index</strong></td>
+            <td>
+<p>device index to use for <code>torch_kCUDA</code> case</p>
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+    <h4>
+    Return Value
+    <small>type(<a href='../type/torch_tensor.html'>torch_tensor</a>)</small>
+    </h4>
+    <p>Returned tensor</p>
+
+          </li>
+          <li class="list-group-item">
+                <h3>
+    public  function <a href='../proc/torch_tensor_from_array_real64_2d.html'>torch_tensor_from_array_real64_2d</a>(data_in, layout, c_device_type, device_index) result(tensor)  
+
+    </h3>
+    
+  <p>Return a Torch tensor pointing to data_in array of rank 2 containing data of type <code>real64</code></p>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-data_in~22"></span>
+              real(kind=real64),
+            </td>
+<td>intent(in),</td>
+              <td></td>            <td>
+              target
+            </td>
+            <td>::</td>
+            <td><strong>data_in</strong>(:,:)</td>
+            <td>
+<p>Input data that tensor will point at</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-layout~23"></span>
+              integer,
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>layout</strong>(2)</td>
+            <td>
+<p>Control order of indices</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-c_device_type~22"></span>
+              integer(kind=c_int),
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>c_device_type</strong></td>
+            <td>
+<p>Device type the tensor will live on (<code>torch_kCPU</code> or <code>torch_kCUDA</code>)</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-device_index~32"></span>
+              integer(kind=c_int),
+            </td>
+<td>intent(in),</td>
+              <td>optional</td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>device_index</strong></td>
+            <td>
+<p>device index to use for <code>torch_kCUDA</code> case</p>
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+    <h4>
+    Return Value
+    <small>type(<a href='../type/torch_tensor.html'>torch_tensor</a>)</small>
+    </h4>
+    <p>Returned tensor</p>
+
+          </li>
+          <li class="list-group-item">
+                <h3>
+    public  function <a href='../proc/torch_tensor_from_array_real64_3d.html'>torch_tensor_from_array_real64_3d</a>(data_in, layout, c_device_type, device_index) result(tensor)  
+
+    </h3>
+    
+  <p>Return a Torch tensor pointing to data_in array of rank 3 containing data of type <code>real64</code></p>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-data_in~23"></span>
+              real(kind=real64),
+            </td>
+<td>intent(in),</td>
+              <td></td>            <td>
+              target
+            </td>
+            <td>::</td>
+            <td><strong>data_in</strong>(:,:,:)</td>
+            <td>
+<p>Input data that tensor will point at</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-layout~24"></span>
+              integer,
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>layout</strong>(3)</td>
+            <td>
+<p>Control order of indices</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-c_device_type~23"></span>
+              integer(kind=c_int),
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>c_device_type</strong></td>
+            <td>
+<p>Device type the tensor will live on (<code>torch_kCPU</code> or <code>torch_kCUDA</code>)</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-device_index~33"></span>
+              integer(kind=c_int),
+            </td>
+<td>intent(in),</td>
+              <td>optional</td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>device_index</strong></td>
+            <td>
+<p>device index to use for <code>torch_kCUDA</code> case</p>
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+    <h4>
+    Return Value
+    <small>type(<a href='../type/torch_tensor.html'>torch_tensor</a>)</small>
+    </h4>
+    <p>Returned tensor</p>
+
+          </li>
+          <li class="list-group-item">
+                <h3>
+    public  function <a href='../proc/torch_tensor_from_array_real64_4d.html'>torch_tensor_from_array_real64_4d</a>(data_in, layout, c_device_type, device_index) result(tensor)  
+
+    </h3>
+    
+  <p>Return a Torch tensor pointing to data_in array of rank 4 containing data of type <code>real64</code></p>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-data_in~24"></span>
+              real(kind=real64),
+            </td>
+<td>intent(in),</td>
+              <td></td>            <td>
+              target
+            </td>
+            <td>::</td>
+            <td><strong>data_in</strong>(:,:,:,:)</td>
+            <td>
+<p>Input data that tensor will point at</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-layout~25"></span>
+              integer,
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>layout</strong>(4)</td>
+            <td>
+<p>Control order of indices</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-c_device_type~24"></span>
+              integer(kind=c_int),
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>c_device_type</strong></td>
+            <td>
+<p>Device type the tensor will live on (<code>torch_kCPU</code> or <code>torch_kCUDA</code>)</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-device_index~34"></span>
+              integer(kind=c_int),
+            </td>
+<td>intent(in),</td>
+              <td>optional</td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>device_index</strong></td>
+            <td>
+<p>device index to use for <code>torch_kCUDA</code> case</p>
             </td>
         </tr>
     </tbody>
@@ -508,7 +2684,7 @@
       </h3>
     </div>
     <div class="card-body">
-      <p>Type for holding a torch tensor.</p>
+      <p>Type for holding a Torch tensor.</p>
 
         <h4>Components</h4>
           <table class="table table-striped varlist">
@@ -553,102 +2729,11 @@
         <section>
           <h2>Functions</h2>
               <div class="card">
-    <div class="card-header codesum"><span class="anchor" id="proc-t_t_from_array"></span><h3>public  function <a href='../proc/t_t_from_array.html'>t_t_from_array</a>(data_arr, tensor_shape, dtype, device) result(tensor)  
+    <div class="card-header codesum"><span class="anchor" id="proc-torch_module_load"></span> <h3>public  function <a href='../proc/torch_module_load.html'>torch_module_load</a>(filename, device_type, device_index) result(module)  
 </h3></div>
     <div class="card-body">
           
-  <p>This routine will take an (i, j, k) array and return an (k, j, i) tensor
-it is invoked from a set of interfaces <code>torch_tensor_from_array_dtype</code></p>
-
-  <h4>Arguments</h4>
-      <table class="table table-striped varlist">
-    <thead>
-      <tr>
-        <th scope="col">Type</th>
-<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
-        <th scope="col"></th>
-        <th scope="col">Name</th>
-        <th scope="col"></th>
-    </thead>
-    <tbody>
-        <tr>
-            <td>
-              <span class="anchor" id="variable-data_arr"></span>
-              type(c_ptr),
-            </td>
-<td>intent(in)</td>
-              <td></td>            <td>
-              
-            </td>
-            <td>::</td>
-            <td><strong>data_arr</strong></td>
-            <td>
-<p>Pointer to data</p>
-            </td>
-        </tr>
-        <tr>
-            <td>
-              <span class="anchor" id="variable-tensor_shape~2"></span>
-              integer(kind=c_int64_t),
-            </td>
-<td>intent(in)</td>
-              <td></td>            <td>
-              
-            </td>
-            <td>::</td>
-            <td><strong>tensor_shape</strong>(:)</td>
-            <td>
-<p>Shape of the tensor</p>
-            </td>
-        </tr>
-        <tr>
-            <td>
-              <span class="anchor" id="variable-dtype~2"></span>
-              integer(kind=c_int),
-            </td>
-<td>intent(in)</td>
-              <td></td>            <td>
-              
-            </td>
-            <td>::</td>
-            <td><strong>dtype</strong></td>
-            <td>
-<p>Data type of the tensor</p>
-            </td>
-        </tr>
-        <tr>
-            <td>
-              <span class="anchor" id="variable-device~2"></span>
-              integer(kind=c_int),
-            </td>
-<td>intent(in)</td>
-              <td></td>            <td>
-              
-            </td>
-            <td>::</td>
-            <td><strong>device</strong></td>
-            <td>
-<p>Device on which the tensor will live on (torch_kCPU or torch_kGPU)</p>
-            </td>
-        </tr>
-    </tbody>
-  </table>
-
-    <h4>
-    Return Value
-    <small>type(<a href='../type/torch_tensor.html'>torch_tensor</a>)</small>
-    </h4>
-    <p>Returned tensor</p>
-
-    </div>
-  </div>
-
-              <div class="card">
-    <div class="card-header codesum"><span class="anchor" id="proc-torch_module_load"></span><h3>public  function <a href='../proc/torch_module_load.html'>torch_module_load</a>(filename) result(module)  
-</h3></div>
-    <div class="card-body">
-          
-  <p>Loads a Torch Script module (pre-trained PyTorch model saved with Torch Script)</p>
+  <p>Loads a TorchScript module (pre-trained PyTorch model saved with TorchScript)</p>
 
   <h4>Arguments</h4>
       <table class="table table-striped varlist">
@@ -673,7 +2758,37 @@ it is invoked from a set of interfaces <code>torch_tensor_from_array_dtype</code
             <td>::</td>
             <td><strong>filename</strong></td>
             <td>
-<p>Filename of Torch Script module</p>
+<p>Filename of TorchScript module</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-device_type~7"></span>
+              integer(kind=c_int),
+            </td>
+<td>intent(in),</td>
+              <td>optional</td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>device_type</strong></td>
+            <td>
+<p>Device type the tensor will live on (<code>torch_kCPU</code> or <code>torch_kCUDA</code>)</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-device_index~9"></span>
+              integer(kind=c_int),
+            </td>
+<td>intent(in),</td>
+              <td>optional</td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>device_index</strong></td>
+            <td>
+<p>device index to use for <code>torch_kCUDA</code> case</p>
             </td>
         </tr>
     </tbody>
@@ -689,11 +2804,11 @@ it is invoked from a set of interfaces <code>torch_tensor_from_array_dtype</code
   </div>
 
               <div class="card">
-    <div class="card-header codesum"><span class="anchor" id="proc-torch_tensor_from_array_c_double"></span><h3>public  function <a href='../proc/torch_tensor_from_array_c_double.html'>torch_tensor_from_array_c_double</a>(data_arr, tensor_shape, device) result(tensor)  
+    <div class="card-header codesum"><span class="anchor" id="proc-torch_tensor_from_array_int16_1d"></span> <h3>public  function <a href='../proc/torch_tensor_from_array_int16_1d.html'>torch_tensor_from_array_int16_1d</a>(data_in, layout, c_device_type, device_index) result(tensor)  
 </h3></div>
     <div class="card-body">
           
-  
+  <p>Return a Torch tensor pointing to data_in array of rank 1 containing data of type <code>int16</code></p>
 
   <h4>Arguments</h4>
       <table class="table table-striped varlist">
@@ -708,37 +2823,37 @@ it is invoked from a set of interfaces <code>torch_tensor_from_array_dtype</code
     <tbody>
         <tr>
             <td>
-              <span class="anchor" id="variable-data_arr~2"></span>
-              real(kind=c_double),
+              <span class="anchor" id="variable-data_in~5"></span>
+              integer(kind=int16),
             </td>
 <td>intent(in),</td>
               <td></td>            <td>
               target
             </td>
             <td>::</td>
-            <td><strong>data_arr</strong>(*)</td>
+            <td><strong>data_in</strong>(:)</td>
             <td>
-<p>Fortran array of data</p>
+<p>Input data that tensor will point at</p>
             </td>
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-tensor_shape~5"></span>
-              integer(kind=c_int64_t),
+              <span class="anchor" id="variable-layout~6"></span>
+              integer,
             </td>
 <td>intent(in)</td>
               <td></td>            <td>
               
             </td>
             <td>::</td>
-            <td><strong>tensor_shape</strong>(:)</td>
+            <td><strong>layout</strong>(1)</td>
             <td>
-<p>Shape of the tensor</p>
+<p>Control order of indices</p>
             </td>
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-device~5"></span>
+              <span class="anchor" id="variable-c_device_type~5"></span>
               integer(kind=c_int),
             </td>
 <td>intent(in)</td>
@@ -746,9 +2861,24 @@ it is invoked from a set of interfaces <code>torch_tensor_from_array_dtype</code
               
             </td>
             <td>::</td>
-            <td><strong>device</strong></td>
+            <td><strong>c_device_type</strong></td>
             <td>
-<p>Device on which the tensor will live on (torch_kCPU or torch_kGPU)</p>
+<p>Device type the tensor will live on (<code>torch_kCPU</code> or <code>torch_kCUDA</code>)</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-device_index~15"></span>
+              integer(kind=c_int),
+            </td>
+<td>intent(in),</td>
+              <td>optional</td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>device_index</strong></td>
+            <td>
+<p>device index to use for <code>torch_kCUDA</code> case</p>
             </td>
         </tr>
     </tbody>
@@ -764,11 +2894,11 @@ it is invoked from a set of interfaces <code>torch_tensor_from_array_dtype</code
   </div>
 
               <div class="card">
-    <div class="card-header codesum"><span class="anchor" id="proc-torch_tensor_from_array_c_float"></span><h3>public  function <a href='../proc/torch_tensor_from_array_c_float.html'>torch_tensor_from_array_c_float</a>(data_arr, tensor_shape, device) result(tensor)  
+    <div class="card-header codesum"><span class="anchor" id="proc-torch_tensor_from_array_int16_2d"></span> <h3>public  function <a href='../proc/torch_tensor_from_array_int16_2d.html'>torch_tensor_from_array_int16_2d</a>(data_in, layout, c_device_type, device_index) result(tensor)  
 </h3></div>
     <div class="card-body">
           
-  
+  <p>Return a Torch tensor pointing to data_in array of rank 2 containing data of type <code>int16</code></p>
 
   <h4>Arguments</h4>
       <table class="table table-striped varlist">
@@ -783,37 +2913,37 @@ it is invoked from a set of interfaces <code>torch_tensor_from_array_dtype</code
     <tbody>
         <tr>
             <td>
-              <span class="anchor" id="variable-data_arr~3"></span>
-              real(kind=c_float),
+              <span class="anchor" id="variable-data_in~6"></span>
+              integer(kind=int16),
             </td>
 <td>intent(in),</td>
               <td></td>            <td>
               target
             </td>
             <td>::</td>
-            <td><strong>data_arr</strong>(*)</td>
+            <td><strong>data_in</strong>(:,:)</td>
             <td>
-<p>Fortran array of data</p>
+<p>Input data that tensor will point at</p>
             </td>
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-tensor_shape~6"></span>
-              integer(kind=c_int64_t),
+              <span class="anchor" id="variable-layout~7"></span>
+              integer,
             </td>
 <td>intent(in)</td>
               <td></td>            <td>
               
             </td>
             <td>::</td>
-            <td><strong>tensor_shape</strong>(:)</td>
+            <td><strong>layout</strong>(2)</td>
             <td>
-<p>Shape of the tensor</p>
+<p>Control order of indices</p>
             </td>
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-device~6"></span>
+              <span class="anchor" id="variable-c_device_type~6"></span>
               integer(kind=c_int),
             </td>
 <td>intent(in)</td>
@@ -821,9 +2951,24 @@ it is invoked from a set of interfaces <code>torch_tensor_from_array_dtype</code
               
             </td>
             <td>::</td>
-            <td><strong>device</strong></td>
+            <td><strong>c_device_type</strong></td>
             <td>
-<p>Device on which the tensor will live on (torch_kCPU or torch_kGPU)</p>
+<p>Device type the tensor will live on (<code>torch_kCPU</code> or <code>torch_kCUDA</code>)</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-device_index~16"></span>
+              integer(kind=c_int),
+            </td>
+<td>intent(in),</td>
+              <td>optional</td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>device_index</strong></td>
+            <td>
+<p>device index to use for <code>torch_kCUDA</code> case</p>
             </td>
         </tr>
     </tbody>
@@ -839,12 +2984,1992 @@ it is invoked from a set of interfaces <code>torch_tensor_from_array_dtype</code
   </div>
 
               <div class="card">
-    <div class="card-header codesum"><span class="anchor" id="proc-torch_tensor_from_blob"></span><h3>public  function <a href='../proc/torch_tensor_from_blob.html'>torch_tensor_from_blob</a>(data, ndims, tensor_shape, dtype, device, layout) result(tensor)  
+    <div class="card-header codesum"><span class="anchor" id="proc-torch_tensor_from_array_int16_3d"></span> <h3>public  function <a href='../proc/torch_tensor_from_array_int16_3d.html'>torch_tensor_from_array_int16_3d</a>(data_in, layout, c_device_type, device_index) result(tensor)  
+</h3></div>
+    <div class="card-body">
+          
+  <p>Return a Torch tensor pointing to data_in array of rank 3 containing data of type <code>int16</code></p>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-data_in~7"></span>
+              integer(kind=int16),
+            </td>
+<td>intent(in),</td>
+              <td></td>            <td>
+              target
+            </td>
+            <td>::</td>
+            <td><strong>data_in</strong>(:,:,:)</td>
+            <td>
+<p>Input data that tensor will point at</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-layout~8"></span>
+              integer,
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>layout</strong>(3)</td>
+            <td>
+<p>Control order of indices</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-c_device_type~7"></span>
+              integer(kind=c_int),
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>c_device_type</strong></td>
+            <td>
+<p>Device type the tensor will live on (<code>torch_kCPU</code> or <code>torch_kCUDA</code>)</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-device_index~17"></span>
+              integer(kind=c_int),
+            </td>
+<td>intent(in),</td>
+              <td>optional</td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>device_index</strong></td>
+            <td>
+<p>device index to use for <code>torch_kCUDA</code> case</p>
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+    <h4>
+    Return Value
+    <small>type(<a href='../type/torch_tensor.html'>torch_tensor</a>)</small>
+    </h4>
+    <p>Returned tensor</p>
+
+    </div>
+  </div>
+
+              <div class="card">
+    <div class="card-header codesum"><span class="anchor" id="proc-torch_tensor_from_array_int16_4d"></span> <h3>public  function <a href='../proc/torch_tensor_from_array_int16_4d.html'>torch_tensor_from_array_int16_4d</a>(data_in, layout, c_device_type, device_index) result(tensor)  
+</h3></div>
+    <div class="card-body">
+          
+  <p>Return a Torch tensor pointing to data_in array of rank 4 containing data of type <code>int16</code></p>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-data_in~8"></span>
+              integer(kind=int16),
+            </td>
+<td>intent(in),</td>
+              <td></td>            <td>
+              target
+            </td>
+            <td>::</td>
+            <td><strong>data_in</strong>(:,:,:,:)</td>
+            <td>
+<p>Input data that tensor will point at</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-layout~9"></span>
+              integer,
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>layout</strong>(4)</td>
+            <td>
+<p>Control order of indices</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-c_device_type~8"></span>
+              integer(kind=c_int),
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>c_device_type</strong></td>
+            <td>
+<p>Device type the tensor will live on (<code>torch_kCPU</code> or <code>torch_kCUDA</code>)</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-device_index~18"></span>
+              integer(kind=c_int),
+            </td>
+<td>intent(in),</td>
+              <td>optional</td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>device_index</strong></td>
+            <td>
+<p>device index to use for <code>torch_kCUDA</code> case</p>
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+    <h4>
+    Return Value
+    <small>type(<a href='../type/torch_tensor.html'>torch_tensor</a>)</small>
+    </h4>
+    <p>Returned tensor</p>
+
+    </div>
+  </div>
+
+              <div class="card">
+    <div class="card-header codesum"><span class="anchor" id="proc-torch_tensor_from_array_int32_1d"></span> <h3>public  function <a href='../proc/torch_tensor_from_array_int32_1d.html'>torch_tensor_from_array_int32_1d</a>(data_in, layout, c_device_type, device_index) result(tensor)  
+</h3></div>
+    <div class="card-body">
+          
+  <p>Return a Torch tensor pointing to data_in array of rank 1 containing data of type <code>int32</code></p>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-data_in~9"></span>
+              integer(kind=int32),
+            </td>
+<td>intent(in),</td>
+              <td></td>            <td>
+              target
+            </td>
+            <td>::</td>
+            <td><strong>data_in</strong>(:)</td>
+            <td>
+<p>Input data that tensor will point at</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-layout~10"></span>
+              integer,
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>layout</strong>(1)</td>
+            <td>
+<p>Control order of indices</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-c_device_type~9"></span>
+              integer(kind=c_int),
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>c_device_type</strong></td>
+            <td>
+<p>Device type the tensor will live on (<code>torch_kCPU</code> or <code>torch_kCUDA</code>)</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-device_index~19"></span>
+              integer(kind=c_int),
+            </td>
+<td>intent(in),</td>
+              <td>optional</td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>device_index</strong></td>
+            <td>
+<p>device index to use for <code>torch_kCUDA</code> case</p>
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+    <h4>
+    Return Value
+    <small>type(<a href='../type/torch_tensor.html'>torch_tensor</a>)</small>
+    </h4>
+    <p>Returned tensor</p>
+
+    </div>
+  </div>
+
+              <div class="card">
+    <div class="card-header codesum"><span class="anchor" id="proc-torch_tensor_from_array_int32_2d"></span> <h3>public  function <a href='../proc/torch_tensor_from_array_int32_2d.html'>torch_tensor_from_array_int32_2d</a>(data_in, layout, c_device_type, device_index) result(tensor)  
+</h3></div>
+    <div class="card-body">
+          
+  <p>Return a Torch tensor pointing to data_in array of rank 2 containing data of type <code>int32</code></p>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-data_in~10"></span>
+              integer(kind=int32),
+            </td>
+<td>intent(in),</td>
+              <td></td>            <td>
+              target
+            </td>
+            <td>::</td>
+            <td><strong>data_in</strong>(:,:)</td>
+            <td>
+<p>Input data that tensor will point at</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-layout~11"></span>
+              integer,
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>layout</strong>(2)</td>
+            <td>
+<p>Control order of indices</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-c_device_type~10"></span>
+              integer(kind=c_int),
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>c_device_type</strong></td>
+            <td>
+<p>Device type the tensor will live on (<code>torch_kCPU</code> or <code>torch_kCUDA</code>)</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-device_index~20"></span>
+              integer(kind=c_int),
+            </td>
+<td>intent(in),</td>
+              <td>optional</td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>device_index</strong></td>
+            <td>
+<p>device index to use for <code>torch_kCUDA</code> case</p>
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+    <h4>
+    Return Value
+    <small>type(<a href='../type/torch_tensor.html'>torch_tensor</a>)</small>
+    </h4>
+    <p>Returned tensor</p>
+
+    </div>
+  </div>
+
+              <div class="card">
+    <div class="card-header codesum"><span class="anchor" id="proc-torch_tensor_from_array_int32_3d"></span> <h3>public  function <a href='../proc/torch_tensor_from_array_int32_3d.html'>torch_tensor_from_array_int32_3d</a>(data_in, layout, c_device_type, device_index) result(tensor)  
+</h3></div>
+    <div class="card-body">
+          
+  <p>Return a Torch tensor pointing to data_in array of rank 3 containing data of type <code>int32</code></p>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-data_in~11"></span>
+              integer(kind=int32),
+            </td>
+<td>intent(in),</td>
+              <td></td>            <td>
+              target
+            </td>
+            <td>::</td>
+            <td><strong>data_in</strong>(:,:,:)</td>
+            <td>
+<p>Input data that tensor will point at</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-layout~12"></span>
+              integer,
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>layout</strong>(3)</td>
+            <td>
+<p>Control order of indices</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-c_device_type~11"></span>
+              integer(kind=c_int),
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>c_device_type</strong></td>
+            <td>
+<p>Device type the tensor will live on (<code>torch_kCPU</code> or <code>torch_kCUDA</code>)</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-device_index~21"></span>
+              integer(kind=c_int),
+            </td>
+<td>intent(in),</td>
+              <td>optional</td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>device_index</strong></td>
+            <td>
+<p>device index to use for <code>torch_kCUDA</code> case</p>
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+    <h4>
+    Return Value
+    <small>type(<a href='../type/torch_tensor.html'>torch_tensor</a>)</small>
+    </h4>
+    <p>Returned tensor</p>
+
+    </div>
+  </div>
+
+              <div class="card">
+    <div class="card-header codesum"><span class="anchor" id="proc-torch_tensor_from_array_int32_4d"></span> <h3>public  function <a href='../proc/torch_tensor_from_array_int32_4d.html'>torch_tensor_from_array_int32_4d</a>(data_in, layout, c_device_type, device_index) result(tensor)  
+</h3></div>
+    <div class="card-body">
+          
+  <p>Return a Torch tensor pointing to data_in array of rank 4 containing data of type <code>int32</code></p>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-data_in~12"></span>
+              integer(kind=int32),
+            </td>
+<td>intent(in),</td>
+              <td></td>            <td>
+              target
+            </td>
+            <td>::</td>
+            <td><strong>data_in</strong>(:,:,:,:)</td>
+            <td>
+<p>Input data that tensor will point at</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-layout~13"></span>
+              integer,
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>layout</strong>(4)</td>
+            <td>
+<p>Control order of indices</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-c_device_type~12"></span>
+              integer(kind=c_int),
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>c_device_type</strong></td>
+            <td>
+<p>Device type the tensor will live on (<code>torch_kCPU</code> or <code>torch_kCUDA</code>)</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-device_index~22"></span>
+              integer(kind=c_int),
+            </td>
+<td>intent(in),</td>
+              <td>optional</td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>device_index</strong></td>
+            <td>
+<p>device index to use for <code>torch_kCUDA</code> case</p>
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+    <h4>
+    Return Value
+    <small>type(<a href='../type/torch_tensor.html'>torch_tensor</a>)</small>
+    </h4>
+    <p>Returned tensor</p>
+
+    </div>
+  </div>
+
+              <div class="card">
+    <div class="card-header codesum"><span class="anchor" id="proc-torch_tensor_from_array_int64_1d"></span> <h3>public  function <a href='../proc/torch_tensor_from_array_int64_1d.html'>torch_tensor_from_array_int64_1d</a>(data_in, layout, c_device_type, device_index) result(tensor)  
+</h3></div>
+    <div class="card-body">
+          
+  <p>Return a Torch tensor pointing to data_in array of rank 1 containing data of type <code>int64</code></p>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-data_in~13"></span>
+              integer(kind=int64),
+            </td>
+<td>intent(in),</td>
+              <td></td>            <td>
+              target
+            </td>
+            <td>::</td>
+            <td><strong>data_in</strong>(:)</td>
+            <td>
+<p>Input data that tensor will point at</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-layout~14"></span>
+              integer,
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>layout</strong>(1)</td>
+            <td>
+<p>Control order of indices</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-c_device_type~13"></span>
+              integer(kind=c_int),
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>c_device_type</strong></td>
+            <td>
+<p>Device type the tensor will live on (<code>torch_kCPU</code> or <code>torch_kCUDA</code>)</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-device_index~23"></span>
+              integer(kind=c_int),
+            </td>
+<td>intent(in),</td>
+              <td>optional</td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>device_index</strong></td>
+            <td>
+<p>device index to use for <code>torch_kCUDA</code> case</p>
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+    <h4>
+    Return Value
+    <small>type(<a href='../type/torch_tensor.html'>torch_tensor</a>)</small>
+    </h4>
+    <p>Returned tensor</p>
+
+    </div>
+  </div>
+
+              <div class="card">
+    <div class="card-header codesum"><span class="anchor" id="proc-torch_tensor_from_array_int64_2d"></span> <h3>public  function <a href='../proc/torch_tensor_from_array_int64_2d.html'>torch_tensor_from_array_int64_2d</a>(data_in, layout, c_device_type, device_index) result(tensor)  
+</h3></div>
+    <div class="card-body">
+          
+  <p>Return a Torch tensor pointing to data_in array of rank 2 containing data of type <code>int64</code></p>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-data_in~14"></span>
+              integer(kind=int64),
+            </td>
+<td>intent(in),</td>
+              <td></td>            <td>
+              target
+            </td>
+            <td>::</td>
+            <td><strong>data_in</strong>(:,:)</td>
+            <td>
+<p>Input data that tensor will point at</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-layout~15"></span>
+              integer,
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>layout</strong>(2)</td>
+            <td>
+<p>Control order of indices</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-c_device_type~14"></span>
+              integer(kind=c_int),
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>c_device_type</strong></td>
+            <td>
+<p>Device type the tensor will live on (<code>torch_kCPU</code> or <code>torch_kCUDA</code>)</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-device_index~24"></span>
+              integer(kind=c_int),
+            </td>
+<td>intent(in),</td>
+              <td>optional</td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>device_index</strong></td>
+            <td>
+<p>device index to use for <code>torch_kCUDA</code> case</p>
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+    <h4>
+    Return Value
+    <small>type(<a href='../type/torch_tensor.html'>torch_tensor</a>)</small>
+    </h4>
+    <p>Returned tensor</p>
+
+    </div>
+  </div>
+
+              <div class="card">
+    <div class="card-header codesum"><span class="anchor" id="proc-torch_tensor_from_array_int64_3d"></span> <h3>public  function <a href='../proc/torch_tensor_from_array_int64_3d.html'>torch_tensor_from_array_int64_3d</a>(data_in, layout, c_device_type, device_index) result(tensor)  
+</h3></div>
+    <div class="card-body">
+          
+  <p>Return a Torch tensor pointing to data_in array of rank 3 containing data of type <code>int64</code></p>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-data_in~15"></span>
+              integer(kind=int64),
+            </td>
+<td>intent(in),</td>
+              <td></td>            <td>
+              target
+            </td>
+            <td>::</td>
+            <td><strong>data_in</strong>(:,:,:)</td>
+            <td>
+<p>Input data that tensor will point at</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-layout~16"></span>
+              integer,
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>layout</strong>(3)</td>
+            <td>
+<p>Control order of indices</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-c_device_type~15"></span>
+              integer(kind=c_int),
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>c_device_type</strong></td>
+            <td>
+<p>Device type the tensor will live on (<code>torch_kCPU</code> or <code>torch_kCUDA</code>)</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-device_index~25"></span>
+              integer(kind=c_int),
+            </td>
+<td>intent(in),</td>
+              <td>optional</td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>device_index</strong></td>
+            <td>
+<p>device index to use for <code>torch_kCUDA</code> case</p>
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+    <h4>
+    Return Value
+    <small>type(<a href='../type/torch_tensor.html'>torch_tensor</a>)</small>
+    </h4>
+    <p>Returned tensor</p>
+
+    </div>
+  </div>
+
+              <div class="card">
+    <div class="card-header codesum"><span class="anchor" id="proc-torch_tensor_from_array_int64_4d"></span> <h3>public  function <a href='../proc/torch_tensor_from_array_int64_4d.html'>torch_tensor_from_array_int64_4d</a>(data_in, layout, c_device_type, device_index) result(tensor)  
+</h3></div>
+    <div class="card-body">
+          
+  <p>Return a Torch tensor pointing to data_in array of rank 4 containing data of type <code>int64</code></p>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-data_in~16"></span>
+              integer(kind=int64),
+            </td>
+<td>intent(in),</td>
+              <td></td>            <td>
+              target
+            </td>
+            <td>::</td>
+            <td><strong>data_in</strong>(:,:,:,:)</td>
+            <td>
+<p>Input data that tensor will point at</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-layout~17"></span>
+              integer,
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>layout</strong>(4)</td>
+            <td>
+<p>Control order of indices</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-c_device_type~16"></span>
+              integer(kind=c_int),
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>c_device_type</strong></td>
+            <td>
+<p>Device type the tensor will live on (<code>torch_kCPU</code> or <code>torch_kCUDA</code>)</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-device_index~26"></span>
+              integer(kind=c_int),
+            </td>
+<td>intent(in),</td>
+              <td>optional</td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>device_index</strong></td>
+            <td>
+<p>device index to use for <code>torch_kCUDA</code> case</p>
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+    <h4>
+    Return Value
+    <small>type(<a href='../type/torch_tensor.html'>torch_tensor</a>)</small>
+    </h4>
+    <p>Returned tensor</p>
+
+    </div>
+  </div>
+
+              <div class="card">
+    <div class="card-header codesum"><span class="anchor" id="proc-torch_tensor_from_array_int8_1d"></span> <h3>public  function <a href='../proc/torch_tensor_from_array_int8_1d.html'>torch_tensor_from_array_int8_1d</a>(data_in, layout, c_device_type, device_index) result(tensor)  
+</h3></div>
+    <div class="card-body">
+          
+  <p>Return a Torch tensor pointing to data_in array of rank 1 containing data of type <code>int8</code></p>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-data_in"></span>
+              integer(kind=int8),
+            </td>
+<td>intent(in),</td>
+              <td></td>            <td>
+              target
+            </td>
+            <td>::</td>
+            <td><strong>data_in</strong>(:)</td>
+            <td>
+<p>Input data that tensor will point at</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-layout~2"></span>
+              integer,
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>layout</strong>(1)</td>
+            <td>
+<p>Control order of indices</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-c_device_type"></span>
+              integer(kind=c_int),
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>c_device_type</strong></td>
+            <td>
+<p>Device type the tensor will live on (<code>torch_kCPU</code> or <code>torch_kCUDA</code>)</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-device_index~11"></span>
+              integer(kind=c_int),
+            </td>
+<td>intent(in),</td>
+              <td>optional</td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>device_index</strong></td>
+            <td>
+<p>device index to use for <code>torch_kCUDA</code> case</p>
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+    <h4>
+    Return Value
+    <small>type(<a href='../type/torch_tensor.html'>torch_tensor</a>)</small>
+    </h4>
+    <p>Returned tensor</p>
+
+    </div>
+  </div>
+
+              <div class="card">
+    <div class="card-header codesum"><span class="anchor" id="proc-torch_tensor_from_array_int8_2d"></span> <h3>public  function <a href='../proc/torch_tensor_from_array_int8_2d.html'>torch_tensor_from_array_int8_2d</a>(data_in, layout, c_device_type, device_index) result(tensor)  
+</h3></div>
+    <div class="card-body">
+          
+  <p>Return a Torch tensor pointing to data_in array of rank 2 containing data of type <code>int8</code></p>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-data_in~2"></span>
+              integer(kind=int8),
+            </td>
+<td>intent(in),</td>
+              <td></td>            <td>
+              target
+            </td>
+            <td>::</td>
+            <td><strong>data_in</strong>(:,:)</td>
+            <td>
+<p>Input data that tensor will point at</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-layout~3"></span>
+              integer,
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>layout</strong>(2)</td>
+            <td>
+<p>Control order of indices</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-c_device_type~2"></span>
+              integer(kind=c_int),
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>c_device_type</strong></td>
+            <td>
+<p>Device type the tensor will live on (<code>torch_kCPU</code> or <code>torch_kCUDA</code>)</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-device_index~12"></span>
+              integer(kind=c_int),
+            </td>
+<td>intent(in),</td>
+              <td>optional</td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>device_index</strong></td>
+            <td>
+<p>device index to use for <code>torch_kCUDA</code> case</p>
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+    <h4>
+    Return Value
+    <small>type(<a href='../type/torch_tensor.html'>torch_tensor</a>)</small>
+    </h4>
+    <p>Returned tensor</p>
+
+    </div>
+  </div>
+
+              <div class="card">
+    <div class="card-header codesum"><span class="anchor" id="proc-torch_tensor_from_array_int8_3d"></span> <h3>public  function <a href='../proc/torch_tensor_from_array_int8_3d.html'>torch_tensor_from_array_int8_3d</a>(data_in, layout, c_device_type, device_index) result(tensor)  
+</h3></div>
+    <div class="card-body">
+          
+  <p>Return a Torch tensor pointing to data_in array of rank 3 containing data of type <code>int8</code></p>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-data_in~3"></span>
+              integer(kind=int8),
+            </td>
+<td>intent(in),</td>
+              <td></td>            <td>
+              target
+            </td>
+            <td>::</td>
+            <td><strong>data_in</strong>(:,:,:)</td>
+            <td>
+<p>Input data that tensor will point at</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-layout~4"></span>
+              integer,
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>layout</strong>(3)</td>
+            <td>
+<p>Control order of indices</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-c_device_type~3"></span>
+              integer(kind=c_int),
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>c_device_type</strong></td>
+            <td>
+<p>Device type the tensor will live on (<code>torch_kCPU</code> or <code>torch_kCUDA</code>)</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-device_index~13"></span>
+              integer(kind=c_int),
+            </td>
+<td>intent(in),</td>
+              <td>optional</td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>device_index</strong></td>
+            <td>
+<p>device index to use for <code>torch_kCUDA</code> case</p>
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+    <h4>
+    Return Value
+    <small>type(<a href='../type/torch_tensor.html'>torch_tensor</a>)</small>
+    </h4>
+    <p>Returned tensor</p>
+
+    </div>
+  </div>
+
+              <div class="card">
+    <div class="card-header codesum"><span class="anchor" id="proc-torch_tensor_from_array_int8_4d"></span> <h3>public  function <a href='../proc/torch_tensor_from_array_int8_4d.html'>torch_tensor_from_array_int8_4d</a>(data_in, layout, c_device_type, device_index) result(tensor)  
+</h3></div>
+    <div class="card-body">
+          
+  <p>Return a Torch tensor pointing to data_in array of rank 4 containing data of type <code>int8</code></p>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-data_in~4"></span>
+              integer(kind=int8),
+            </td>
+<td>intent(in),</td>
+              <td></td>            <td>
+              target
+            </td>
+            <td>::</td>
+            <td><strong>data_in</strong>(:,:,:,:)</td>
+            <td>
+<p>Input data that tensor will point at</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-layout~5"></span>
+              integer,
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>layout</strong>(4)</td>
+            <td>
+<p>Control order of indices</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-c_device_type~4"></span>
+              integer(kind=c_int),
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>c_device_type</strong></td>
+            <td>
+<p>Device type the tensor will live on (<code>torch_kCPU</code> or <code>torch_kCUDA</code>)</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-device_index~14"></span>
+              integer(kind=c_int),
+            </td>
+<td>intent(in),</td>
+              <td>optional</td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>device_index</strong></td>
+            <td>
+<p>device index to use for <code>torch_kCUDA</code> case</p>
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+    <h4>
+    Return Value
+    <small>type(<a href='../type/torch_tensor.html'>torch_tensor</a>)</small>
+    </h4>
+    <p>Returned tensor</p>
+
+    </div>
+  </div>
+
+              <div class="card">
+    <div class="card-header codesum"><span class="anchor" id="proc-torch_tensor_from_array_real32_1d"></span> <h3>public  function <a href='../proc/torch_tensor_from_array_real32_1d.html'>torch_tensor_from_array_real32_1d</a>(data_in, layout, c_device_type, device_index) result(tensor)  
+</h3></div>
+    <div class="card-body">
+          
+  <p>Return a Torch tensor pointing to data_in array of rank 1 containing data of type <code>real32</code></p>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-data_in~17"></span>
+              real(kind=real32),
+            </td>
+<td>intent(in),</td>
+              <td></td>            <td>
+              target
+            </td>
+            <td>::</td>
+            <td><strong>data_in</strong>(:)</td>
+            <td>
+<p>Input data that tensor will point at</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-layout~18"></span>
+              integer,
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>layout</strong>(1)</td>
+            <td>
+<p>Control order of indices</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-c_device_type~17"></span>
+              integer(kind=c_int),
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>c_device_type</strong></td>
+            <td>
+<p>Device type the tensor will live on (<code>torch_kCPU</code> or <code>torch_kCUDA</code>)</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-device_index~27"></span>
+              integer(kind=c_int),
+            </td>
+<td>intent(in),</td>
+              <td>optional</td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>device_index</strong></td>
+            <td>
+<p>device index to use for <code>torch_kCUDA</code> case</p>
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+    <h4>
+    Return Value
+    <small>type(<a href='../type/torch_tensor.html'>torch_tensor</a>)</small>
+    </h4>
+    <p>Returned tensor</p>
+
+    </div>
+  </div>
+
+              <div class="card">
+    <div class="card-header codesum"><span class="anchor" id="proc-torch_tensor_from_array_real32_2d"></span> <h3>public  function <a href='../proc/torch_tensor_from_array_real32_2d.html'>torch_tensor_from_array_real32_2d</a>(data_in, layout, c_device_type, device_index) result(tensor)  
+</h3></div>
+    <div class="card-body">
+          
+  <p>Return a Torch tensor pointing to data_in array of rank 2 containing data of type <code>real32</code></p>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-data_in~18"></span>
+              real(kind=real32),
+            </td>
+<td>intent(in),</td>
+              <td></td>            <td>
+              target
+            </td>
+            <td>::</td>
+            <td><strong>data_in</strong>(:,:)</td>
+            <td>
+<p>Input data that tensor will point at</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-layout~19"></span>
+              integer,
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>layout</strong>(2)</td>
+            <td>
+<p>Control order of indices</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-c_device_type~18"></span>
+              integer(kind=c_int),
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>c_device_type</strong></td>
+            <td>
+<p>Device type the tensor will live on (<code>torch_kCPU</code> or <code>torch_kCUDA</code>)</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-device_index~28"></span>
+              integer(kind=c_int),
+            </td>
+<td>intent(in),</td>
+              <td>optional</td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>device_index</strong></td>
+            <td>
+<p>device index to use for <code>torch_kCUDA</code> case</p>
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+    <h4>
+    Return Value
+    <small>type(<a href='../type/torch_tensor.html'>torch_tensor</a>)</small>
+    </h4>
+    <p>Returned tensor</p>
+
+    </div>
+  </div>
+
+              <div class="card">
+    <div class="card-header codesum"><span class="anchor" id="proc-torch_tensor_from_array_real32_3d"></span> <h3>public  function <a href='../proc/torch_tensor_from_array_real32_3d.html'>torch_tensor_from_array_real32_3d</a>(data_in, layout, c_device_type, device_index) result(tensor)  
+</h3></div>
+    <div class="card-body">
+          
+  <p>Return a Torch tensor pointing to data_in array of rank 3 containing data of type <code>real32</code></p>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-data_in~19"></span>
+              real(kind=real32),
+            </td>
+<td>intent(in),</td>
+              <td></td>            <td>
+              target
+            </td>
+            <td>::</td>
+            <td><strong>data_in</strong>(:,:,:)</td>
+            <td>
+<p>Input data that tensor will point at</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-layout~20"></span>
+              integer,
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>layout</strong>(3)</td>
+            <td>
+<p>Control order of indices</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-c_device_type~19"></span>
+              integer(kind=c_int),
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>c_device_type</strong></td>
+            <td>
+<p>Device type the tensor will live on (<code>torch_kCPU</code> or <code>torch_kCUDA</code>)</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-device_index~29"></span>
+              integer(kind=c_int),
+            </td>
+<td>intent(in),</td>
+              <td>optional</td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>device_index</strong></td>
+            <td>
+<p>device index to use for <code>torch_kCUDA</code> case</p>
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+    <h4>
+    Return Value
+    <small>type(<a href='../type/torch_tensor.html'>torch_tensor</a>)</small>
+    </h4>
+    <p>Returned tensor</p>
+
+    </div>
+  </div>
+
+              <div class="card">
+    <div class="card-header codesum"><span class="anchor" id="proc-torch_tensor_from_array_real32_4d"></span> <h3>public  function <a href='../proc/torch_tensor_from_array_real32_4d.html'>torch_tensor_from_array_real32_4d</a>(data_in, layout, c_device_type, device_index) result(tensor)  
+</h3></div>
+    <div class="card-body">
+          
+  <p>Return a Torch tensor pointing to data_in array of rank 4 containing data of type <code>real32</code></p>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-data_in~20"></span>
+              real(kind=real32),
+            </td>
+<td>intent(in),</td>
+              <td></td>            <td>
+              target
+            </td>
+            <td>::</td>
+            <td><strong>data_in</strong>(:,:,:,:)</td>
+            <td>
+<p>Input data that tensor will point at</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-layout~21"></span>
+              integer,
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>layout</strong>(4)</td>
+            <td>
+<p>Control order of indices</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-c_device_type~20"></span>
+              integer(kind=c_int),
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>c_device_type</strong></td>
+            <td>
+<p>Device type the tensor will live on (<code>torch_kCPU</code> or <code>torch_kCUDA</code>)</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-device_index~30"></span>
+              integer(kind=c_int),
+            </td>
+<td>intent(in),</td>
+              <td>optional</td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>device_index</strong></td>
+            <td>
+<p>device index to use for <code>torch_kCUDA</code> case</p>
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+    <h4>
+    Return Value
+    <small>type(<a href='../type/torch_tensor.html'>torch_tensor</a>)</small>
+    </h4>
+    <p>Returned tensor</p>
+
+    </div>
+  </div>
+
+              <div class="card">
+    <div class="card-header codesum"><span class="anchor" id="proc-torch_tensor_from_array_real64_1d"></span> <h3>public  function <a href='../proc/torch_tensor_from_array_real64_1d.html'>torch_tensor_from_array_real64_1d</a>(data_in, layout, c_device_type, device_index) result(tensor)  
+</h3></div>
+    <div class="card-body">
+          
+  <p>Return a Torch tensor pointing to data_in array of rank 1 containing data of type <code>real64</code></p>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-data_in~21"></span>
+              real(kind=real64),
+            </td>
+<td>intent(in),</td>
+              <td></td>            <td>
+              target
+            </td>
+            <td>::</td>
+            <td><strong>data_in</strong>(:)</td>
+            <td>
+<p>Input data that tensor will point at</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-layout~22"></span>
+              integer,
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>layout</strong>(1)</td>
+            <td>
+<p>Control order of indices</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-c_device_type~21"></span>
+              integer(kind=c_int),
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>c_device_type</strong></td>
+            <td>
+<p>Device type the tensor will live on (<code>torch_kCPU</code> or <code>torch_kCUDA</code>)</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-device_index~31"></span>
+              integer(kind=c_int),
+            </td>
+<td>intent(in),</td>
+              <td>optional</td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>device_index</strong></td>
+            <td>
+<p>device index to use for <code>torch_kCUDA</code> case</p>
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+    <h4>
+    Return Value
+    <small>type(<a href='../type/torch_tensor.html'>torch_tensor</a>)</small>
+    </h4>
+    <p>Returned tensor</p>
+
+    </div>
+  </div>
+
+              <div class="card">
+    <div class="card-header codesum"><span class="anchor" id="proc-torch_tensor_from_array_real64_2d"></span> <h3>public  function <a href='../proc/torch_tensor_from_array_real64_2d.html'>torch_tensor_from_array_real64_2d</a>(data_in, layout, c_device_type, device_index) result(tensor)  
+</h3></div>
+    <div class="card-body">
+          
+  <p>Return a Torch tensor pointing to data_in array of rank 2 containing data of type <code>real64</code></p>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-data_in~22"></span>
+              real(kind=real64),
+            </td>
+<td>intent(in),</td>
+              <td></td>            <td>
+              target
+            </td>
+            <td>::</td>
+            <td><strong>data_in</strong>(:,:)</td>
+            <td>
+<p>Input data that tensor will point at</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-layout~23"></span>
+              integer,
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>layout</strong>(2)</td>
+            <td>
+<p>Control order of indices</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-c_device_type~22"></span>
+              integer(kind=c_int),
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>c_device_type</strong></td>
+            <td>
+<p>Device type the tensor will live on (<code>torch_kCPU</code> or <code>torch_kCUDA</code>)</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-device_index~32"></span>
+              integer(kind=c_int),
+            </td>
+<td>intent(in),</td>
+              <td>optional</td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>device_index</strong></td>
+            <td>
+<p>device index to use for <code>torch_kCUDA</code> case</p>
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+    <h4>
+    Return Value
+    <small>type(<a href='../type/torch_tensor.html'>torch_tensor</a>)</small>
+    </h4>
+    <p>Returned tensor</p>
+
+    </div>
+  </div>
+
+              <div class="card">
+    <div class="card-header codesum"><span class="anchor" id="proc-torch_tensor_from_array_real64_3d"></span> <h3>public  function <a href='../proc/torch_tensor_from_array_real64_3d.html'>torch_tensor_from_array_real64_3d</a>(data_in, layout, c_device_type, device_index) result(tensor)  
+</h3></div>
+    <div class="card-body">
+          
+  <p>Return a Torch tensor pointing to data_in array of rank 3 containing data of type <code>real64</code></p>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-data_in~23"></span>
+              real(kind=real64),
+            </td>
+<td>intent(in),</td>
+              <td></td>            <td>
+              target
+            </td>
+            <td>::</td>
+            <td><strong>data_in</strong>(:,:,:)</td>
+            <td>
+<p>Input data that tensor will point at</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-layout~24"></span>
+              integer,
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>layout</strong>(3)</td>
+            <td>
+<p>Control order of indices</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-c_device_type~23"></span>
+              integer(kind=c_int),
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>c_device_type</strong></td>
+            <td>
+<p>Device type the tensor will live on (<code>torch_kCPU</code> or <code>torch_kCUDA</code>)</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-device_index~33"></span>
+              integer(kind=c_int),
+            </td>
+<td>intent(in),</td>
+              <td>optional</td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>device_index</strong></td>
+            <td>
+<p>device index to use for <code>torch_kCUDA</code> case</p>
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+    <h4>
+    Return Value
+    <small>type(<a href='../type/torch_tensor.html'>torch_tensor</a>)</small>
+    </h4>
+    <p>Returned tensor</p>
+
+    </div>
+  </div>
+
+              <div class="card">
+    <div class="card-header codesum"><span class="anchor" id="proc-torch_tensor_from_array_real64_4d"></span> <h3>public  function <a href='../proc/torch_tensor_from_array_real64_4d.html'>torch_tensor_from_array_real64_4d</a>(data_in, layout, c_device_type, device_index) result(tensor)  
+</h3></div>
+    <div class="card-body">
+          
+  <p>Return a Torch tensor pointing to data_in array of rank 4 containing data of type <code>real64</code></p>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-data_in~24"></span>
+              real(kind=real64),
+            </td>
+<td>intent(in),</td>
+              <td></td>            <td>
+              target
+            </td>
+            <td>::</td>
+            <td><strong>data_in</strong>(:,:,:,:)</td>
+            <td>
+<p>Input data that tensor will point at</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-layout~25"></span>
+              integer,
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>layout</strong>(4)</td>
+            <td>
+<p>Control order of indices</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-c_device_type~24"></span>
+              integer(kind=c_int),
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>c_device_type</strong></td>
+            <td>
+<p>Device type the tensor will live on (<code>torch_kCPU</code> or <code>torch_kCUDA</code>)</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-device_index~34"></span>
+              integer(kind=c_int),
+            </td>
+<td>intent(in),</td>
+              <td>optional</td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>device_index</strong></td>
+            <td>
+<p>device index to use for <code>torch_kCUDA</code> case</p>
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+    <h4>
+    Return Value
+    <small>type(<a href='../type/torch_tensor.html'>torch_tensor</a>)</small>
+    </h4>
+    <p>Returned tensor</p>
+
+    </div>
+  </div>
+
+              <div class="card">
+    <div class="card-header codesum"><span class="anchor" id="proc-torch_tensor_from_blob"></span> <h3>public  function <a href='../proc/torch_tensor_from_blob.html'>torch_tensor_from_blob</a>(data, ndims, tensor_shape, layout, dtype, device_type, device_index) result(tensor)  
 </h3></div>
     <div class="card-body">
           
   <p>Exposes the given data as a tensor without taking ownership of the original data.
-This routine will take an (i, j, k) array and return an (k, j, i) tensor.</p>
+ This routine will take an (i, j, k) array and return an (k, j, i) tensor.</p>
 
   <h4>Arguments</h4>
       <table class="table table-striped varlist">
@@ -859,7 +4984,7 @@ This routine will take an (i, j, k) array and return an (k, j, i) tensor.</p>
     <tbody>
         <tr>
             <td>
-              <span class="anchor" id="variable-data"></span>
+              <span class="anchor" id="variable-data~2"></span>
               type(c_ptr),
             </td>
 <td>intent(in)</td>
@@ -874,7 +4999,7 @@ This routine will take an (i, j, k) array and return an (k, j, i) tensor.</p>
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-ndims"></span>
+              <span class="anchor" id="variable-ndims~6"></span>
               integer(kind=c_int),
             </td>
 <td>intent(in)</td>
@@ -889,7 +5014,7 @@ This routine will take an (i, j, k) array and return an (k, j, i) tensor.</p>
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-tensor_shape"></span>
+              <span class="anchor" id="variable-tensor_shape~6"></span>
               integer(kind=c_int64_t),
             </td>
 <td>intent(in)</td>
@@ -900,36 +5025,6 @@ This routine will take an (i, j, k) array and return an (k, j, i) tensor.</p>
             <td><strong>tensor_shape</strong>(*)</td>
             <td>
 <p>Shape of the tensor</p>
-            </td>
-        </tr>
-        <tr>
-            <td>
-              <span class="anchor" id="variable-dtype"></span>
-              integer(kind=c_int),
-            </td>
-<td>intent(in)</td>
-              <td></td>            <td>
-              
-            </td>
-            <td>::</td>
-            <td><strong>dtype</strong></td>
-            <td>
-<p>Data type of the tensor</p>
-            </td>
-        </tr>
-        <tr>
-            <td>
-              <span class="anchor" id="variable-device"></span>
-              integer(kind=c_int),
-            </td>
-<td>intent(in)</td>
-              <td></td>            <td>
-              
-            </td>
-            <td>::</td>
-            <td><strong>device</strong></td>
-            <td>
-<p>Device on which the tensor will live on (torch_kCPU or torch_kGPU)</p>
             </td>
         </tr>
         <tr>
@@ -947,69 +5042,9 @@ This routine will take an (i, j, k) array and return an (k, j, i) tensor.</p>
 <p>Layout for strides for accessing data</p>
             </td>
         </tr>
-    </tbody>
-  </table>
-
-    <h4>
-    Return Value
-    <small>type(<a href='../type/torch_tensor.html'>torch_tensor</a>)</small>
-    </h4>
-    <p>Returned tensor</p>
-
-    </div>
-  </div>
-
-              <div class="card">
-    <div class="card-header codesum"><span class="anchor" id="proc-torch_tensor_ones"></span><h3>public  function <a href='../proc/torch_tensor_ones.html'>torch_tensor_ones</a>(ndims, tensor_shape, dtype, device) result(tensor)  
-</h3></div>
-    <div class="card-body">
-          
-  <p>Returns a tensor filled with the scalar value 1.</p>
-
-  <h4>Arguments</h4>
-      <table class="table table-striped varlist">
-    <thead>
-      <tr>
-        <th scope="col">Type</th>
-<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
-        <th scope="col"></th>
-        <th scope="col">Name</th>
-        <th scope="col"></th>
-    </thead>
-    <tbody>
         <tr>
             <td>
-              <span class="anchor" id="variable-ndims~3"></span>
-              integer(kind=c_int),
-            </td>
-<td>intent(in)</td>
-              <td></td>            <td>
-              
-            </td>
-            <td>::</td>
-            <td><strong>ndims</strong></td>
-            <td>
-<p>Number of dimensions of the tensor</p>
-            </td>
-        </tr>
-        <tr>
-            <td>
-              <span class="anchor" id="variable-tensor_shape~3"></span>
-              integer(kind=c_int64_t),
-            </td>
-<td>intent(in)</td>
-              <td></td>            <td>
-              
-            </td>
-            <td>::</td>
-            <td><strong>tensor_shape</strong>(*)</td>
-            <td>
-<p>Shape of the tensor</p>
-            </td>
-        </tr>
-        <tr>
-            <td>
-              <span class="anchor" id="variable-dtype~3"></span>
+              <span class="anchor" id="variable-dtype~6"></span>
               integer(kind=c_int),
             </td>
 <td>intent(in)</td>
@@ -1024,7 +5059,7 @@ This routine will take an (i, j, k) array and return an (k, j, i) tensor.</p>
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-device~3"></span>
+              <span class="anchor" id="variable-device_type~6"></span>
               integer(kind=c_int),
             </td>
 <td>intent(in)</td>
@@ -1032,9 +5067,24 @@ This routine will take an (i, j, k) array and return an (k, j, i) tensor.</p>
               
             </td>
             <td>::</td>
-            <td><strong>device</strong></td>
+            <td><strong>device_type</strong></td>
             <td>
-<p>Device on which the tensor will live on (torch_kCPU or torch_kGPU)</p>
+<p>Device type the tensor will live on (<code>torch_kCPU</code> or <code>torch_kCUDA</code>)</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-device_index~6"></span>
+              integer(kind=c_int),
+            </td>
+<td>intent(in),</td>
+              <td>optional</td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>device_index</strong></td>
+            <td>
+<p>device index to use for <code>torch_kCUDA</code> case</p>
             </td>
         </tr>
     </tbody>
@@ -1050,11 +5100,56 @@ This routine will take an (i, j, k) array and return an (k, j, i) tensor.</p>
   </div>
 
               <div class="card">
-    <div class="card-header codesum"><span class="anchor" id="proc-torch_tensor_zeros"></span><h3>public  function <a href='../proc/torch_tensor_zeros.html'>torch_tensor_zeros</a>(ndims, tensor_shape, dtype, device) result(tensor)  
+    <div class="card-header codesum"><span class="anchor" id="proc-torch_tensor_get_device_index"></span> <h3>public  function <a href='../proc/torch_tensor_get_device_index.html'>torch_tensor_get_device_index</a>(tensor) result(device_index)  
 </h3></div>
     <div class="card-body">
           
-  <p>Returns a tensor filled with the scalar value 0.</p>
+  <p>Determines the device index of a tensor.</p>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-tensor~8"></span>
+              type(<a href='../type/torch_tensor.html'>torch_tensor</a>),
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>tensor</strong></td>
+            <td>
+<p>Input tensor</p>
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+    <h4>
+    Return Value
+    <small>integer(kind=c_int)</small>
+    </h4>
+    <p>Device index of tensor</p>
+
+    </div>
+  </div>
+
+              <div class="card">
+    <div class="card-header codesum"><span class="anchor" id="proc-torch_tensor_ones"></span> <h3>public  function <a href='../proc/torch_tensor_ones.html'>torch_tensor_ones</a>(ndims, tensor_shape, dtype, device_type, device_index) result(tensor)  
+</h3></div>
+    <div class="card-body">
+          
+  <p>Returns a tensor filled with the scalar value 1.</p>
 
   <h4>Arguments</h4>
       <table class="table table-striped varlist">
@@ -1114,7 +5209,7 @@ This routine will take an (i, j, k) array and return an (k, j, i) tensor.</p>
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-device~4"></span>
+              <span class="anchor" id="variable-device_type~4"></span>
               integer(kind=c_int),
             </td>
 <td>intent(in)</td>
@@ -1122,9 +5217,129 @@ This routine will take an (i, j, k) array and return an (k, j, i) tensor.</p>
               
             </td>
             <td>::</td>
-            <td><strong>device</strong></td>
+            <td><strong>device_type</strong></td>
             <td>
-<p>Device on which the tensor will live on (torch_kCPU or torch_kGPU)</p>
+<p>Device type the tensor will live on (<code>torch_kCPU</code> or <code>torch_kCUDA</code>)</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-device_index~4"></span>
+              integer(kind=c_int),
+            </td>
+<td>intent(in),</td>
+              <td>optional</td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>device_index</strong></td>
+            <td>
+<p>device index to use for <code>torch_kCUDA</code> case</p>
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+    <h4>
+    Return Value
+    <small>type(<a href='../type/torch_tensor.html'>torch_tensor</a>)</small>
+    </h4>
+    <p>Returned tensor</p>
+
+    </div>
+  </div>
+
+              <div class="card">
+    <div class="card-header codesum"><span class="anchor" id="proc-torch_tensor_zeros"></span> <h3>public  function <a href='../proc/torch_tensor_zeros.html'>torch_tensor_zeros</a>(ndims, tensor_shape, dtype, device_type, device_index) result(tensor)  
+</h3></div>
+    <div class="card-body">
+          
+  <p>Returns a tensor filled with the scalar value 0.</p>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-ndims~2"></span>
+              integer(kind=c_int),
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>ndims</strong></td>
+            <td>
+<p>Number of dimensions of the tensor</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-tensor_shape~2"></span>
+              integer(kind=c_int64_t),
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>tensor_shape</strong>(*)</td>
+            <td>
+<p>Shape of the tensor</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-dtype~2"></span>
+              integer(kind=c_int),
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>dtype</strong></td>
+            <td>
+<p>Data type of the tensor</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-device_type~2"></span>
+              integer(kind=c_int),
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>device_type</strong></td>
+            <td>
+<p>Device type the tensor will live on (<code>torch_kCPU</code> or <code>torch_kCUDA</code>)</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-device_index~2"></span>
+              integer(kind=c_int),
+            </td>
+<td>intent(in),</td>
+              <td>optional</td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>device_index</strong></td>
+            <td>
+<p>device index to use for <code>torch_kCUDA</code> case</p>
             </td>
         </tr>
     </tbody>
@@ -1145,11 +5360,11 @@ This routine will take an (i, j, k) array and return an (k, j, i) tensor.</p>
         <section>
           <h2>Subroutines</h2>
               <div class="card">
-    <div class="card-header codesum"><span class="anchor" id="proc-torch_module_delete"></span><h3>public  subroutine <a href='../proc/torch_module_delete.html'>torch_module_delete</a>(module)  
+    <div class="card-header codesum"><span class="anchor" id="proc-torch_module_delete"></span> <h3>public  subroutine <a href='../proc/torch_module_delete.html'>torch_module_delete</a>(module)  
 </h3></div>
     <div class="card-body">
           
-  <p>Deallocates a Torch Script module</p>
+  <p>Deallocates a TorchScript module</p>
 
   <h4>Arguments</h4>
       <table class="table table-striped varlist">
@@ -1164,7 +5379,7 @@ This routine will take an (i, j, k) array and return an (k, j, i) tensor.</p>
     <tbody>
         <tr>
             <td>
-              <span class="anchor" id="variable-module~3"></span>
+              <span class="anchor" id="variable-module~5"></span>
               type(<a href='../type/torch_module.html'>torch_module</a>),
             </td>
 <td>intent(in)</td>
@@ -1174,7 +5389,7 @@ This routine will take an (i, j, k) array and return an (k, j, i) tensor.</p>
             <td>::</td>
             <td><strong>module</strong></td>
             <td>
-<p>Module</p>
+<p>Module to deallocate</p>
             </td>
         </tr>
     </tbody>
@@ -1185,7 +5400,7 @@ This routine will take an (i, j, k) array and return an (k, j, i) tensor.</p>
   </div>
 
               <div class="card">
-    <div class="card-header codesum"><span class="anchor" id="proc-torch_module_forward"></span><h3>public  subroutine <a href='../proc/torch_module_forward.html'>torch_module_forward</a>(module, input_tensors, n_inputs, output_tensor)  
+    <div class="card-header codesum"><span class="anchor" id="proc-torch_module_forward"></span> <h3>public  subroutine <a href='../proc/torch_module_forward.html'>torch_module_forward</a>(module, input_tensors, n_inputs, output_tensor)  
 </h3></div>
     <div class="card-body">
           
@@ -1204,7 +5419,7 @@ This routine will take an (i, j, k) array and return an (k, j, i) tensor.</p>
     <tbody>
         <tr>
             <td>
-              <span class="anchor" id="variable-module~2"></span>
+              <span class="anchor" id="variable-module~3"></span>
               type(<a href='../type/torch_module.html'>torch_module</a>),
             </td>
 <td>intent(in)</td>
@@ -1244,7 +5459,7 @@ This routine will take an (i, j, k) array and return an (k, j, i) tensor.</p>
             <td>::</td>
             <td><strong>n_inputs</strong></td>
             <td>
-<p>Number of tensors in <code>input_tensors</code></p>
+
             </td>
         </tr>
         <tr>
@@ -1270,11 +5485,51 @@ This routine will take an (i, j, k) array and return an (k, j, i) tensor.</p>
   </div>
 
               <div class="card">
-    <div class="card-header codesum"><span class="anchor" id="proc-torch_tensor_delete"></span><h3>public  subroutine <a href='../proc/torch_tensor_delete.html'>torch_tensor_delete</a>(tensor)  
+    <div class="card-header codesum"><span class="anchor" id="proc-torch_tensor_delete"></span> <h3>public  subroutine <a href='../proc/torch_tensor_delete.html'>torch_tensor_delete</a>(tensor)  
 </h3></div>
     <div class="card-body">
           
   <p>Deallocates a tensor.</p>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-tensor~10"></span>
+              type(<a href='../type/torch_tensor.html'>torch_tensor</a>),
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>tensor</strong></td>
+            <td>
+<p>Input tensor</p>
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+
+    </div>
+  </div>
+
+              <div class="card">
+    <div class="card-header codesum"><span class="anchor" id="proc-torch_tensor_print"></span> <h3>public  subroutine <a href='../proc/torch_tensor_print.html'>torch_tensor_print</a>(tensor)  
+</h3></div>
+    <div class="card-body">
+          
+  <p>Prints the contents of a tensor.</p>
 
   <h4>Arguments</h4>
       <table class="table table-striped varlist">
@@ -1309,46 +5564,6 @@ This routine will take an (i, j, k) array and return an (k, j, i) tensor.</p>
     </div>
   </div>
 
-              <div class="card">
-    <div class="card-header codesum"><span class="anchor" id="proc-torch_tensor_print"></span><h3>public  subroutine <a href='../proc/torch_tensor_print.html'>torch_tensor_print</a>(tensor)  
-</h3></div>
-    <div class="card-body">
-          
-  <p>Prints the contents of a tensor.</p>
-
-  <h4>Arguments</h4>
-      <table class="table table-striped varlist">
-    <thead>
-      <tr>
-        <th scope="col">Type</th>
-<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
-        <th scope="col"></th>
-        <th scope="col">Name</th>
-        <th scope="col"></th>
-    </thead>
-    <tbody>
-        <tr>
-            <td>
-              <span class="anchor" id="variable-tensor~5"></span>
-              type(<a href='../type/torch_tensor.html'>torch_tensor</a>),
-            </td>
-<td>intent(in)</td>
-              <td></td>            <td>
-              
-            </td>
-            <td>::</td>
-            <td><strong>tensor</strong></td>
-            <td>
-<p>Input tensor</p>
-            </td>
-        </tr>
-    </tbody>
-  </table>
-
-
-    </div>
-  </div>
-
         </section>
         <br>
 
@@ -1362,7 +5577,10 @@ This routine will take an (i, j, k) array and return an (k, j, i) tensor.</p>
     <footer>
       <div class="container">
         <div class="row justify-content-between">
-          <div class="col"><p>FTorch was developed by ICCS Cambridge<br>&copy; 2023 <a rel="license" href="https://opensource.org/licenses/MIT">MIT</a>
+          <div class="col">
+            <p>
+              FTorch
+ was developed by ICCS Cambridge<br>              &copy; 2024 <a rel="license" href="https://opensource.org/licenses/MIT">MIT</a>
 </p>
           </div>
           <div class="col">

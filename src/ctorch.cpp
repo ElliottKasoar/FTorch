@@ -23,28 +23,44 @@ constexpr auto get_dtype(torch_data_t dtype)
   case torch_kFloat64:
     return torch::kFloat64;
   default:
-    std::cerr << "[ERROR]: unknown data type, setting to torch_kFloat32"
+    std::cerr << "[WARNING]: unknown data type, setting to torch_kFloat32"
               << std::endl;
     return torch::kFloat32;
   }
 }
 
-constexpr auto get_device(torch_device_t device)
+const auto get_device(torch_device_t device_type, int device_index)
 {
-  switch (device) {
+  switch (device_type) {
   case torch_kCPU:
-    return torch::kCPU;
+    if (device_index != -1) {
+      std::cerr << "[WARNING]: device index unused for CPU-only runs"
+                << std::endl;
+    }
+    return torch::Device(torch::kCPU);
   case torch_kCUDA:
-    return torch::kCUDA;
+    if (device_index == -1) {
+      std::cerr << "[WARNING]: device index unset, defaulting to 0"
+                << std::endl;
+      device_index = 0;
+    }
+    if (device_index >= 0 && device_index < torch::cuda::device_count()) {
+      return torch::Device(torch::kCUDA, device_index);
+    } else {
+      std::cerr << "[ERROR]: invalid device index " << device_index
+                << " for device count " << torch::cuda::device_count()
+                << std::endl;
+      exit(EXIT_FAILURE);
+    }
   default:
-    std::cerr << "[ERROR]: unknown device type, setting to torch_kCPU"
+    std::cerr << "[WARNING]: unknown device type, setting to torch_kCPU"
               << std::endl;
-    return torch::kCPU;
+    return torch::Device(torch::kCPU);
   }
 }
 
 torch_tensor_t torch_zeros(int ndim, const int64_t* shape, torch_data_t dtype,
-                           torch_device_t device)
+                           torch_device_t device_type, int device_index = -1)
 {
   torch::Tensor* tensor = nullptr;
   try {
@@ -52,7 +68,7 @@ torch_tensor_t torch_zeros(int ndim, const int64_t* shape, torch_data_t dtype,
     c10::IntArrayRef vshape(shape, ndim);
     tensor = new torch::Tensor;
     *tensor = torch::zeros(
-        vshape, torch::dtype(get_dtype(dtype)).device(get_device(device)));
+        vshape, torch::dtype(get_dtype(dtype))).to(get_device(device_type, device_index));
   } catch (const torch::Error& e) {
     std::cerr << "[ERROR]: " << e.msg() << std::endl;
     delete tensor;
@@ -66,7 +82,7 @@ torch_tensor_t torch_zeros(int ndim, const int64_t* shape, torch_data_t dtype,
 }
 
 torch_tensor_t torch_ones(int ndim, const int64_t* shape, torch_data_t dtype,
-                          torch_device_t device)
+                          torch_device_t device_type, int device_index = -1)
 {
   torch::Tensor* tensor = nullptr;
   try {
@@ -74,7 +90,7 @@ torch_tensor_t torch_ones(int ndim, const int64_t* shape, torch_data_t dtype,
     c10::IntArrayRef vshape(shape, ndim);
     tensor = new torch::Tensor;
     *tensor = torch::ones(
-        vshape, torch::dtype(get_dtype(dtype)).device(get_device(device)));
+        vshape, torch::dtype(get_dtype(dtype))).to(get_device(device_type, device_index));
   } catch (const torch::Error& e) {
     std::cerr << "[ERROR]: " << e.msg() << std::endl;
     delete tensor;
@@ -88,7 +104,7 @@ torch_tensor_t torch_ones(int ndim, const int64_t* shape, torch_data_t dtype,
 }
 
 torch_tensor_t torch_empty(int ndim, const int64_t* shape, torch_data_t dtype,
-                           torch_device_t device)
+                           torch_device_t device_type, int device_index = -1)
 {
   torch::Tensor* tensor = nullptr;
   try {
@@ -96,7 +112,7 @@ torch_tensor_t torch_empty(int ndim, const int64_t* shape, torch_data_t dtype,
     c10::IntArrayRef vshape(shape, ndim);
     tensor = new torch::Tensor;
     *tensor = torch::empty(
-        vshape, torch::dtype(get_dtype(dtype)).device(get_device(device)));
+        vshape, torch::dtype(get_dtype(dtype))).to(get_device(device_type, device_index));
   } catch (const torch::Error& e) {
     std::cerr << "[ERROR]: " << e.msg() << std::endl;
     delete tensor;
@@ -109,37 +125,11 @@ torch_tensor_t torch_empty(int ndim, const int64_t* shape, torch_data_t dtype,
   return tensor;
 }
 
-/*
 // Exposes the given data as a Tensor without taking ownership of the original
 // data
 torch_tensor_t torch_from_blob(void* data, int ndim, const int64_t* shape,
-                               torch_data_t dtype, torch_device_t device)
-{
-  torch::Tensor* tensor = nullptr;
-  try {
-    // This doesn't throw if shape and dimensions are incompatible
-    c10::IntArrayRef vshape(shape, ndim);
-    tensor = new torch::Tensor;
-    *tensor = torch::from_blob(
-        data, vshape,
-        torch::dtype(get_dtype(dtype)).device(get_device(device)));
-  } catch (const torch::Error& e) {
-    std::cerr << "[ERROR]: " << e.msg() << std::endl;
-    delete tensor;
-    exit(EXIT_FAILURE);
-  } catch (const std::exception& e) {
-    std::cerr << "[ERROR]: " << e.what() << std::endl;
-    delete tensor;
-    exit(EXIT_FAILURE);
-  }
-  return tensor;
-}
-
-*/
-// New version of torch_from_blob that uses strides
-torch_tensor_t torch_from_blob(void* data, int ndim, const int64_t* shape,
                                const int64_t* strides, torch_data_t dtype,
-                               torch_device_t device)
+                               torch_device_t device_type, int device_index = -1)
 {
   torch::Tensor* tensor = nullptr;
 
@@ -150,7 +140,7 @@ torch_tensor_t torch_from_blob(void* data, int ndim, const int64_t* shape,
     tensor = new torch::Tensor;
     *tensor = torch::from_blob(
         data, vshape, vstrides,
-        torch::dtype(get_dtype(dtype)).device(get_device(device)));
+        torch::dtype(get_dtype(dtype))).to(get_device(device_type, device_index));
 
   } catch (const torch::Error& e) {
     std::cerr << "[ERROR]: " << e.msg() << std::endl;
@@ -170,18 +160,26 @@ void torch_tensor_print(const torch_tensor_t tensor)
   std::cout << *t << std::endl;
 }
 
+int torch_tensor_get_device_index(const torch_tensor_t tensor)
+{
+  auto t = reinterpret_cast<torch::Tensor*>(tensor);
+  return t->device().index();
+}
+
 void torch_tensor_delete(torch_tensor_t tensor)
 {
   auto t = reinterpret_cast<torch::Tensor*>(tensor);
   delete t;
 }
 
-torch_jit_script_module_t torch_jit_load(const char* filename)
+torch_jit_script_module_t torch_jit_load(const char* filename,
+                                         const torch_device_t device_type = torch_kCPU,
+                                         const int device_index = -1)
 {
   torch::jit::script::Module* module = nullptr;
   try {
     module = new torch::jit::script::Module;
-    *module = torch::jit::load(filename);
+    *module = torch::jit::load(filename, get_device(device_type, device_index));
   } catch (const torch::Error& e) {
     std::cerr << "[ERROR]: " << e.msg() << std::endl;
     delete module;
@@ -230,9 +228,6 @@ void torch_jit_module_forward(const torch_jit_script_module_t module,
     std::cerr << "[ERROR]: " << e.what() << std::endl;
     exit(EXIT_FAILURE);
   }
-  // FIXME: this should be the responsibility of the user
-  if (out->is_cuda())
-    torch::cuda::synchronize();
 }
 
 void torch_jit_module_delete(torch_jit_script_module_t module)
