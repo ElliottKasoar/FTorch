@@ -94,8 +94,10 @@
           <nav class="nav nav-pills flex-column">
               <a class="nav-link" href="LICENSE.html">FTorch License</a>
               <a class="nav-link" href="cmake.html">Installation and Build Process</a>
+              <a class="nav-link" href="developer.html">Developer Guide</a>
               <a class="nav-link" href="examples.html">Examples</a>
               <a class="nav-link" href="gpu.html">GPU Support</a>
+              <a class="nav-link" href="testing.html">FTorch test suite</a>
               <a class="nav-link" href="transposing.html">When to transpose data</a>
               <a class="nav-link active disabled" href="troubleshooting.html">Troubleshooting</a>
           </nav>
@@ -112,6 +114,11 @@
 </ul>
 </li>
 <li><a href="#apple-silicon">Apple Silicon</a></li>
+<li><a href="#faq">FAQ</a><ul>
+<li><a href="#why-are-inputs-to-torch-models-an-array">Why are inputs to torch models an array?</a></li>
+<li><a href="#do-i-need-to-set-torchno_grad-or-torcheval-somewhere-like-in-pytorch">Do I need to set torch.no_grad() or torch.eval() somewhere like in PyTorch?</a></li>
+</ul>
+</li>
 </ul>
 </div>
 <h2 id="windows">Windows</h2>
@@ -128,13 +135,13 @@ In this case you must install </p>
 <p>You will then need to load the intel Fortran compilers using <code>setvars.bat</code>
 which is found in the Intel compiler install directory (see the 
 <a href="https://www.intel.com/content/www/us/en/docs/oneapi/programming-guide/2023-2/use-the-setvars-script-with-windows.html">intel docs</a>)
-for more details.\
+for more details.<br>
 From CMD this can be done with:</p>
 <div class="codehilite"><pre><span></span><code><span class="s2">&quot;C:\Program Files (x86)\Intel\oneAPI\setvars.bat&quot;</span>
 </code></pre></div>
 
 <p>Finally you will need to add <code>-G "NMake Makefiles"</code> to the <code>cmake</code> command in the
-<a href="cmake.html">regular install instructions</a>.\
+<a href="cmake.html">regular install instructions</a>.<br>
 So the basic command to build from CMD becomes:</p>
 <div class="codehilite"><pre><span></span><code><span class="n">cmake</span><span class="w"> </span><span class="o">-</span><span class="n">G</span><span class="w"> </span><span class="s2">&quot;NMake Makefiles&quot;</span><span class="w"> </span><span class="o">-</span><span class="n">DCMAKE_PREFIX_PATH</span><span class="o">=</span><span class="s2">&quot;C:\Users\melt\Downloads\libtorch-win-shared-with-deps-2.1.0+cpu\libtorch&quot;</span><span class="w"> </span><span class="o">-</span><span class="n">DCMAKE_BUILD_TYPE</span><span class="o">=</span><span class="n">Release</span><span class="w"> </span><span class="o">..</span>
 <span class="n">cmake</span><span class="w"> </span><span class="o">--</span><span class="n">build</span><span class="w"> </span><span class="o">.</span>
@@ -160,6 +167,25 @@ However, the version of PyTorch provided by pip install provides an ARM binary
 for libtorch which works on Apple Silicon.
 Therefore you should <code>pip install torch</code> in this situation and follow the guidance
 on locating Torch within a virtual environment (venv) for CMake.</p>
+<h2 id="faq">FAQ</h2>
+<h3 id="why-are-inputs-to-torch-models-an-array">Why are inputs to torch models an array?</h3>
+<p>The reason input and output tensors to <a href="../proc/torch_module_forward.html">torch_module_forward</a> are
+contained in arrays is because it is possible to pass multiple input tensors to
+the <code>forward()</code> method of a torch net, and it is possible for the net to return
+multiple output arrays.<br>
+The nature of Fortran means that it is not possible to set an arbitrary number
+of inputs to the <code>torch_module_forward</code> subroutine, so instead we use a single
+array of input tensors which <em>can</em> have an arbitrary length. Similarly, a single
+array of output tensors is used.</p>
+<p>Note that this does not refer to batching data.
+This should be done in the same way as in Torch; by extending the dimensionality of
+the input tensors.</p>
+<h3 id="do-i-need-to-set-torchno_grad-or-torcheval-somewhere-like-in-pytorch">Do I need to set torch.no_grad() or torch.eval() somewhere like in PyTorch?</h3>
+<p>By default we disable gradient calculations for tensors and models and place models in
+evaluation mode for efficiency.
+These can be adjusted using the <code>requires_grad</code> and <code>is_training</code> optional arguments
+in the Fortran interface. See the <a href="lists/procedures.html">API procedures documentation</a>
+for details.</p>
     </div>
   </div>
       <hr>
