@@ -75,7 +75,7 @@
 
             <li class="list-inline-item" id="statements"><i class="fa fa-list-ol"></i>
               <a data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-html="true"
-                 title="100.0% of total for modules and submodules.">1141 statements</a>
+                 title="100.0% of total for modules and submodules.">1153 statements</a>
             </li>
 
             <li class="list-inline-item" id="source-file">
@@ -133,6 +133,7 @@
       </a>
       <div id="inters-0" class="collapse">
         <div class="list-group list-group-flush">
+            <a class="list-group-item" href="../module/ftorch.html#interface-torch_delete">torch_delete</a>
             <a class="list-group-item" href="../module/ftorch.html#interface-torch_from_blob_c">torch_from_blob_c</a>
             <a class="list-group-item" href="../module/ftorch.html#interface-torch_tensor_from_array">torch_tensor_from_array</a>
         </div>
@@ -147,7 +148,7 @@
       </a>
       <div id="types-0" class="collapse">
         <div class="list-group list-group-flush">
-            <a class="list-group-item" href="../module/ftorch.html#type-torch_module">torch_module</a>
+            <a class="list-group-item" href="../module/ftorch.html#type-torch_model">torch_model</a>
             <a class="list-group-item" href="../module/ftorch.html#type-torch_tensor">torch_tensor</a>
         </div>
       </div>
@@ -160,7 +161,23 @@
       </a>
       <div id="funcs-0" class="collapse">
         <div class="list-group list-group-flush">
-            <a class="list-group-item" href="../module/ftorch.html#proc-torch_module_load">torch_module_load</a>
+            <a class="list-group-item" href="../module/ftorch.html#proc-torch_tensor_get_device_index">torch_tensor_get_device_index</a>
+        </div>
+      </div>
+    </div>
+
+      <div class="card mb-4">
+      <a data-bs-toggle="collapse" href="#subs-0"
+         aria-expanded="false" aria-controls="subs-0">
+         <h4 class="card-header bg-primary text-white">Subroutines</h4>
+      </a>
+      <div id="subs-0" class="collapse">
+        <div class="list-group list-group-flush">
+            <a class="list-group-item" href="../module/ftorch.html#proc-torch_model_delete">torch_model_delete</a>
+            <a class="list-group-item" href="../module/ftorch.html#proc-torch_model_forward">torch_model_forward</a>
+            <a class="list-group-item" href="../module/ftorch.html#proc-torch_model_load">torch_model_load</a>
+            <a class="list-group-item" href="../module/ftorch.html#proc-torch_tensor_array_delete">torch_tensor_array_delete</a>
+            <a class="list-group-item" href="../module/ftorch.html#proc-torch_tensor_delete">torch_tensor_delete</a>
             <a class="list-group-item" href="../module/ftorch.html#proc-torch_tensor_from_array_int16_1d">torch_tensor_from_array_int16_1d</a>
             <a class="list-group-item" href="../module/ftorch.html#proc-torch_tensor_from_array_int16_2d">torch_tensor_from_array_int16_2d</a>
             <a class="list-group-item" href="../module/ftorch.html#proc-torch_tensor_from_array_int16_3d">torch_tensor_from_array_int16_3d</a>
@@ -186,24 +203,9 @@
             <a class="list-group-item" href="../module/ftorch.html#proc-torch_tensor_from_array_real64_3d">torch_tensor_from_array_real64_3d</a>
             <a class="list-group-item" href="../module/ftorch.html#proc-torch_tensor_from_array_real64_4d">torch_tensor_from_array_real64_4d</a>
             <a class="list-group-item" href="../module/ftorch.html#proc-torch_tensor_from_blob">torch_tensor_from_blob</a>
-            <a class="list-group-item" href="../module/ftorch.html#proc-torch_tensor_get_device_index">torch_tensor_get_device_index</a>
             <a class="list-group-item" href="../module/ftorch.html#proc-torch_tensor_ones">torch_tensor_ones</a>
-            <a class="list-group-item" href="../module/ftorch.html#proc-torch_tensor_zeros">torch_tensor_zeros</a>
-        </div>
-      </div>
-    </div>
-
-      <div class="card mb-4">
-      <a data-bs-toggle="collapse" href="#subs-0"
-         aria-expanded="false" aria-controls="subs-0">
-         <h4 class="card-header bg-primary text-white">Subroutines</h4>
-      </a>
-      <div id="subs-0" class="collapse">
-        <div class="list-group list-group-flush">
-            <a class="list-group-item" href="../module/ftorch.html#proc-torch_module_delete">torch_module_delete</a>
-            <a class="list-group-item" href="../module/ftorch.html#proc-torch_module_forward">torch_module_forward</a>
-            <a class="list-group-item" href="../module/ftorch.html#proc-torch_tensor_delete">torch_tensor_delete</a>
             <a class="list-group-item" href="../module/ftorch.html#proc-torch_tensor_print">torch_tensor_print</a>
+            <a class="list-group-item" href="../module/ftorch.html#proc-torch_tensor_zeros">torch_tensor_zeros</a>
         </div>
       </div>
     </div>
@@ -236,8 +238,8 @@
         <ul class="list-group list-group-flush">
             <li class="list-group-item">
               <ul class="list-inline">
-                  <li class="list-inline-item"><a href='http://fortranwiki.org/fortran/show/iso_fortran_env'>iso_fortran_env</a></li>
                   <li class="list-inline-item"><a href='http://fortranwiki.org/fortran/show/iso_c_binding'>iso_c_binding</a></li>
+                  <li class="list-inline-item"><a href='http://fortranwiki.org/fortran/show/iso_fortran_env'>iso_fortran_env</a></li>
               </ul>
             </li>
         </ul>
@@ -327,6 +329,136 @@
 
         <section>
           <h2>Interfaces</h2>
+              <div class="card">
+    <div class="card-header bg-light codesum">
+      <span class="anchor" id="interface-torch_delete"></span>
+      <h3>public        interface <a href='../interface/torch_delete.html'>torch_delete</a> 
+      </h3>
+    </div>
+      <div class="card-body">
+        <p>Interface for deleting generic torch objects</p>
+      </div>
+    <ul class="list-group">
+          <li class="list-group-item">
+                <h3>
+    public  subroutine <a href='../proc/torch_model_delete.html'>torch_model_delete</a>(model)  
+
+    </h3>
+    
+  <p>Deallocates a TorchScript model</p>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-model~5"></span>
+              type(<a href='../type/torch_model.html'>torch_model</a>),
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>model</strong></td>
+            <td>
+<p>Torch Model to deallocate</p>
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+
+          </li>
+          <li class="list-group-item">
+                <h3>
+    public  subroutine <a href='../proc/torch_tensor_delete.html'>torch_tensor_delete</a>(tensor)  
+
+    </h3>
+    
+  <p>Deallocates a tensor.</p>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-tensor~10"></span>
+              type(<a href='../type/torch_tensor.html'>torch_tensor</a>),
+            </td>
+<td>intent(inout)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>tensor</strong></td>
+            <td>
+
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+
+          </li>
+          <li class="list-group-item">
+                <h3>
+    public  subroutine <a href='../proc/torch_tensor_array_delete.html'>torch_tensor_array_delete</a>(tensor_array)  
+
+    </h3>
+    
+  <p>Deallocates an array of tensors.</p>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-tensor_array"></span>
+              type(<a href='../type/torch_tensor.html'>torch_tensor</a>),
+            </td>
+<td>intent(inout),</td>
+              <td></td>            <td>
+              dimension(:)
+            </td>
+            <td>::</td>
+            <td><strong>tensor_array</strong></td>
+            <td>
+
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+
+          </li>
+    </ul>
+  </div>
+
               <div class="card">
     <div class="card-header bg-light codesum">
       <span class="anchor" id="interface-torch_from_blob_c"></span>
@@ -497,7 +629,7 @@
     <ul class="list-group">
           <li class="list-group-item">
                 <h3>
-    public  function <a href='../proc/torch_tensor_from_array_int8_1d.html'>torch_tensor_from_array_int8_1d</a>(data_in, layout, c_device_type, device_index, requires_grad_opt) result(tensor)  
+    public  subroutine <a href='../proc/torch_tensor_from_array_int8_1d.html'>torch_tensor_from_array_int8_1d</a>(tensor, data_in, layout, c_device_type, device_index, requires_grad)  
 
     </h3>
     
@@ -514,6 +646,21 @@
         <th scope="col"></th>
     </thead>
     <tbody>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-tensor~12"></span>
+              type(<a href='../type/torch_tensor.html'>torch_tensor</a>),
+            </td>
+<td>intent(out)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>tensor</strong></td>
+            <td>
+<p>Returned tensor</p>
+            </td>
+        </tr>
         <tr>
             <td>
               <span class="anchor" id="variable-data_in"></span>
@@ -576,7 +723,7 @@
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-requires_grad_opt~6"></span>
+              <span class="anchor" id="variable-requires_grad~11"></span>
               logical,
             </td>
 <td>intent(in),</td>
@@ -584,7 +731,7 @@
               
             </td>
             <td>::</td>
-            <td><strong>requires_grad_opt</strong></td>
+            <td><strong>requires_grad</strong></td>
             <td>
 <p>Whether gradients need to be computed for the created tensor</p>
             </td>
@@ -592,16 +739,11 @@
     </tbody>
   </table>
 
-    <h4>
-    Return Value
-    <small>type(<a href='../type/torch_tensor.html'>torch_tensor</a>)</small>
-    </h4>
-    <p>Returned tensor</p>
 
           </li>
           <li class="list-group-item">
                 <h3>
-    public  function <a href='../proc/torch_tensor_from_array_int8_2d.html'>torch_tensor_from_array_int8_2d</a>(data_in, layout, c_device_type, device_index, requires_grad_opt) result(tensor)  
+    public  subroutine <a href='../proc/torch_tensor_from_array_int8_2d.html'>torch_tensor_from_array_int8_2d</a>(tensor, data_in, layout, c_device_type, device_index, requires_grad)  
 
     </h3>
     
@@ -618,6 +760,21 @@
         <th scope="col"></th>
     </thead>
     <tbody>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-tensor~13"></span>
+              type(<a href='../type/torch_tensor.html'>torch_tensor</a>),
+            </td>
+<td>intent(out)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>tensor</strong></td>
+            <td>
+<p>Returned tensor</p>
+            </td>
+        </tr>
         <tr>
             <td>
               <span class="anchor" id="variable-data_in~2"></span>
@@ -680,7 +837,7 @@
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-requires_grad_opt~7"></span>
+              <span class="anchor" id="variable-requires_grad~12"></span>
               logical,
             </td>
 <td>intent(in),</td>
@@ -688,7 +845,7 @@
               
             </td>
             <td>::</td>
-            <td><strong>requires_grad_opt</strong></td>
+            <td><strong>requires_grad</strong></td>
             <td>
 <p>Whether gradients need to be computed for the created tensor</p>
             </td>
@@ -696,16 +853,11 @@
     </tbody>
   </table>
 
-    <h4>
-    Return Value
-    <small>type(<a href='../type/torch_tensor.html'>torch_tensor</a>)</small>
-    </h4>
-    <p>Returned tensor</p>
 
           </li>
           <li class="list-group-item">
                 <h3>
-    public  function <a href='../proc/torch_tensor_from_array_int8_3d.html'>torch_tensor_from_array_int8_3d</a>(data_in, layout, c_device_type, device_index, requires_grad_opt) result(tensor)  
+    public  subroutine <a href='../proc/torch_tensor_from_array_int8_3d.html'>torch_tensor_from_array_int8_3d</a>(tensor, data_in, layout, c_device_type, device_index, requires_grad)  
 
     </h3>
     
@@ -722,6 +874,21 @@
         <th scope="col"></th>
     </thead>
     <tbody>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-tensor~14"></span>
+              type(<a href='../type/torch_tensor.html'>torch_tensor</a>),
+            </td>
+<td>intent(out)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>tensor</strong></td>
+            <td>
+<p>Returned tensor</p>
+            </td>
+        </tr>
         <tr>
             <td>
               <span class="anchor" id="variable-data_in~3"></span>
@@ -784,7 +951,7 @@
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-requires_grad_opt~8"></span>
+              <span class="anchor" id="variable-requires_grad~13"></span>
               logical,
             </td>
 <td>intent(in),</td>
@@ -792,7 +959,7 @@
               
             </td>
             <td>::</td>
-            <td><strong>requires_grad_opt</strong></td>
+            <td><strong>requires_grad</strong></td>
             <td>
 <p>Whether gradients need to be computed for the created tensor</p>
             </td>
@@ -800,16 +967,11 @@
     </tbody>
   </table>
 
-    <h4>
-    Return Value
-    <small>type(<a href='../type/torch_tensor.html'>torch_tensor</a>)</small>
-    </h4>
-    <p>Returned tensor</p>
 
           </li>
           <li class="list-group-item">
                 <h3>
-    public  function <a href='../proc/torch_tensor_from_array_int8_4d.html'>torch_tensor_from_array_int8_4d</a>(data_in, layout, c_device_type, device_index, requires_grad_opt) result(tensor)  
+    public  subroutine <a href='../proc/torch_tensor_from_array_int8_4d.html'>torch_tensor_from_array_int8_4d</a>(tensor, data_in, layout, c_device_type, device_index, requires_grad)  
 
     </h3>
     
@@ -826,6 +988,21 @@
         <th scope="col"></th>
     </thead>
     <tbody>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-tensor~15"></span>
+              type(<a href='../type/torch_tensor.html'>torch_tensor</a>),
+            </td>
+<td>intent(out)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>tensor</strong></td>
+            <td>
+<p>Returned tensor</p>
+            </td>
+        </tr>
         <tr>
             <td>
               <span class="anchor" id="variable-data_in~4"></span>
@@ -888,7 +1065,7 @@
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-requires_grad_opt~9"></span>
+              <span class="anchor" id="variable-requires_grad~14"></span>
               logical,
             </td>
 <td>intent(in),</td>
@@ -896,7 +1073,7 @@
               
             </td>
             <td>::</td>
-            <td><strong>requires_grad_opt</strong></td>
+            <td><strong>requires_grad</strong></td>
             <td>
 <p>Whether gradients need to be computed for the created tensor</p>
             </td>
@@ -904,16 +1081,11 @@
     </tbody>
   </table>
 
-    <h4>
-    Return Value
-    <small>type(<a href='../type/torch_tensor.html'>torch_tensor</a>)</small>
-    </h4>
-    <p>Returned tensor</p>
 
           </li>
           <li class="list-group-item">
                 <h3>
-    public  function <a href='../proc/torch_tensor_from_array_int16_1d.html'>torch_tensor_from_array_int16_1d</a>(data_in, layout, c_device_type, device_index, requires_grad_opt) result(tensor)  
+    public  subroutine <a href='../proc/torch_tensor_from_array_int16_1d.html'>torch_tensor_from_array_int16_1d</a>(tensor, data_in, layout, c_device_type, device_index, requires_grad)  
 
     </h3>
     
@@ -930,6 +1102,21 @@
         <th scope="col"></th>
     </thead>
     <tbody>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-tensor~16"></span>
+              type(<a href='../type/torch_tensor.html'>torch_tensor</a>),
+            </td>
+<td>intent(out)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>tensor</strong></td>
+            <td>
+<p>Returned tensor</p>
+            </td>
+        </tr>
         <tr>
             <td>
               <span class="anchor" id="variable-data_in~5"></span>
@@ -992,7 +1179,7 @@
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-requires_grad_opt~10"></span>
+              <span class="anchor" id="variable-requires_grad~15"></span>
               logical,
             </td>
 <td>intent(in),</td>
@@ -1000,7 +1187,7 @@
               
             </td>
             <td>::</td>
-            <td><strong>requires_grad_opt</strong></td>
+            <td><strong>requires_grad</strong></td>
             <td>
 <p>Whether gradients need to be computed for the created tensor</p>
             </td>
@@ -1008,16 +1195,11 @@
     </tbody>
   </table>
 
-    <h4>
-    Return Value
-    <small>type(<a href='../type/torch_tensor.html'>torch_tensor</a>)</small>
-    </h4>
-    <p>Returned tensor</p>
 
           </li>
           <li class="list-group-item">
                 <h3>
-    public  function <a href='../proc/torch_tensor_from_array_int16_2d.html'>torch_tensor_from_array_int16_2d</a>(data_in, layout, c_device_type, device_index, requires_grad_opt) result(tensor)  
+    public  subroutine <a href='../proc/torch_tensor_from_array_int16_2d.html'>torch_tensor_from_array_int16_2d</a>(tensor, data_in, layout, c_device_type, device_index, requires_grad)  
 
     </h3>
     
@@ -1034,6 +1216,21 @@
         <th scope="col"></th>
     </thead>
     <tbody>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-tensor~17"></span>
+              type(<a href='../type/torch_tensor.html'>torch_tensor</a>),
+            </td>
+<td>intent(out)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>tensor</strong></td>
+            <td>
+<p>Returned tensor</p>
+            </td>
+        </tr>
         <tr>
             <td>
               <span class="anchor" id="variable-data_in~6"></span>
@@ -1096,7 +1293,7 @@
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-requires_grad_opt~11"></span>
+              <span class="anchor" id="variable-requires_grad~16"></span>
               logical,
             </td>
 <td>intent(in),</td>
@@ -1104,7 +1301,7 @@
               
             </td>
             <td>::</td>
-            <td><strong>requires_grad_opt</strong></td>
+            <td><strong>requires_grad</strong></td>
             <td>
 <p>Whether gradients need to be computed for the created tensor</p>
             </td>
@@ -1112,16 +1309,11 @@
     </tbody>
   </table>
 
-    <h4>
-    Return Value
-    <small>type(<a href='../type/torch_tensor.html'>torch_tensor</a>)</small>
-    </h4>
-    <p>Returned tensor</p>
 
           </li>
           <li class="list-group-item">
                 <h3>
-    public  function <a href='../proc/torch_tensor_from_array_int16_3d.html'>torch_tensor_from_array_int16_3d</a>(data_in, layout, c_device_type, device_index, requires_grad_opt) result(tensor)  
+    public  subroutine <a href='../proc/torch_tensor_from_array_int16_3d.html'>torch_tensor_from_array_int16_3d</a>(tensor, data_in, layout, c_device_type, device_index, requires_grad)  
 
     </h3>
     
@@ -1138,6 +1330,21 @@
         <th scope="col"></th>
     </thead>
     <tbody>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-tensor~18"></span>
+              type(<a href='../type/torch_tensor.html'>torch_tensor</a>),
+            </td>
+<td>intent(out)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>tensor</strong></td>
+            <td>
+<p>Returned tensor</p>
+            </td>
+        </tr>
         <tr>
             <td>
               <span class="anchor" id="variable-data_in~7"></span>
@@ -1200,7 +1407,7 @@
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-requires_grad_opt~12"></span>
+              <span class="anchor" id="variable-requires_grad~17"></span>
               logical,
             </td>
 <td>intent(in),</td>
@@ -1208,7 +1415,7 @@
               
             </td>
             <td>::</td>
-            <td><strong>requires_grad_opt</strong></td>
+            <td><strong>requires_grad</strong></td>
             <td>
 <p>Whether gradients need to be computed for the created tensor</p>
             </td>
@@ -1216,16 +1423,11 @@
     </tbody>
   </table>
 
-    <h4>
-    Return Value
-    <small>type(<a href='../type/torch_tensor.html'>torch_tensor</a>)</small>
-    </h4>
-    <p>Returned tensor</p>
 
           </li>
           <li class="list-group-item">
                 <h3>
-    public  function <a href='../proc/torch_tensor_from_array_int16_4d.html'>torch_tensor_from_array_int16_4d</a>(data_in, layout, c_device_type, device_index, requires_grad_opt) result(tensor)  
+    public  subroutine <a href='../proc/torch_tensor_from_array_int16_4d.html'>torch_tensor_from_array_int16_4d</a>(tensor, data_in, layout, c_device_type, device_index, requires_grad)  
 
     </h3>
     
@@ -1242,6 +1444,21 @@
         <th scope="col"></th>
     </thead>
     <tbody>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-tensor~19"></span>
+              type(<a href='../type/torch_tensor.html'>torch_tensor</a>),
+            </td>
+<td>intent(out)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>tensor</strong></td>
+            <td>
+<p>Returned tensor</p>
+            </td>
+        </tr>
         <tr>
             <td>
               <span class="anchor" id="variable-data_in~8"></span>
@@ -1304,7 +1521,7 @@
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-requires_grad_opt~13"></span>
+              <span class="anchor" id="variable-requires_grad~18"></span>
               logical,
             </td>
 <td>intent(in),</td>
@@ -1312,7 +1529,7 @@
               
             </td>
             <td>::</td>
-            <td><strong>requires_grad_opt</strong></td>
+            <td><strong>requires_grad</strong></td>
             <td>
 <p>Whether gradients need to be computed for the created tensor</p>
             </td>
@@ -1320,16 +1537,11 @@
     </tbody>
   </table>
 
-    <h4>
-    Return Value
-    <small>type(<a href='../type/torch_tensor.html'>torch_tensor</a>)</small>
-    </h4>
-    <p>Returned tensor</p>
 
           </li>
           <li class="list-group-item">
                 <h3>
-    public  function <a href='../proc/torch_tensor_from_array_int32_1d.html'>torch_tensor_from_array_int32_1d</a>(data_in, layout, c_device_type, device_index, requires_grad_opt) result(tensor)  
+    public  subroutine <a href='../proc/torch_tensor_from_array_int32_1d.html'>torch_tensor_from_array_int32_1d</a>(tensor, data_in, layout, c_device_type, device_index, requires_grad)  
 
     </h3>
     
@@ -1346,6 +1558,21 @@
         <th scope="col"></th>
     </thead>
     <tbody>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-tensor~20"></span>
+              type(<a href='../type/torch_tensor.html'>torch_tensor</a>),
+            </td>
+<td>intent(out)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>tensor</strong></td>
+            <td>
+<p>Returned tensor</p>
+            </td>
+        </tr>
         <tr>
             <td>
               <span class="anchor" id="variable-data_in~9"></span>
@@ -1408,7 +1635,7 @@
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-requires_grad_opt~14"></span>
+              <span class="anchor" id="variable-requires_grad~19"></span>
               logical,
             </td>
 <td>intent(in),</td>
@@ -1416,7 +1643,7 @@
               
             </td>
             <td>::</td>
-            <td><strong>requires_grad_opt</strong></td>
+            <td><strong>requires_grad</strong></td>
             <td>
 <p>Whether gradients need to be computed for the created tensor</p>
             </td>
@@ -1424,16 +1651,11 @@
     </tbody>
   </table>
 
-    <h4>
-    Return Value
-    <small>type(<a href='../type/torch_tensor.html'>torch_tensor</a>)</small>
-    </h4>
-    <p>Returned tensor</p>
 
           </li>
           <li class="list-group-item">
                 <h3>
-    public  function <a href='../proc/torch_tensor_from_array_int32_2d.html'>torch_tensor_from_array_int32_2d</a>(data_in, layout, c_device_type, device_index, requires_grad_opt) result(tensor)  
+    public  subroutine <a href='../proc/torch_tensor_from_array_int32_2d.html'>torch_tensor_from_array_int32_2d</a>(tensor, data_in, layout, c_device_type, device_index, requires_grad)  
 
     </h3>
     
@@ -1450,6 +1672,21 @@
         <th scope="col"></th>
     </thead>
     <tbody>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-tensor~21"></span>
+              type(<a href='../type/torch_tensor.html'>torch_tensor</a>),
+            </td>
+<td>intent(out)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>tensor</strong></td>
+            <td>
+<p>Returned tensor</p>
+            </td>
+        </tr>
         <tr>
             <td>
               <span class="anchor" id="variable-data_in~10"></span>
@@ -1512,7 +1749,7 @@
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-requires_grad_opt~15"></span>
+              <span class="anchor" id="variable-requires_grad~20"></span>
               logical,
             </td>
 <td>intent(in),</td>
@@ -1520,7 +1757,7 @@
               
             </td>
             <td>::</td>
-            <td><strong>requires_grad_opt</strong></td>
+            <td><strong>requires_grad</strong></td>
             <td>
 <p>Whether gradients need to be computed for the created tensor</p>
             </td>
@@ -1528,16 +1765,11 @@
     </tbody>
   </table>
 
-    <h4>
-    Return Value
-    <small>type(<a href='../type/torch_tensor.html'>torch_tensor</a>)</small>
-    </h4>
-    <p>Returned tensor</p>
 
           </li>
           <li class="list-group-item">
                 <h3>
-    public  function <a href='../proc/torch_tensor_from_array_int32_3d.html'>torch_tensor_from_array_int32_3d</a>(data_in, layout, c_device_type, device_index, requires_grad_opt) result(tensor)  
+    public  subroutine <a href='../proc/torch_tensor_from_array_int32_3d.html'>torch_tensor_from_array_int32_3d</a>(tensor, data_in, layout, c_device_type, device_index, requires_grad)  
 
     </h3>
     
@@ -1554,6 +1786,21 @@
         <th scope="col"></th>
     </thead>
     <tbody>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-tensor~22"></span>
+              type(<a href='../type/torch_tensor.html'>torch_tensor</a>),
+            </td>
+<td>intent(out)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>tensor</strong></td>
+            <td>
+<p>Returned tensor</p>
+            </td>
+        </tr>
         <tr>
             <td>
               <span class="anchor" id="variable-data_in~11"></span>
@@ -1616,7 +1863,7 @@
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-requires_grad_opt~16"></span>
+              <span class="anchor" id="variable-requires_grad~21"></span>
               logical,
             </td>
 <td>intent(in),</td>
@@ -1624,7 +1871,7 @@
               
             </td>
             <td>::</td>
-            <td><strong>requires_grad_opt</strong></td>
+            <td><strong>requires_grad</strong></td>
             <td>
 <p>Whether gradients need to be computed for the created tensor</p>
             </td>
@@ -1632,16 +1879,11 @@
     </tbody>
   </table>
 
-    <h4>
-    Return Value
-    <small>type(<a href='../type/torch_tensor.html'>torch_tensor</a>)</small>
-    </h4>
-    <p>Returned tensor</p>
 
           </li>
           <li class="list-group-item">
                 <h3>
-    public  function <a href='../proc/torch_tensor_from_array_int32_4d.html'>torch_tensor_from_array_int32_4d</a>(data_in, layout, c_device_type, device_index, requires_grad_opt) result(tensor)  
+    public  subroutine <a href='../proc/torch_tensor_from_array_int32_4d.html'>torch_tensor_from_array_int32_4d</a>(tensor, data_in, layout, c_device_type, device_index, requires_grad)  
 
     </h3>
     
@@ -1658,6 +1900,21 @@
         <th scope="col"></th>
     </thead>
     <tbody>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-tensor~23"></span>
+              type(<a href='../type/torch_tensor.html'>torch_tensor</a>),
+            </td>
+<td>intent(out)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>tensor</strong></td>
+            <td>
+<p>Returned tensor</p>
+            </td>
+        </tr>
         <tr>
             <td>
               <span class="anchor" id="variable-data_in~12"></span>
@@ -1720,7 +1977,7 @@
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-requires_grad_opt~17"></span>
+              <span class="anchor" id="variable-requires_grad~22"></span>
               logical,
             </td>
 <td>intent(in),</td>
@@ -1728,7 +1985,7 @@
               
             </td>
             <td>::</td>
-            <td><strong>requires_grad_opt</strong></td>
+            <td><strong>requires_grad</strong></td>
             <td>
 <p>Whether gradients need to be computed for the created tensor</p>
             </td>
@@ -1736,16 +1993,11 @@
     </tbody>
   </table>
 
-    <h4>
-    Return Value
-    <small>type(<a href='../type/torch_tensor.html'>torch_tensor</a>)</small>
-    </h4>
-    <p>Returned tensor</p>
 
           </li>
           <li class="list-group-item">
                 <h3>
-    public  function <a href='../proc/torch_tensor_from_array_int64_1d.html'>torch_tensor_from_array_int64_1d</a>(data_in, layout, c_device_type, device_index, requires_grad_opt) result(tensor)  
+    public  subroutine <a href='../proc/torch_tensor_from_array_int64_1d.html'>torch_tensor_from_array_int64_1d</a>(tensor, data_in, layout, c_device_type, device_index, requires_grad)  
 
     </h3>
     
@@ -1762,6 +2014,21 @@
         <th scope="col"></th>
     </thead>
     <tbody>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-tensor~24"></span>
+              type(<a href='../type/torch_tensor.html'>torch_tensor</a>),
+            </td>
+<td>intent(out)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>tensor</strong></td>
+            <td>
+<p>Returned tensor</p>
+            </td>
+        </tr>
         <tr>
             <td>
               <span class="anchor" id="variable-data_in~13"></span>
@@ -1824,7 +2091,7 @@
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-requires_grad_opt~18"></span>
+              <span class="anchor" id="variable-requires_grad~23"></span>
               logical,
             </td>
 <td>intent(in),</td>
@@ -1832,7 +2099,7 @@
               
             </td>
             <td>::</td>
-            <td><strong>requires_grad_opt</strong></td>
+            <td><strong>requires_grad</strong></td>
             <td>
 <p>Whether gradients need to be computed for the created tensor</p>
             </td>
@@ -1840,16 +2107,11 @@
     </tbody>
   </table>
 
-    <h4>
-    Return Value
-    <small>type(<a href='../type/torch_tensor.html'>torch_tensor</a>)</small>
-    </h4>
-    <p>Returned tensor</p>
 
           </li>
           <li class="list-group-item">
                 <h3>
-    public  function <a href='../proc/torch_tensor_from_array_int64_2d.html'>torch_tensor_from_array_int64_2d</a>(data_in, layout, c_device_type, device_index, requires_grad_opt) result(tensor)  
+    public  subroutine <a href='../proc/torch_tensor_from_array_int64_2d.html'>torch_tensor_from_array_int64_2d</a>(tensor, data_in, layout, c_device_type, device_index, requires_grad)  
 
     </h3>
     
@@ -1866,6 +2128,21 @@
         <th scope="col"></th>
     </thead>
     <tbody>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-tensor~25"></span>
+              type(<a href='../type/torch_tensor.html'>torch_tensor</a>),
+            </td>
+<td>intent(out)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>tensor</strong></td>
+            <td>
+<p>Returned tensor</p>
+            </td>
+        </tr>
         <tr>
             <td>
               <span class="anchor" id="variable-data_in~14"></span>
@@ -1928,7 +2205,7 @@
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-requires_grad_opt~19"></span>
+              <span class="anchor" id="variable-requires_grad~24"></span>
               logical,
             </td>
 <td>intent(in),</td>
@@ -1936,7 +2213,7 @@
               
             </td>
             <td>::</td>
-            <td><strong>requires_grad_opt</strong></td>
+            <td><strong>requires_grad</strong></td>
             <td>
 <p>Whether gradients need to be computed for the created tensor</p>
             </td>
@@ -1944,16 +2221,11 @@
     </tbody>
   </table>
 
-    <h4>
-    Return Value
-    <small>type(<a href='../type/torch_tensor.html'>torch_tensor</a>)</small>
-    </h4>
-    <p>Returned tensor</p>
 
           </li>
           <li class="list-group-item">
                 <h3>
-    public  function <a href='../proc/torch_tensor_from_array_int64_3d.html'>torch_tensor_from_array_int64_3d</a>(data_in, layout, c_device_type, device_index, requires_grad_opt) result(tensor)  
+    public  subroutine <a href='../proc/torch_tensor_from_array_int64_3d.html'>torch_tensor_from_array_int64_3d</a>(tensor, data_in, layout, c_device_type, device_index, requires_grad)  
 
     </h3>
     
@@ -1970,6 +2242,21 @@
         <th scope="col"></th>
     </thead>
     <tbody>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-tensor~26"></span>
+              type(<a href='../type/torch_tensor.html'>torch_tensor</a>),
+            </td>
+<td>intent(out)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>tensor</strong></td>
+            <td>
+<p>Returned tensor</p>
+            </td>
+        </tr>
         <tr>
             <td>
               <span class="anchor" id="variable-data_in~15"></span>
@@ -2032,7 +2319,7 @@
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-requires_grad_opt~20"></span>
+              <span class="anchor" id="variable-requires_grad~25"></span>
               logical,
             </td>
 <td>intent(in),</td>
@@ -2040,7 +2327,7 @@
               
             </td>
             <td>::</td>
-            <td><strong>requires_grad_opt</strong></td>
+            <td><strong>requires_grad</strong></td>
             <td>
 <p>Whether gradients need to be computed for the created tensor</p>
             </td>
@@ -2048,16 +2335,11 @@
     </tbody>
   </table>
 
-    <h4>
-    Return Value
-    <small>type(<a href='../type/torch_tensor.html'>torch_tensor</a>)</small>
-    </h4>
-    <p>Returned tensor</p>
 
           </li>
           <li class="list-group-item">
                 <h3>
-    public  function <a href='../proc/torch_tensor_from_array_int64_4d.html'>torch_tensor_from_array_int64_4d</a>(data_in, layout, c_device_type, device_index, requires_grad_opt) result(tensor)  
+    public  subroutine <a href='../proc/torch_tensor_from_array_int64_4d.html'>torch_tensor_from_array_int64_4d</a>(tensor, data_in, layout, c_device_type, device_index, requires_grad)  
 
     </h3>
     
@@ -2074,6 +2356,21 @@
         <th scope="col"></th>
     </thead>
     <tbody>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-tensor~27"></span>
+              type(<a href='../type/torch_tensor.html'>torch_tensor</a>),
+            </td>
+<td>intent(out)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>tensor</strong></td>
+            <td>
+<p>Returned tensor</p>
+            </td>
+        </tr>
         <tr>
             <td>
               <span class="anchor" id="variable-data_in~16"></span>
@@ -2136,7 +2433,7 @@
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-requires_grad_opt~21"></span>
+              <span class="anchor" id="variable-requires_grad~26"></span>
               logical,
             </td>
 <td>intent(in),</td>
@@ -2144,7 +2441,7 @@
               
             </td>
             <td>::</td>
-            <td><strong>requires_grad_opt</strong></td>
+            <td><strong>requires_grad</strong></td>
             <td>
 <p>Whether gradients need to be computed for the created tensor</p>
             </td>
@@ -2152,16 +2449,11 @@
     </tbody>
   </table>
 
-    <h4>
-    Return Value
-    <small>type(<a href='../type/torch_tensor.html'>torch_tensor</a>)</small>
-    </h4>
-    <p>Returned tensor</p>
 
           </li>
           <li class="list-group-item">
                 <h3>
-    public  function <a href='../proc/torch_tensor_from_array_real32_1d.html'>torch_tensor_from_array_real32_1d</a>(data_in, layout, c_device_type, device_index, requires_grad_opt) result(tensor)  
+    public  subroutine <a href='../proc/torch_tensor_from_array_real32_1d.html'>torch_tensor_from_array_real32_1d</a>(tensor, data_in, layout, c_device_type, device_index, requires_grad)  
 
     </h3>
     
@@ -2178,6 +2470,21 @@
         <th scope="col"></th>
     </thead>
     <tbody>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-tensor~28"></span>
+              type(<a href='../type/torch_tensor.html'>torch_tensor</a>),
+            </td>
+<td>intent(out)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>tensor</strong></td>
+            <td>
+<p>Returned tensor</p>
+            </td>
+        </tr>
         <tr>
             <td>
               <span class="anchor" id="variable-data_in~17"></span>
@@ -2240,7 +2547,7 @@
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-requires_grad_opt~22"></span>
+              <span class="anchor" id="variable-requires_grad~27"></span>
               logical,
             </td>
 <td>intent(in),</td>
@@ -2248,7 +2555,7 @@
               
             </td>
             <td>::</td>
-            <td><strong>requires_grad_opt</strong></td>
+            <td><strong>requires_grad</strong></td>
             <td>
 <p>Whether gradients need to be computed for the created tensor</p>
             </td>
@@ -2256,16 +2563,11 @@
     </tbody>
   </table>
 
-    <h4>
-    Return Value
-    <small>type(<a href='../type/torch_tensor.html'>torch_tensor</a>)</small>
-    </h4>
-    <p>Returned tensor</p>
 
           </li>
           <li class="list-group-item">
                 <h3>
-    public  function <a href='../proc/torch_tensor_from_array_real32_2d.html'>torch_tensor_from_array_real32_2d</a>(data_in, layout, c_device_type, device_index, requires_grad_opt) result(tensor)  
+    public  subroutine <a href='../proc/torch_tensor_from_array_real32_2d.html'>torch_tensor_from_array_real32_2d</a>(tensor, data_in, layout, c_device_type, device_index, requires_grad)  
 
     </h3>
     
@@ -2282,6 +2584,21 @@
         <th scope="col"></th>
     </thead>
     <tbody>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-tensor~29"></span>
+              type(<a href='../type/torch_tensor.html'>torch_tensor</a>),
+            </td>
+<td>intent(out)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>tensor</strong></td>
+            <td>
+<p>Returned tensor</p>
+            </td>
+        </tr>
         <tr>
             <td>
               <span class="anchor" id="variable-data_in~18"></span>
@@ -2344,7 +2661,7 @@
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-requires_grad_opt~23"></span>
+              <span class="anchor" id="variable-requires_grad~28"></span>
               logical,
             </td>
 <td>intent(in),</td>
@@ -2352,7 +2669,7 @@
               
             </td>
             <td>::</td>
-            <td><strong>requires_grad_opt</strong></td>
+            <td><strong>requires_grad</strong></td>
             <td>
 <p>Whether gradients need to be computed for the created tensor</p>
             </td>
@@ -2360,16 +2677,11 @@
     </tbody>
   </table>
 
-    <h4>
-    Return Value
-    <small>type(<a href='../type/torch_tensor.html'>torch_tensor</a>)</small>
-    </h4>
-    <p>Returned tensor</p>
 
           </li>
           <li class="list-group-item">
                 <h3>
-    public  function <a href='../proc/torch_tensor_from_array_real32_3d.html'>torch_tensor_from_array_real32_3d</a>(data_in, layout, c_device_type, device_index, requires_grad_opt) result(tensor)  
+    public  subroutine <a href='../proc/torch_tensor_from_array_real32_3d.html'>torch_tensor_from_array_real32_3d</a>(tensor, data_in, layout, c_device_type, device_index, requires_grad)  
 
     </h3>
     
@@ -2386,6 +2698,21 @@
         <th scope="col"></th>
     </thead>
     <tbody>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-tensor~30"></span>
+              type(<a href='../type/torch_tensor.html'>torch_tensor</a>),
+            </td>
+<td>intent(out)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>tensor</strong></td>
+            <td>
+<p>Returned tensor</p>
+            </td>
+        </tr>
         <tr>
             <td>
               <span class="anchor" id="variable-data_in~19"></span>
@@ -2448,7 +2775,7 @@
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-requires_grad_opt~24"></span>
+              <span class="anchor" id="variable-requires_grad~29"></span>
               logical,
             </td>
 <td>intent(in),</td>
@@ -2456,7 +2783,7 @@
               
             </td>
             <td>::</td>
-            <td><strong>requires_grad_opt</strong></td>
+            <td><strong>requires_grad</strong></td>
             <td>
 <p>Whether gradients need to be computed for the created tensor</p>
             </td>
@@ -2464,16 +2791,11 @@
     </tbody>
   </table>
 
-    <h4>
-    Return Value
-    <small>type(<a href='../type/torch_tensor.html'>torch_tensor</a>)</small>
-    </h4>
-    <p>Returned tensor</p>
 
           </li>
           <li class="list-group-item">
                 <h3>
-    public  function <a href='../proc/torch_tensor_from_array_real32_4d.html'>torch_tensor_from_array_real32_4d</a>(data_in, layout, c_device_type, device_index, requires_grad_opt) result(tensor)  
+    public  subroutine <a href='../proc/torch_tensor_from_array_real32_4d.html'>torch_tensor_from_array_real32_4d</a>(tensor, data_in, layout, c_device_type, device_index, requires_grad)  
 
     </h3>
     
@@ -2490,6 +2812,21 @@
         <th scope="col"></th>
     </thead>
     <tbody>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-tensor~31"></span>
+              type(<a href='../type/torch_tensor.html'>torch_tensor</a>),
+            </td>
+<td>intent(out)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>tensor</strong></td>
+            <td>
+<p>Returned tensor</p>
+            </td>
+        </tr>
         <tr>
             <td>
               <span class="anchor" id="variable-data_in~20"></span>
@@ -2552,7 +2889,7 @@
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-requires_grad_opt~25"></span>
+              <span class="anchor" id="variable-requires_grad~30"></span>
               logical,
             </td>
 <td>intent(in),</td>
@@ -2560,7 +2897,7 @@
               
             </td>
             <td>::</td>
-            <td><strong>requires_grad_opt</strong></td>
+            <td><strong>requires_grad</strong></td>
             <td>
 <p>Whether gradients need to be computed for the created tensor</p>
             </td>
@@ -2568,16 +2905,11 @@
     </tbody>
   </table>
 
-    <h4>
-    Return Value
-    <small>type(<a href='../type/torch_tensor.html'>torch_tensor</a>)</small>
-    </h4>
-    <p>Returned tensor</p>
 
           </li>
           <li class="list-group-item">
                 <h3>
-    public  function <a href='../proc/torch_tensor_from_array_real64_1d.html'>torch_tensor_from_array_real64_1d</a>(data_in, layout, c_device_type, device_index, requires_grad_opt) result(tensor)  
+    public  subroutine <a href='../proc/torch_tensor_from_array_real64_1d.html'>torch_tensor_from_array_real64_1d</a>(tensor, data_in, layout, c_device_type, device_index, requires_grad)  
 
     </h3>
     
@@ -2594,6 +2926,21 @@
         <th scope="col"></th>
     </thead>
     <tbody>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-tensor~32"></span>
+              type(<a href='../type/torch_tensor.html'>torch_tensor</a>),
+            </td>
+<td>intent(out)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>tensor</strong></td>
+            <td>
+<p>Returned tensor</p>
+            </td>
+        </tr>
         <tr>
             <td>
               <span class="anchor" id="variable-data_in~21"></span>
@@ -2656,7 +3003,7 @@
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-requires_grad_opt~26"></span>
+              <span class="anchor" id="variable-requires_grad~31"></span>
               logical,
             </td>
 <td>intent(in),</td>
@@ -2664,7 +3011,7 @@
               
             </td>
             <td>::</td>
-            <td><strong>requires_grad_opt</strong></td>
+            <td><strong>requires_grad</strong></td>
             <td>
 <p>Whether gradients need to be computed for the created tensor</p>
             </td>
@@ -2672,16 +3019,11 @@
     </tbody>
   </table>
 
-    <h4>
-    Return Value
-    <small>type(<a href='../type/torch_tensor.html'>torch_tensor</a>)</small>
-    </h4>
-    <p>Returned tensor</p>
 
           </li>
           <li class="list-group-item">
                 <h3>
-    public  function <a href='../proc/torch_tensor_from_array_real64_2d.html'>torch_tensor_from_array_real64_2d</a>(data_in, layout, c_device_type, device_index, requires_grad_opt) result(tensor)  
+    public  subroutine <a href='../proc/torch_tensor_from_array_real64_2d.html'>torch_tensor_from_array_real64_2d</a>(tensor, data_in, layout, c_device_type, device_index, requires_grad)  
 
     </h3>
     
@@ -2698,6 +3040,21 @@
         <th scope="col"></th>
     </thead>
     <tbody>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-tensor~33"></span>
+              type(<a href='../type/torch_tensor.html'>torch_tensor</a>),
+            </td>
+<td>intent(out)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>tensor</strong></td>
+            <td>
+<p>Returned tensor</p>
+            </td>
+        </tr>
         <tr>
             <td>
               <span class="anchor" id="variable-data_in~22"></span>
@@ -2760,7 +3117,7 @@
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-requires_grad_opt~27"></span>
+              <span class="anchor" id="variable-requires_grad~32"></span>
               logical,
             </td>
 <td>intent(in),</td>
@@ -2768,7 +3125,7 @@
               
             </td>
             <td>::</td>
-            <td><strong>requires_grad_opt</strong></td>
+            <td><strong>requires_grad</strong></td>
             <td>
 <p>Whether gradients need to be computed for the created tensor</p>
             </td>
@@ -2776,16 +3133,11 @@
     </tbody>
   </table>
 
-    <h4>
-    Return Value
-    <small>type(<a href='../type/torch_tensor.html'>torch_tensor</a>)</small>
-    </h4>
-    <p>Returned tensor</p>
 
           </li>
           <li class="list-group-item">
                 <h3>
-    public  function <a href='../proc/torch_tensor_from_array_real64_3d.html'>torch_tensor_from_array_real64_3d</a>(data_in, layout, c_device_type, device_index, requires_grad_opt) result(tensor)  
+    public  subroutine <a href='../proc/torch_tensor_from_array_real64_3d.html'>torch_tensor_from_array_real64_3d</a>(tensor, data_in, layout, c_device_type, device_index, requires_grad)  
 
     </h3>
     
@@ -2802,6 +3154,21 @@
         <th scope="col"></th>
     </thead>
     <tbody>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-tensor~34"></span>
+              type(<a href='../type/torch_tensor.html'>torch_tensor</a>),
+            </td>
+<td>intent(out)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>tensor</strong></td>
+            <td>
+<p>Returned tensor</p>
+            </td>
+        </tr>
         <tr>
             <td>
               <span class="anchor" id="variable-data_in~23"></span>
@@ -2864,7 +3231,7 @@
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-requires_grad_opt~28"></span>
+              <span class="anchor" id="variable-requires_grad~33"></span>
               logical,
             </td>
 <td>intent(in),</td>
@@ -2872,7 +3239,7 @@
               
             </td>
             <td>::</td>
-            <td><strong>requires_grad_opt</strong></td>
+            <td><strong>requires_grad</strong></td>
             <td>
 <p>Whether gradients need to be computed for the created tensor</p>
             </td>
@@ -2880,16 +3247,11 @@
     </tbody>
   </table>
 
-    <h4>
-    Return Value
-    <small>type(<a href='../type/torch_tensor.html'>torch_tensor</a>)</small>
-    </h4>
-    <p>Returned tensor</p>
 
           </li>
           <li class="list-group-item">
                 <h3>
-    public  function <a href='../proc/torch_tensor_from_array_real64_4d.html'>torch_tensor_from_array_real64_4d</a>(data_in, layout, c_device_type, device_index, requires_grad_opt) result(tensor)  
+    public  subroutine <a href='../proc/torch_tensor_from_array_real64_4d.html'>torch_tensor_from_array_real64_4d</a>(tensor, data_in, layout, c_device_type, device_index, requires_grad)  
 
     </h3>
     
@@ -2906,6 +3268,21 @@
         <th scope="col"></th>
     </thead>
     <tbody>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-tensor~35"></span>
+              type(<a href='../type/torch_tensor.html'>torch_tensor</a>),
+            </td>
+<td>intent(out)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>tensor</strong></td>
+            <td>
+<p>Returned tensor</p>
+            </td>
+        </tr>
         <tr>
             <td>
               <span class="anchor" id="variable-data_in~24"></span>
@@ -2968,7 +3345,7 @@
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-requires_grad_opt~29"></span>
+              <span class="anchor" id="variable-requires_grad~34"></span>
               logical,
             </td>
 <td>intent(in),</td>
@@ -2976,7 +3353,7 @@
               
             </td>
             <td>::</td>
-            <td><strong>requires_grad_opt</strong></td>
+            <td><strong>requires_grad</strong></td>
             <td>
 <p>Whether gradients need to be computed for the created tensor</p>
             </td>
@@ -2984,11 +3361,6 @@
     </tbody>
   </table>
 
-    <h4>
-    Return Value
-    <small>type(<a href='../type/torch_tensor.html'>torch_tensor</a>)</small>
-    </h4>
-    <p>Returned tensor</p>
 
           </li>
     </ul>
@@ -3002,10 +3374,10 @@
           <h2>Derived Types</h2>
               <div class="card">
     <div class="card-header codesum">
-      <span class="anchor" id="type-torch_module"></span>
+      <span class="anchor" id="type-torch_model"></span>
       <h3>
         type, public&nbsp;::&nbsp;
-        <a href='../type/torch_module.html'>torch_module</a>
+        <a href='../type/torch_model.html'>torch_model</a>
         
       </h3>
     </div>
@@ -3037,7 +3409,7 @@
 <td> =</td>
                 <td>c_null_ptr</td>
             <td>
-<p>pointer to the neural net module in memory</p>
+<p>pointer to the neural net in memory</p>
             </td>
         </tr>
     </tbody>
@@ -3104,11 +3476,11 @@
         <section>
           <h2>Functions</h2>
               <div class="card">
-    <div class="card-header codesum"><span class="anchor" id="proc-torch_module_load"></span> <h3>public  function <a href='../proc/torch_module_load.html'>torch_module_load</a>(filename, device_type, device_index, requires_grad_opt, is_training_opt) result(module)  
+    <div class="card-header codesum"><span class="anchor" id="proc-torch_tensor_get_device_index"></span> <h3>public  function <a href='../proc/torch_tensor_get_device_index.html'>torch_tensor_get_device_index</a>(tensor) result(device_index)  
 </h3></div>
     <div class="card-body">
           
-  <p>Loads a TorchScript module (pre-trained PyTorch model saved with TorchScript)</p>
+  <p>Determines the device index of a tensor.</p>
 
   <h4>Arguments</h4>
       <table class="table table-striped varlist">
@@ -3123,6 +3495,196 @@
     <tbody>
         <tr>
             <td>
+              <span class="anchor" id="variable-tensor~8"></span>
+              type(<a href='../type/torch_tensor.html'>torch_tensor</a>),
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>tensor</strong></td>
+            <td>
+<p>Input tensor</p>
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+    <h4>
+    Return Value
+    <small>integer(kind=c_int)</small>
+    </h4>
+    <p>Device index of tensor</p>
+
+    </div>
+  </div>
+
+        </section>
+        <br>
+
+        <section>
+          <h2>Subroutines</h2>
+              <div class="card">
+    <div class="card-header codesum"><span class="anchor" id="proc-torch_model_delete"></span> <h3>public  subroutine <a href='../proc/torch_model_delete.html'>torch_model_delete</a>(model)  
+</h3></div>
+    <div class="card-body">
+          
+  <p>Deallocates a TorchScript model</p>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-model~5"></span>
+              type(<a href='../type/torch_model.html'>torch_model</a>),
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>model</strong></td>
+            <td>
+<p>Torch Model to deallocate</p>
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+
+    </div>
+  </div>
+
+              <div class="card">
+    <div class="card-header codesum"><span class="anchor" id="proc-torch_model_forward"></span> <h3>public  subroutine <a href='../proc/torch_model_forward.html'>torch_model_forward</a>(model, input_tensors, output_tensors, requires_grad)  
+</h3></div>
+    <div class="card-body">
+          
+  <p>Performs a forward pass of the model with the input tensors</p>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-model~3"></span>
+              type(<a href='../type/torch_model.html'>torch_model</a>),
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>model</strong></td>
+            <td>
+<p>Model</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-input_tensors"></span>
+              type(<a href='../type/torch_tensor.html'>torch_tensor</a>),
+            </td>
+<td>intent(in),</td>
+              <td></td>            <td>
+              dimension(:)
+            </td>
+            <td>::</td>
+            <td><strong>input_tensors</strong></td>
+            <td>
+<p>Array of Input tensors</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-output_tensors"></span>
+              type(<a href='../type/torch_tensor.html'>torch_tensor</a>),
+            </td>
+<td>intent(in),</td>
+              <td></td>            <td>
+              dimension(:)
+            </td>
+            <td>::</td>
+            <td><strong>output_tensors</strong></td>
+            <td>
+<p>Returned output tensors</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-requires_grad~9"></span>
+              logical,
+            </td>
+<td>intent(in),</td>
+              <td>optional</td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>requires_grad</strong></td>
+            <td>
+<p>Whether gradients need to be computed for the created tensor</p>
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+
+    </div>
+  </div>
+
+              <div class="card">
+    <div class="card-header codesum"><span class="anchor" id="proc-torch_model_load"></span> <h3>public  subroutine <a href='../proc/torch_model_load.html'>torch_model_load</a>(model, filename, device_type, device_index, requires_grad, is_training)  
+</h3></div>
+    <div class="card-body">
+          
+  <p>Loads a TorchScript nn.module (pre-trained PyTorch model saved with TorchScript)</p>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-model"></span>
+              type(<a href='../type/torch_model.html'>torch_model</a>),
+            </td>
+<td>intent(out)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>model</strong></td>
+            <td>
+<p>Returned deserialized model</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
               <span class="anchor" id="variable-filename"></span>
               character(len=*),
             </td>
@@ -3133,7 +3695,7 @@
             <td>::</td>
             <td><strong>filename</strong></td>
             <td>
-<p>Filename of TorchScript module</p>
+<p>Filename of saved TorchScript model</p>
             </td>
         </tr>
         <tr>
@@ -3168,7 +3730,7 @@
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-requires_grad_opt~4"></span>
+              <span class="anchor" id="variable-requires_grad~7"></span>
               logical,
             </td>
 <td>intent(in),</td>
@@ -3176,14 +3738,14 @@
               
             </td>
             <td>::</td>
-            <td><strong>requires_grad_opt</strong></td>
+            <td><strong>requires_grad</strong></td>
             <td>
 <p>Whether gradients need to be computed for the created tensor</p>
             </td>
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-is_training_opt"></span>
+              <span class="anchor" id="variable-is_training"></span>
               logical,
             </td>
 <td>intent(in),</td>
@@ -3191,7 +3753,7 @@
               
             </td>
             <td>::</td>
-            <td><strong>is_training_opt</strong></td>
+            <td><strong>is_training</strong></td>
             <td>
 <p>Whether gradients need to be computed for the created tensor</p>
             </td>
@@ -3199,17 +3761,92 @@
     </tbody>
   </table>
 
-    <h4>
-    Return Value
-    <small>type(<a href='../type/torch_module.html'>torch_module</a>)</small>
-    </h4>
-    <p>Returned deserialized module</p>
 
     </div>
   </div>
 
               <div class="card">
-    <div class="card-header codesum"><span class="anchor" id="proc-torch_tensor_from_array_int16_1d"></span> <h3>public  function <a href='../proc/torch_tensor_from_array_int16_1d.html'>torch_tensor_from_array_int16_1d</a>(data_in, layout, c_device_type, device_index, requires_grad_opt) result(tensor)  
+    <div class="card-header codesum"><span class="anchor" id="proc-torch_tensor_array_delete"></span> <h3>public  subroutine <a href='../proc/torch_tensor_array_delete.html'>torch_tensor_array_delete</a>(tensor_array)  
+</h3></div>
+    <div class="card-body">
+          
+  <p>Deallocates an array of tensors.</p>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-tensor_array"></span>
+              type(<a href='../type/torch_tensor.html'>torch_tensor</a>),
+            </td>
+<td>intent(inout),</td>
+              <td></td>            <td>
+              dimension(:)
+            </td>
+            <td>::</td>
+            <td><strong>tensor_array</strong></td>
+            <td>
+
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+
+    </div>
+  </div>
+
+              <div class="card">
+    <div class="card-header codesum"><span class="anchor" id="proc-torch_tensor_delete"></span> <h3>public  subroutine <a href='../proc/torch_tensor_delete.html'>torch_tensor_delete</a>(tensor)  
+</h3></div>
+    <div class="card-body">
+          
+  <p>Deallocates a tensor.</p>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-tensor~10"></span>
+              type(<a href='../type/torch_tensor.html'>torch_tensor</a>),
+            </td>
+<td>intent(inout)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>tensor</strong></td>
+            <td>
+
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+
+    </div>
+  </div>
+
+              <div class="card">
+    <div class="card-header codesum"><span class="anchor" id="proc-torch_tensor_from_array_int16_1d"></span> <h3>public  subroutine <a href='../proc/torch_tensor_from_array_int16_1d.html'>torch_tensor_from_array_int16_1d</a>(tensor, data_in, layout, c_device_type, device_index, requires_grad)  
 </h3></div>
     <div class="card-body">
           
@@ -3226,6 +3863,21 @@
         <th scope="col"></th>
     </thead>
     <tbody>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-tensor~16"></span>
+              type(<a href='../type/torch_tensor.html'>torch_tensor</a>),
+            </td>
+<td>intent(out)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>tensor</strong></td>
+            <td>
+<p>Returned tensor</p>
+            </td>
+        </tr>
         <tr>
             <td>
               <span class="anchor" id="variable-data_in~5"></span>
@@ -3288,7 +3940,7 @@
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-requires_grad_opt~10"></span>
+              <span class="anchor" id="variable-requires_grad~15"></span>
               logical,
             </td>
 <td>intent(in),</td>
@@ -3296,7 +3948,7 @@
               
             </td>
             <td>::</td>
-            <td><strong>requires_grad_opt</strong></td>
+            <td><strong>requires_grad</strong></td>
             <td>
 <p>Whether gradients need to be computed for the created tensor</p>
             </td>
@@ -3304,17 +3956,12 @@
     </tbody>
   </table>
 
-    <h4>
-    Return Value
-    <small>type(<a href='../type/torch_tensor.html'>torch_tensor</a>)</small>
-    </h4>
-    <p>Returned tensor</p>
 
     </div>
   </div>
 
               <div class="card">
-    <div class="card-header codesum"><span class="anchor" id="proc-torch_tensor_from_array_int16_2d"></span> <h3>public  function <a href='../proc/torch_tensor_from_array_int16_2d.html'>torch_tensor_from_array_int16_2d</a>(data_in, layout, c_device_type, device_index, requires_grad_opt) result(tensor)  
+    <div class="card-header codesum"><span class="anchor" id="proc-torch_tensor_from_array_int16_2d"></span> <h3>public  subroutine <a href='../proc/torch_tensor_from_array_int16_2d.html'>torch_tensor_from_array_int16_2d</a>(tensor, data_in, layout, c_device_type, device_index, requires_grad)  
 </h3></div>
     <div class="card-body">
           
@@ -3331,6 +3978,21 @@
         <th scope="col"></th>
     </thead>
     <tbody>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-tensor~17"></span>
+              type(<a href='../type/torch_tensor.html'>torch_tensor</a>),
+            </td>
+<td>intent(out)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>tensor</strong></td>
+            <td>
+<p>Returned tensor</p>
+            </td>
+        </tr>
         <tr>
             <td>
               <span class="anchor" id="variable-data_in~6"></span>
@@ -3393,7 +4055,7 @@
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-requires_grad_opt~11"></span>
+              <span class="anchor" id="variable-requires_grad~16"></span>
               logical,
             </td>
 <td>intent(in),</td>
@@ -3401,7 +4063,7 @@
               
             </td>
             <td>::</td>
-            <td><strong>requires_grad_opt</strong></td>
+            <td><strong>requires_grad</strong></td>
             <td>
 <p>Whether gradients need to be computed for the created tensor</p>
             </td>
@@ -3409,17 +4071,12 @@
     </tbody>
   </table>
 
-    <h4>
-    Return Value
-    <small>type(<a href='../type/torch_tensor.html'>torch_tensor</a>)</small>
-    </h4>
-    <p>Returned tensor</p>
 
     </div>
   </div>
 
               <div class="card">
-    <div class="card-header codesum"><span class="anchor" id="proc-torch_tensor_from_array_int16_3d"></span> <h3>public  function <a href='../proc/torch_tensor_from_array_int16_3d.html'>torch_tensor_from_array_int16_3d</a>(data_in, layout, c_device_type, device_index, requires_grad_opt) result(tensor)  
+    <div class="card-header codesum"><span class="anchor" id="proc-torch_tensor_from_array_int16_3d"></span> <h3>public  subroutine <a href='../proc/torch_tensor_from_array_int16_3d.html'>torch_tensor_from_array_int16_3d</a>(tensor, data_in, layout, c_device_type, device_index, requires_grad)  
 </h3></div>
     <div class="card-body">
           
@@ -3436,6 +4093,21 @@
         <th scope="col"></th>
     </thead>
     <tbody>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-tensor~18"></span>
+              type(<a href='../type/torch_tensor.html'>torch_tensor</a>),
+            </td>
+<td>intent(out)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>tensor</strong></td>
+            <td>
+<p>Returned tensor</p>
+            </td>
+        </tr>
         <tr>
             <td>
               <span class="anchor" id="variable-data_in~7"></span>
@@ -3498,7 +4170,7 @@
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-requires_grad_opt~12"></span>
+              <span class="anchor" id="variable-requires_grad~17"></span>
               logical,
             </td>
 <td>intent(in),</td>
@@ -3506,7 +4178,7 @@
               
             </td>
             <td>::</td>
-            <td><strong>requires_grad_opt</strong></td>
+            <td><strong>requires_grad</strong></td>
             <td>
 <p>Whether gradients need to be computed for the created tensor</p>
             </td>
@@ -3514,17 +4186,12 @@
     </tbody>
   </table>
 
-    <h4>
-    Return Value
-    <small>type(<a href='../type/torch_tensor.html'>torch_tensor</a>)</small>
-    </h4>
-    <p>Returned tensor</p>
 
     </div>
   </div>
 
               <div class="card">
-    <div class="card-header codesum"><span class="anchor" id="proc-torch_tensor_from_array_int16_4d"></span> <h3>public  function <a href='../proc/torch_tensor_from_array_int16_4d.html'>torch_tensor_from_array_int16_4d</a>(data_in, layout, c_device_type, device_index, requires_grad_opt) result(tensor)  
+    <div class="card-header codesum"><span class="anchor" id="proc-torch_tensor_from_array_int16_4d"></span> <h3>public  subroutine <a href='../proc/torch_tensor_from_array_int16_4d.html'>torch_tensor_from_array_int16_4d</a>(tensor, data_in, layout, c_device_type, device_index, requires_grad)  
 </h3></div>
     <div class="card-body">
           
@@ -3541,6 +4208,21 @@
         <th scope="col"></th>
     </thead>
     <tbody>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-tensor~19"></span>
+              type(<a href='../type/torch_tensor.html'>torch_tensor</a>),
+            </td>
+<td>intent(out)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>tensor</strong></td>
+            <td>
+<p>Returned tensor</p>
+            </td>
+        </tr>
         <tr>
             <td>
               <span class="anchor" id="variable-data_in~8"></span>
@@ -3603,7 +4285,7 @@
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-requires_grad_opt~13"></span>
+              <span class="anchor" id="variable-requires_grad~18"></span>
               logical,
             </td>
 <td>intent(in),</td>
@@ -3611,7 +4293,7 @@
               
             </td>
             <td>::</td>
-            <td><strong>requires_grad_opt</strong></td>
+            <td><strong>requires_grad</strong></td>
             <td>
 <p>Whether gradients need to be computed for the created tensor</p>
             </td>
@@ -3619,17 +4301,12 @@
     </tbody>
   </table>
 
-    <h4>
-    Return Value
-    <small>type(<a href='../type/torch_tensor.html'>torch_tensor</a>)</small>
-    </h4>
-    <p>Returned tensor</p>
 
     </div>
   </div>
 
               <div class="card">
-    <div class="card-header codesum"><span class="anchor" id="proc-torch_tensor_from_array_int32_1d"></span> <h3>public  function <a href='../proc/torch_tensor_from_array_int32_1d.html'>torch_tensor_from_array_int32_1d</a>(data_in, layout, c_device_type, device_index, requires_grad_opt) result(tensor)  
+    <div class="card-header codesum"><span class="anchor" id="proc-torch_tensor_from_array_int32_1d"></span> <h3>public  subroutine <a href='../proc/torch_tensor_from_array_int32_1d.html'>torch_tensor_from_array_int32_1d</a>(tensor, data_in, layout, c_device_type, device_index, requires_grad)  
 </h3></div>
     <div class="card-body">
           
@@ -3646,6 +4323,21 @@
         <th scope="col"></th>
     </thead>
     <tbody>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-tensor~20"></span>
+              type(<a href='../type/torch_tensor.html'>torch_tensor</a>),
+            </td>
+<td>intent(out)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>tensor</strong></td>
+            <td>
+<p>Returned tensor</p>
+            </td>
+        </tr>
         <tr>
             <td>
               <span class="anchor" id="variable-data_in~9"></span>
@@ -3708,7 +4400,7 @@
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-requires_grad_opt~14"></span>
+              <span class="anchor" id="variable-requires_grad~19"></span>
               logical,
             </td>
 <td>intent(in),</td>
@@ -3716,7 +4408,7 @@
               
             </td>
             <td>::</td>
-            <td><strong>requires_grad_opt</strong></td>
+            <td><strong>requires_grad</strong></td>
             <td>
 <p>Whether gradients need to be computed for the created tensor</p>
             </td>
@@ -3724,17 +4416,12 @@
     </tbody>
   </table>
 
-    <h4>
-    Return Value
-    <small>type(<a href='../type/torch_tensor.html'>torch_tensor</a>)</small>
-    </h4>
-    <p>Returned tensor</p>
 
     </div>
   </div>
 
               <div class="card">
-    <div class="card-header codesum"><span class="anchor" id="proc-torch_tensor_from_array_int32_2d"></span> <h3>public  function <a href='../proc/torch_tensor_from_array_int32_2d.html'>torch_tensor_from_array_int32_2d</a>(data_in, layout, c_device_type, device_index, requires_grad_opt) result(tensor)  
+    <div class="card-header codesum"><span class="anchor" id="proc-torch_tensor_from_array_int32_2d"></span> <h3>public  subroutine <a href='../proc/torch_tensor_from_array_int32_2d.html'>torch_tensor_from_array_int32_2d</a>(tensor, data_in, layout, c_device_type, device_index, requires_grad)  
 </h3></div>
     <div class="card-body">
           
@@ -3751,6 +4438,21 @@
         <th scope="col"></th>
     </thead>
     <tbody>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-tensor~21"></span>
+              type(<a href='../type/torch_tensor.html'>torch_tensor</a>),
+            </td>
+<td>intent(out)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>tensor</strong></td>
+            <td>
+<p>Returned tensor</p>
+            </td>
+        </tr>
         <tr>
             <td>
               <span class="anchor" id="variable-data_in~10"></span>
@@ -3813,7 +4515,7 @@
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-requires_grad_opt~15"></span>
+              <span class="anchor" id="variable-requires_grad~20"></span>
               logical,
             </td>
 <td>intent(in),</td>
@@ -3821,7 +4523,7 @@
               
             </td>
             <td>::</td>
-            <td><strong>requires_grad_opt</strong></td>
+            <td><strong>requires_grad</strong></td>
             <td>
 <p>Whether gradients need to be computed for the created tensor</p>
             </td>
@@ -3829,17 +4531,12 @@
     </tbody>
   </table>
 
-    <h4>
-    Return Value
-    <small>type(<a href='../type/torch_tensor.html'>torch_tensor</a>)</small>
-    </h4>
-    <p>Returned tensor</p>
 
     </div>
   </div>
 
               <div class="card">
-    <div class="card-header codesum"><span class="anchor" id="proc-torch_tensor_from_array_int32_3d"></span> <h3>public  function <a href='../proc/torch_tensor_from_array_int32_3d.html'>torch_tensor_from_array_int32_3d</a>(data_in, layout, c_device_type, device_index, requires_grad_opt) result(tensor)  
+    <div class="card-header codesum"><span class="anchor" id="proc-torch_tensor_from_array_int32_3d"></span> <h3>public  subroutine <a href='../proc/torch_tensor_from_array_int32_3d.html'>torch_tensor_from_array_int32_3d</a>(tensor, data_in, layout, c_device_type, device_index, requires_grad)  
 </h3></div>
     <div class="card-body">
           
@@ -3856,6 +4553,21 @@
         <th scope="col"></th>
     </thead>
     <tbody>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-tensor~22"></span>
+              type(<a href='../type/torch_tensor.html'>torch_tensor</a>),
+            </td>
+<td>intent(out)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>tensor</strong></td>
+            <td>
+<p>Returned tensor</p>
+            </td>
+        </tr>
         <tr>
             <td>
               <span class="anchor" id="variable-data_in~11"></span>
@@ -3918,7 +4630,7 @@
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-requires_grad_opt~16"></span>
+              <span class="anchor" id="variable-requires_grad~21"></span>
               logical,
             </td>
 <td>intent(in),</td>
@@ -3926,7 +4638,7 @@
               
             </td>
             <td>::</td>
-            <td><strong>requires_grad_opt</strong></td>
+            <td><strong>requires_grad</strong></td>
             <td>
 <p>Whether gradients need to be computed for the created tensor</p>
             </td>
@@ -3934,17 +4646,12 @@
     </tbody>
   </table>
 
-    <h4>
-    Return Value
-    <small>type(<a href='../type/torch_tensor.html'>torch_tensor</a>)</small>
-    </h4>
-    <p>Returned tensor</p>
 
     </div>
   </div>
 
               <div class="card">
-    <div class="card-header codesum"><span class="anchor" id="proc-torch_tensor_from_array_int32_4d"></span> <h3>public  function <a href='../proc/torch_tensor_from_array_int32_4d.html'>torch_tensor_from_array_int32_4d</a>(data_in, layout, c_device_type, device_index, requires_grad_opt) result(tensor)  
+    <div class="card-header codesum"><span class="anchor" id="proc-torch_tensor_from_array_int32_4d"></span> <h3>public  subroutine <a href='../proc/torch_tensor_from_array_int32_4d.html'>torch_tensor_from_array_int32_4d</a>(tensor, data_in, layout, c_device_type, device_index, requires_grad)  
 </h3></div>
     <div class="card-body">
           
@@ -3961,6 +4668,21 @@
         <th scope="col"></th>
     </thead>
     <tbody>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-tensor~23"></span>
+              type(<a href='../type/torch_tensor.html'>torch_tensor</a>),
+            </td>
+<td>intent(out)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>tensor</strong></td>
+            <td>
+<p>Returned tensor</p>
+            </td>
+        </tr>
         <tr>
             <td>
               <span class="anchor" id="variable-data_in~12"></span>
@@ -4023,7 +4745,7 @@
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-requires_grad_opt~17"></span>
+              <span class="anchor" id="variable-requires_grad~22"></span>
               logical,
             </td>
 <td>intent(in),</td>
@@ -4031,7 +4753,7 @@
               
             </td>
             <td>::</td>
-            <td><strong>requires_grad_opt</strong></td>
+            <td><strong>requires_grad</strong></td>
             <td>
 <p>Whether gradients need to be computed for the created tensor</p>
             </td>
@@ -4039,17 +4761,12 @@
     </tbody>
   </table>
 
-    <h4>
-    Return Value
-    <small>type(<a href='../type/torch_tensor.html'>torch_tensor</a>)</small>
-    </h4>
-    <p>Returned tensor</p>
 
     </div>
   </div>
 
               <div class="card">
-    <div class="card-header codesum"><span class="anchor" id="proc-torch_tensor_from_array_int64_1d"></span> <h3>public  function <a href='../proc/torch_tensor_from_array_int64_1d.html'>torch_tensor_from_array_int64_1d</a>(data_in, layout, c_device_type, device_index, requires_grad_opt) result(tensor)  
+    <div class="card-header codesum"><span class="anchor" id="proc-torch_tensor_from_array_int64_1d"></span> <h3>public  subroutine <a href='../proc/torch_tensor_from_array_int64_1d.html'>torch_tensor_from_array_int64_1d</a>(tensor, data_in, layout, c_device_type, device_index, requires_grad)  
 </h3></div>
     <div class="card-body">
           
@@ -4066,6 +4783,21 @@
         <th scope="col"></th>
     </thead>
     <tbody>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-tensor~24"></span>
+              type(<a href='../type/torch_tensor.html'>torch_tensor</a>),
+            </td>
+<td>intent(out)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>tensor</strong></td>
+            <td>
+<p>Returned tensor</p>
+            </td>
+        </tr>
         <tr>
             <td>
               <span class="anchor" id="variable-data_in~13"></span>
@@ -4128,7 +4860,7 @@
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-requires_grad_opt~18"></span>
+              <span class="anchor" id="variable-requires_grad~23"></span>
               logical,
             </td>
 <td>intent(in),</td>
@@ -4136,7 +4868,7 @@
               
             </td>
             <td>::</td>
-            <td><strong>requires_grad_opt</strong></td>
+            <td><strong>requires_grad</strong></td>
             <td>
 <p>Whether gradients need to be computed for the created tensor</p>
             </td>
@@ -4144,17 +4876,12 @@
     </tbody>
   </table>
 
-    <h4>
-    Return Value
-    <small>type(<a href='../type/torch_tensor.html'>torch_tensor</a>)</small>
-    </h4>
-    <p>Returned tensor</p>
 
     </div>
   </div>
 
               <div class="card">
-    <div class="card-header codesum"><span class="anchor" id="proc-torch_tensor_from_array_int64_2d"></span> <h3>public  function <a href='../proc/torch_tensor_from_array_int64_2d.html'>torch_tensor_from_array_int64_2d</a>(data_in, layout, c_device_type, device_index, requires_grad_opt) result(tensor)  
+    <div class="card-header codesum"><span class="anchor" id="proc-torch_tensor_from_array_int64_2d"></span> <h3>public  subroutine <a href='../proc/torch_tensor_from_array_int64_2d.html'>torch_tensor_from_array_int64_2d</a>(tensor, data_in, layout, c_device_type, device_index, requires_grad)  
 </h3></div>
     <div class="card-body">
           
@@ -4171,6 +4898,21 @@
         <th scope="col"></th>
     </thead>
     <tbody>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-tensor~25"></span>
+              type(<a href='../type/torch_tensor.html'>torch_tensor</a>),
+            </td>
+<td>intent(out)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>tensor</strong></td>
+            <td>
+<p>Returned tensor</p>
+            </td>
+        </tr>
         <tr>
             <td>
               <span class="anchor" id="variable-data_in~14"></span>
@@ -4233,7 +4975,7 @@
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-requires_grad_opt~19"></span>
+              <span class="anchor" id="variable-requires_grad~24"></span>
               logical,
             </td>
 <td>intent(in),</td>
@@ -4241,7 +4983,7 @@
               
             </td>
             <td>::</td>
-            <td><strong>requires_grad_opt</strong></td>
+            <td><strong>requires_grad</strong></td>
             <td>
 <p>Whether gradients need to be computed for the created tensor</p>
             </td>
@@ -4249,17 +4991,12 @@
     </tbody>
   </table>
 
-    <h4>
-    Return Value
-    <small>type(<a href='../type/torch_tensor.html'>torch_tensor</a>)</small>
-    </h4>
-    <p>Returned tensor</p>
 
     </div>
   </div>
 
               <div class="card">
-    <div class="card-header codesum"><span class="anchor" id="proc-torch_tensor_from_array_int64_3d"></span> <h3>public  function <a href='../proc/torch_tensor_from_array_int64_3d.html'>torch_tensor_from_array_int64_3d</a>(data_in, layout, c_device_type, device_index, requires_grad_opt) result(tensor)  
+    <div class="card-header codesum"><span class="anchor" id="proc-torch_tensor_from_array_int64_3d"></span> <h3>public  subroutine <a href='../proc/torch_tensor_from_array_int64_3d.html'>torch_tensor_from_array_int64_3d</a>(tensor, data_in, layout, c_device_type, device_index, requires_grad)  
 </h3></div>
     <div class="card-body">
           
@@ -4276,6 +5013,21 @@
         <th scope="col"></th>
     </thead>
     <tbody>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-tensor~26"></span>
+              type(<a href='../type/torch_tensor.html'>torch_tensor</a>),
+            </td>
+<td>intent(out)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>tensor</strong></td>
+            <td>
+<p>Returned tensor</p>
+            </td>
+        </tr>
         <tr>
             <td>
               <span class="anchor" id="variable-data_in~15"></span>
@@ -4338,7 +5090,7 @@
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-requires_grad_opt~20"></span>
+              <span class="anchor" id="variable-requires_grad~25"></span>
               logical,
             </td>
 <td>intent(in),</td>
@@ -4346,7 +5098,7 @@
               
             </td>
             <td>::</td>
-            <td><strong>requires_grad_opt</strong></td>
+            <td><strong>requires_grad</strong></td>
             <td>
 <p>Whether gradients need to be computed for the created tensor</p>
             </td>
@@ -4354,17 +5106,12 @@
     </tbody>
   </table>
 
-    <h4>
-    Return Value
-    <small>type(<a href='../type/torch_tensor.html'>torch_tensor</a>)</small>
-    </h4>
-    <p>Returned tensor</p>
 
     </div>
   </div>
 
               <div class="card">
-    <div class="card-header codesum"><span class="anchor" id="proc-torch_tensor_from_array_int64_4d"></span> <h3>public  function <a href='../proc/torch_tensor_from_array_int64_4d.html'>torch_tensor_from_array_int64_4d</a>(data_in, layout, c_device_type, device_index, requires_grad_opt) result(tensor)  
+    <div class="card-header codesum"><span class="anchor" id="proc-torch_tensor_from_array_int64_4d"></span> <h3>public  subroutine <a href='../proc/torch_tensor_from_array_int64_4d.html'>torch_tensor_from_array_int64_4d</a>(tensor, data_in, layout, c_device_type, device_index, requires_grad)  
 </h3></div>
     <div class="card-body">
           
@@ -4381,6 +5128,21 @@
         <th scope="col"></th>
     </thead>
     <tbody>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-tensor~27"></span>
+              type(<a href='../type/torch_tensor.html'>torch_tensor</a>),
+            </td>
+<td>intent(out)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>tensor</strong></td>
+            <td>
+<p>Returned tensor</p>
+            </td>
+        </tr>
         <tr>
             <td>
               <span class="anchor" id="variable-data_in~16"></span>
@@ -4443,7 +5205,7 @@
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-requires_grad_opt~21"></span>
+              <span class="anchor" id="variable-requires_grad~26"></span>
               logical,
             </td>
 <td>intent(in),</td>
@@ -4451,7 +5213,7 @@
               
             </td>
             <td>::</td>
-            <td><strong>requires_grad_opt</strong></td>
+            <td><strong>requires_grad</strong></td>
             <td>
 <p>Whether gradients need to be computed for the created tensor</p>
             </td>
@@ -4459,17 +5221,12 @@
     </tbody>
   </table>
 
-    <h4>
-    Return Value
-    <small>type(<a href='../type/torch_tensor.html'>torch_tensor</a>)</small>
-    </h4>
-    <p>Returned tensor</p>
 
     </div>
   </div>
 
               <div class="card">
-    <div class="card-header codesum"><span class="anchor" id="proc-torch_tensor_from_array_int8_1d"></span> <h3>public  function <a href='../proc/torch_tensor_from_array_int8_1d.html'>torch_tensor_from_array_int8_1d</a>(data_in, layout, c_device_type, device_index, requires_grad_opt) result(tensor)  
+    <div class="card-header codesum"><span class="anchor" id="proc-torch_tensor_from_array_int8_1d"></span> <h3>public  subroutine <a href='../proc/torch_tensor_from_array_int8_1d.html'>torch_tensor_from_array_int8_1d</a>(tensor, data_in, layout, c_device_type, device_index, requires_grad)  
 </h3></div>
     <div class="card-body">
           
@@ -4486,6 +5243,21 @@
         <th scope="col"></th>
     </thead>
     <tbody>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-tensor~12"></span>
+              type(<a href='../type/torch_tensor.html'>torch_tensor</a>),
+            </td>
+<td>intent(out)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>tensor</strong></td>
+            <td>
+<p>Returned tensor</p>
+            </td>
+        </tr>
         <tr>
             <td>
               <span class="anchor" id="variable-data_in"></span>
@@ -4548,7 +5320,7 @@
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-requires_grad_opt~6"></span>
+              <span class="anchor" id="variable-requires_grad~11"></span>
               logical,
             </td>
 <td>intent(in),</td>
@@ -4556,7 +5328,7 @@
               
             </td>
             <td>::</td>
-            <td><strong>requires_grad_opt</strong></td>
+            <td><strong>requires_grad</strong></td>
             <td>
 <p>Whether gradients need to be computed for the created tensor</p>
             </td>
@@ -4564,17 +5336,12 @@
     </tbody>
   </table>
 
-    <h4>
-    Return Value
-    <small>type(<a href='../type/torch_tensor.html'>torch_tensor</a>)</small>
-    </h4>
-    <p>Returned tensor</p>
 
     </div>
   </div>
 
               <div class="card">
-    <div class="card-header codesum"><span class="anchor" id="proc-torch_tensor_from_array_int8_2d"></span> <h3>public  function <a href='../proc/torch_tensor_from_array_int8_2d.html'>torch_tensor_from_array_int8_2d</a>(data_in, layout, c_device_type, device_index, requires_grad_opt) result(tensor)  
+    <div class="card-header codesum"><span class="anchor" id="proc-torch_tensor_from_array_int8_2d"></span> <h3>public  subroutine <a href='../proc/torch_tensor_from_array_int8_2d.html'>torch_tensor_from_array_int8_2d</a>(tensor, data_in, layout, c_device_type, device_index, requires_grad)  
 </h3></div>
     <div class="card-body">
           
@@ -4591,6 +5358,21 @@
         <th scope="col"></th>
     </thead>
     <tbody>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-tensor~13"></span>
+              type(<a href='../type/torch_tensor.html'>torch_tensor</a>),
+            </td>
+<td>intent(out)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>tensor</strong></td>
+            <td>
+<p>Returned tensor</p>
+            </td>
+        </tr>
         <tr>
             <td>
               <span class="anchor" id="variable-data_in~2"></span>
@@ -4653,7 +5435,7 @@
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-requires_grad_opt~7"></span>
+              <span class="anchor" id="variable-requires_grad~12"></span>
               logical,
             </td>
 <td>intent(in),</td>
@@ -4661,7 +5443,7 @@
               
             </td>
             <td>::</td>
-            <td><strong>requires_grad_opt</strong></td>
+            <td><strong>requires_grad</strong></td>
             <td>
 <p>Whether gradients need to be computed for the created tensor</p>
             </td>
@@ -4669,17 +5451,12 @@
     </tbody>
   </table>
 
-    <h4>
-    Return Value
-    <small>type(<a href='../type/torch_tensor.html'>torch_tensor</a>)</small>
-    </h4>
-    <p>Returned tensor</p>
 
     </div>
   </div>
 
               <div class="card">
-    <div class="card-header codesum"><span class="anchor" id="proc-torch_tensor_from_array_int8_3d"></span> <h3>public  function <a href='../proc/torch_tensor_from_array_int8_3d.html'>torch_tensor_from_array_int8_3d</a>(data_in, layout, c_device_type, device_index, requires_grad_opt) result(tensor)  
+    <div class="card-header codesum"><span class="anchor" id="proc-torch_tensor_from_array_int8_3d"></span> <h3>public  subroutine <a href='../proc/torch_tensor_from_array_int8_3d.html'>torch_tensor_from_array_int8_3d</a>(tensor, data_in, layout, c_device_type, device_index, requires_grad)  
 </h3></div>
     <div class="card-body">
           
@@ -4696,6 +5473,21 @@
         <th scope="col"></th>
     </thead>
     <tbody>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-tensor~14"></span>
+              type(<a href='../type/torch_tensor.html'>torch_tensor</a>),
+            </td>
+<td>intent(out)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>tensor</strong></td>
+            <td>
+<p>Returned tensor</p>
+            </td>
+        </tr>
         <tr>
             <td>
               <span class="anchor" id="variable-data_in~3"></span>
@@ -4758,7 +5550,7 @@
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-requires_grad_opt~8"></span>
+              <span class="anchor" id="variable-requires_grad~13"></span>
               logical,
             </td>
 <td>intent(in),</td>
@@ -4766,7 +5558,7 @@
               
             </td>
             <td>::</td>
-            <td><strong>requires_grad_opt</strong></td>
+            <td><strong>requires_grad</strong></td>
             <td>
 <p>Whether gradients need to be computed for the created tensor</p>
             </td>
@@ -4774,17 +5566,12 @@
     </tbody>
   </table>
 
-    <h4>
-    Return Value
-    <small>type(<a href='../type/torch_tensor.html'>torch_tensor</a>)</small>
-    </h4>
-    <p>Returned tensor</p>
 
     </div>
   </div>
 
               <div class="card">
-    <div class="card-header codesum"><span class="anchor" id="proc-torch_tensor_from_array_int8_4d"></span> <h3>public  function <a href='../proc/torch_tensor_from_array_int8_4d.html'>torch_tensor_from_array_int8_4d</a>(data_in, layout, c_device_type, device_index, requires_grad_opt) result(tensor)  
+    <div class="card-header codesum"><span class="anchor" id="proc-torch_tensor_from_array_int8_4d"></span> <h3>public  subroutine <a href='../proc/torch_tensor_from_array_int8_4d.html'>torch_tensor_from_array_int8_4d</a>(tensor, data_in, layout, c_device_type, device_index, requires_grad)  
 </h3></div>
     <div class="card-body">
           
@@ -4801,6 +5588,21 @@
         <th scope="col"></th>
     </thead>
     <tbody>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-tensor~15"></span>
+              type(<a href='../type/torch_tensor.html'>torch_tensor</a>),
+            </td>
+<td>intent(out)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>tensor</strong></td>
+            <td>
+<p>Returned tensor</p>
+            </td>
+        </tr>
         <tr>
             <td>
               <span class="anchor" id="variable-data_in~4"></span>
@@ -4863,7 +5665,7 @@
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-requires_grad_opt~9"></span>
+              <span class="anchor" id="variable-requires_grad~14"></span>
               logical,
             </td>
 <td>intent(in),</td>
@@ -4871,7 +5673,7 @@
               
             </td>
             <td>::</td>
-            <td><strong>requires_grad_opt</strong></td>
+            <td><strong>requires_grad</strong></td>
             <td>
 <p>Whether gradients need to be computed for the created tensor</p>
             </td>
@@ -4879,17 +5681,12 @@
     </tbody>
   </table>
 
-    <h4>
-    Return Value
-    <small>type(<a href='../type/torch_tensor.html'>torch_tensor</a>)</small>
-    </h4>
-    <p>Returned tensor</p>
 
     </div>
   </div>
 
               <div class="card">
-    <div class="card-header codesum"><span class="anchor" id="proc-torch_tensor_from_array_real32_1d"></span> <h3>public  function <a href='../proc/torch_tensor_from_array_real32_1d.html'>torch_tensor_from_array_real32_1d</a>(data_in, layout, c_device_type, device_index, requires_grad_opt) result(tensor)  
+    <div class="card-header codesum"><span class="anchor" id="proc-torch_tensor_from_array_real32_1d"></span> <h3>public  subroutine <a href='../proc/torch_tensor_from_array_real32_1d.html'>torch_tensor_from_array_real32_1d</a>(tensor, data_in, layout, c_device_type, device_index, requires_grad)  
 </h3></div>
     <div class="card-body">
           
@@ -4906,6 +5703,21 @@
         <th scope="col"></th>
     </thead>
     <tbody>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-tensor~28"></span>
+              type(<a href='../type/torch_tensor.html'>torch_tensor</a>),
+            </td>
+<td>intent(out)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>tensor</strong></td>
+            <td>
+<p>Returned tensor</p>
+            </td>
+        </tr>
         <tr>
             <td>
               <span class="anchor" id="variable-data_in~17"></span>
@@ -4968,7 +5780,7 @@
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-requires_grad_opt~22"></span>
+              <span class="anchor" id="variable-requires_grad~27"></span>
               logical,
             </td>
 <td>intent(in),</td>
@@ -4976,7 +5788,7 @@
               
             </td>
             <td>::</td>
-            <td><strong>requires_grad_opt</strong></td>
+            <td><strong>requires_grad</strong></td>
             <td>
 <p>Whether gradients need to be computed for the created tensor</p>
             </td>
@@ -4984,17 +5796,12 @@
     </tbody>
   </table>
 
-    <h4>
-    Return Value
-    <small>type(<a href='../type/torch_tensor.html'>torch_tensor</a>)</small>
-    </h4>
-    <p>Returned tensor</p>
 
     </div>
   </div>
 
               <div class="card">
-    <div class="card-header codesum"><span class="anchor" id="proc-torch_tensor_from_array_real32_2d"></span> <h3>public  function <a href='../proc/torch_tensor_from_array_real32_2d.html'>torch_tensor_from_array_real32_2d</a>(data_in, layout, c_device_type, device_index, requires_grad_opt) result(tensor)  
+    <div class="card-header codesum"><span class="anchor" id="proc-torch_tensor_from_array_real32_2d"></span> <h3>public  subroutine <a href='../proc/torch_tensor_from_array_real32_2d.html'>torch_tensor_from_array_real32_2d</a>(tensor, data_in, layout, c_device_type, device_index, requires_grad)  
 </h3></div>
     <div class="card-body">
           
@@ -5011,6 +5818,21 @@
         <th scope="col"></th>
     </thead>
     <tbody>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-tensor~29"></span>
+              type(<a href='../type/torch_tensor.html'>torch_tensor</a>),
+            </td>
+<td>intent(out)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>tensor</strong></td>
+            <td>
+<p>Returned tensor</p>
+            </td>
+        </tr>
         <tr>
             <td>
               <span class="anchor" id="variable-data_in~18"></span>
@@ -5073,7 +5895,7 @@
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-requires_grad_opt~23"></span>
+              <span class="anchor" id="variable-requires_grad~28"></span>
               logical,
             </td>
 <td>intent(in),</td>
@@ -5081,7 +5903,7 @@
               
             </td>
             <td>::</td>
-            <td><strong>requires_grad_opt</strong></td>
+            <td><strong>requires_grad</strong></td>
             <td>
 <p>Whether gradients need to be computed for the created tensor</p>
             </td>
@@ -5089,17 +5911,12 @@
     </tbody>
   </table>
 
-    <h4>
-    Return Value
-    <small>type(<a href='../type/torch_tensor.html'>torch_tensor</a>)</small>
-    </h4>
-    <p>Returned tensor</p>
 
     </div>
   </div>
 
               <div class="card">
-    <div class="card-header codesum"><span class="anchor" id="proc-torch_tensor_from_array_real32_3d"></span> <h3>public  function <a href='../proc/torch_tensor_from_array_real32_3d.html'>torch_tensor_from_array_real32_3d</a>(data_in, layout, c_device_type, device_index, requires_grad_opt) result(tensor)  
+    <div class="card-header codesum"><span class="anchor" id="proc-torch_tensor_from_array_real32_3d"></span> <h3>public  subroutine <a href='../proc/torch_tensor_from_array_real32_3d.html'>torch_tensor_from_array_real32_3d</a>(tensor, data_in, layout, c_device_type, device_index, requires_grad)  
 </h3></div>
     <div class="card-body">
           
@@ -5116,6 +5933,21 @@
         <th scope="col"></th>
     </thead>
     <tbody>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-tensor~30"></span>
+              type(<a href='../type/torch_tensor.html'>torch_tensor</a>),
+            </td>
+<td>intent(out)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>tensor</strong></td>
+            <td>
+<p>Returned tensor</p>
+            </td>
+        </tr>
         <tr>
             <td>
               <span class="anchor" id="variable-data_in~19"></span>
@@ -5178,7 +6010,7 @@
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-requires_grad_opt~24"></span>
+              <span class="anchor" id="variable-requires_grad~29"></span>
               logical,
             </td>
 <td>intent(in),</td>
@@ -5186,7 +6018,7 @@
               
             </td>
             <td>::</td>
-            <td><strong>requires_grad_opt</strong></td>
+            <td><strong>requires_grad</strong></td>
             <td>
 <p>Whether gradients need to be computed for the created tensor</p>
             </td>
@@ -5194,17 +6026,12 @@
     </tbody>
   </table>
 
-    <h4>
-    Return Value
-    <small>type(<a href='../type/torch_tensor.html'>torch_tensor</a>)</small>
-    </h4>
-    <p>Returned tensor</p>
 
     </div>
   </div>
 
               <div class="card">
-    <div class="card-header codesum"><span class="anchor" id="proc-torch_tensor_from_array_real32_4d"></span> <h3>public  function <a href='../proc/torch_tensor_from_array_real32_4d.html'>torch_tensor_from_array_real32_4d</a>(data_in, layout, c_device_type, device_index, requires_grad_opt) result(tensor)  
+    <div class="card-header codesum"><span class="anchor" id="proc-torch_tensor_from_array_real32_4d"></span> <h3>public  subroutine <a href='../proc/torch_tensor_from_array_real32_4d.html'>torch_tensor_from_array_real32_4d</a>(tensor, data_in, layout, c_device_type, device_index, requires_grad)  
 </h3></div>
     <div class="card-body">
           
@@ -5221,6 +6048,21 @@
         <th scope="col"></th>
     </thead>
     <tbody>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-tensor~31"></span>
+              type(<a href='../type/torch_tensor.html'>torch_tensor</a>),
+            </td>
+<td>intent(out)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>tensor</strong></td>
+            <td>
+<p>Returned tensor</p>
+            </td>
+        </tr>
         <tr>
             <td>
               <span class="anchor" id="variable-data_in~20"></span>
@@ -5283,7 +6125,7 @@
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-requires_grad_opt~25"></span>
+              <span class="anchor" id="variable-requires_grad~30"></span>
               logical,
             </td>
 <td>intent(in),</td>
@@ -5291,7 +6133,7 @@
               
             </td>
             <td>::</td>
-            <td><strong>requires_grad_opt</strong></td>
+            <td><strong>requires_grad</strong></td>
             <td>
 <p>Whether gradients need to be computed for the created tensor</p>
             </td>
@@ -5299,17 +6141,12 @@
     </tbody>
   </table>
 
-    <h4>
-    Return Value
-    <small>type(<a href='../type/torch_tensor.html'>torch_tensor</a>)</small>
-    </h4>
-    <p>Returned tensor</p>
 
     </div>
   </div>
 
               <div class="card">
-    <div class="card-header codesum"><span class="anchor" id="proc-torch_tensor_from_array_real64_1d"></span> <h3>public  function <a href='../proc/torch_tensor_from_array_real64_1d.html'>torch_tensor_from_array_real64_1d</a>(data_in, layout, c_device_type, device_index, requires_grad_opt) result(tensor)  
+    <div class="card-header codesum"><span class="anchor" id="proc-torch_tensor_from_array_real64_1d"></span> <h3>public  subroutine <a href='../proc/torch_tensor_from_array_real64_1d.html'>torch_tensor_from_array_real64_1d</a>(tensor, data_in, layout, c_device_type, device_index, requires_grad)  
 </h3></div>
     <div class="card-body">
           
@@ -5326,6 +6163,21 @@
         <th scope="col"></th>
     </thead>
     <tbody>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-tensor~32"></span>
+              type(<a href='../type/torch_tensor.html'>torch_tensor</a>),
+            </td>
+<td>intent(out)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>tensor</strong></td>
+            <td>
+<p>Returned tensor</p>
+            </td>
+        </tr>
         <tr>
             <td>
               <span class="anchor" id="variable-data_in~21"></span>
@@ -5388,7 +6240,7 @@
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-requires_grad_opt~26"></span>
+              <span class="anchor" id="variable-requires_grad~31"></span>
               logical,
             </td>
 <td>intent(in),</td>
@@ -5396,7 +6248,7 @@
               
             </td>
             <td>::</td>
-            <td><strong>requires_grad_opt</strong></td>
+            <td><strong>requires_grad</strong></td>
             <td>
 <p>Whether gradients need to be computed for the created tensor</p>
             </td>
@@ -5404,17 +6256,12 @@
     </tbody>
   </table>
 
-    <h4>
-    Return Value
-    <small>type(<a href='../type/torch_tensor.html'>torch_tensor</a>)</small>
-    </h4>
-    <p>Returned tensor</p>
 
     </div>
   </div>
 
               <div class="card">
-    <div class="card-header codesum"><span class="anchor" id="proc-torch_tensor_from_array_real64_2d"></span> <h3>public  function <a href='../proc/torch_tensor_from_array_real64_2d.html'>torch_tensor_from_array_real64_2d</a>(data_in, layout, c_device_type, device_index, requires_grad_opt) result(tensor)  
+    <div class="card-header codesum"><span class="anchor" id="proc-torch_tensor_from_array_real64_2d"></span> <h3>public  subroutine <a href='../proc/torch_tensor_from_array_real64_2d.html'>torch_tensor_from_array_real64_2d</a>(tensor, data_in, layout, c_device_type, device_index, requires_grad)  
 </h3></div>
     <div class="card-body">
           
@@ -5431,6 +6278,21 @@
         <th scope="col"></th>
     </thead>
     <tbody>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-tensor~33"></span>
+              type(<a href='../type/torch_tensor.html'>torch_tensor</a>),
+            </td>
+<td>intent(out)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>tensor</strong></td>
+            <td>
+<p>Returned tensor</p>
+            </td>
+        </tr>
         <tr>
             <td>
               <span class="anchor" id="variable-data_in~22"></span>
@@ -5493,7 +6355,7 @@
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-requires_grad_opt~27"></span>
+              <span class="anchor" id="variable-requires_grad~32"></span>
               logical,
             </td>
 <td>intent(in),</td>
@@ -5501,7 +6363,7 @@
               
             </td>
             <td>::</td>
-            <td><strong>requires_grad_opt</strong></td>
+            <td><strong>requires_grad</strong></td>
             <td>
 <p>Whether gradients need to be computed for the created tensor</p>
             </td>
@@ -5509,17 +6371,12 @@
     </tbody>
   </table>
 
-    <h4>
-    Return Value
-    <small>type(<a href='../type/torch_tensor.html'>torch_tensor</a>)</small>
-    </h4>
-    <p>Returned tensor</p>
 
     </div>
   </div>
 
               <div class="card">
-    <div class="card-header codesum"><span class="anchor" id="proc-torch_tensor_from_array_real64_3d"></span> <h3>public  function <a href='../proc/torch_tensor_from_array_real64_3d.html'>torch_tensor_from_array_real64_3d</a>(data_in, layout, c_device_type, device_index, requires_grad_opt) result(tensor)  
+    <div class="card-header codesum"><span class="anchor" id="proc-torch_tensor_from_array_real64_3d"></span> <h3>public  subroutine <a href='../proc/torch_tensor_from_array_real64_3d.html'>torch_tensor_from_array_real64_3d</a>(tensor, data_in, layout, c_device_type, device_index, requires_grad)  
 </h3></div>
     <div class="card-body">
           
@@ -5536,6 +6393,21 @@
         <th scope="col"></th>
     </thead>
     <tbody>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-tensor~34"></span>
+              type(<a href='../type/torch_tensor.html'>torch_tensor</a>),
+            </td>
+<td>intent(out)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>tensor</strong></td>
+            <td>
+<p>Returned tensor</p>
+            </td>
+        </tr>
         <tr>
             <td>
               <span class="anchor" id="variable-data_in~23"></span>
@@ -5598,7 +6470,7 @@
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-requires_grad_opt~28"></span>
+              <span class="anchor" id="variable-requires_grad~33"></span>
               logical,
             </td>
 <td>intent(in),</td>
@@ -5606,7 +6478,7 @@
               
             </td>
             <td>::</td>
-            <td><strong>requires_grad_opt</strong></td>
+            <td><strong>requires_grad</strong></td>
             <td>
 <p>Whether gradients need to be computed for the created tensor</p>
             </td>
@@ -5614,17 +6486,12 @@
     </tbody>
   </table>
 
-    <h4>
-    Return Value
-    <small>type(<a href='../type/torch_tensor.html'>torch_tensor</a>)</small>
-    </h4>
-    <p>Returned tensor</p>
 
     </div>
   </div>
 
               <div class="card">
-    <div class="card-header codesum"><span class="anchor" id="proc-torch_tensor_from_array_real64_4d"></span> <h3>public  function <a href='../proc/torch_tensor_from_array_real64_4d.html'>torch_tensor_from_array_real64_4d</a>(data_in, layout, c_device_type, device_index, requires_grad_opt) result(tensor)  
+    <div class="card-header codesum"><span class="anchor" id="proc-torch_tensor_from_array_real64_4d"></span> <h3>public  subroutine <a href='../proc/torch_tensor_from_array_real64_4d.html'>torch_tensor_from_array_real64_4d</a>(tensor, data_in, layout, c_device_type, device_index, requires_grad)  
 </h3></div>
     <div class="card-body">
           
@@ -5641,6 +6508,21 @@
         <th scope="col"></th>
     </thead>
     <tbody>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-tensor~35"></span>
+              type(<a href='../type/torch_tensor.html'>torch_tensor</a>),
+            </td>
+<td>intent(out)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>tensor</strong></td>
+            <td>
+<p>Returned tensor</p>
+            </td>
+        </tr>
         <tr>
             <td>
               <span class="anchor" id="variable-data_in~24"></span>
@@ -5703,7 +6585,7 @@
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-requires_grad_opt~29"></span>
+              <span class="anchor" id="variable-requires_grad~34"></span>
               logical,
             </td>
 <td>intent(in),</td>
@@ -5711,7 +6593,7 @@
               
             </td>
             <td>::</td>
-            <td><strong>requires_grad_opt</strong></td>
+            <td><strong>requires_grad</strong></td>
             <td>
 <p>Whether gradients need to be computed for the created tensor</p>
             </td>
@@ -5719,17 +6601,12 @@
     </tbody>
   </table>
 
-    <h4>
-    Return Value
-    <small>type(<a href='../type/torch_tensor.html'>torch_tensor</a>)</small>
-    </h4>
-    <p>Returned tensor</p>
 
     </div>
   </div>
 
               <div class="card">
-    <div class="card-header codesum"><span class="anchor" id="proc-torch_tensor_from_blob"></span> <h3>public  function <a href='../proc/torch_tensor_from_blob.html'>torch_tensor_from_blob</a>(data, ndims, tensor_shape, layout, dtype, device_type, device_index, requires_grad_opt) result(tensor)  
+    <div class="card-header codesum"><span class="anchor" id="proc-torch_tensor_from_blob"></span> <h3>public  subroutine <a href='../proc/torch_tensor_from_blob.html'>torch_tensor_from_blob</a>(tensor, data, ndims, tensor_shape, layout, dtype, device_type, device_index, requires_grad)  
 </h3></div>
     <div class="card-body">
           
@@ -5747,6 +6624,21 @@
         <th scope="col"></th>
     </thead>
     <tbody>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-tensor~5"></span>
+              type(<a href='../type/torch_tensor.html'>torch_tensor</a>),
+            </td>
+<td>intent(out)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>tensor</strong></td>
+            <td>
+<p>Returned tensor</p>
+            </td>
+        </tr>
         <tr>
             <td>
               <span class="anchor" id="variable-data~2"></span>
@@ -5854,7 +6746,7 @@
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-requires_grad_opt~3"></span>
+              <span class="anchor" id="variable-requires_grad~6"></span>
               logical(kind=c_bool),
             </td>
 <td>intent(in),</td>
@@ -5862,7 +6754,7 @@
               
             </td>
             <td>::</td>
-            <td><strong>requires_grad_opt</strong></td>
+            <td><strong>requires_grad</strong></td>
             <td>
 <p>Whether gradients need to be computed for the created tensor</p>
             </td>
@@ -5870,62 +6762,12 @@
     </tbody>
   </table>
 
-    <h4>
-    Return Value
-    <small>type(<a href='../type/torch_tensor.html'>torch_tensor</a>)</small>
-    </h4>
-    <p>Returned tensor</p>
 
     </div>
   </div>
 
               <div class="card">
-    <div class="card-header codesum"><span class="anchor" id="proc-torch_tensor_get_device_index"></span> <h3>public  function <a href='../proc/torch_tensor_get_device_index.html'>torch_tensor_get_device_index</a>(tensor) result(device_index)  
-</h3></div>
-    <div class="card-body">
-          
-  <p>Determines the device index of a tensor.</p>
-
-  <h4>Arguments</h4>
-      <table class="table table-striped varlist">
-    <thead>
-      <tr>
-        <th scope="col">Type</th>
-<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
-        <th scope="col"></th>
-        <th scope="col">Name</th>
-        <th scope="col"></th>
-    </thead>
-    <tbody>
-        <tr>
-            <td>
-              <span class="anchor" id="variable-tensor~8"></span>
-              type(<a href='../type/torch_tensor.html'>torch_tensor</a>),
-            </td>
-<td>intent(in)</td>
-              <td></td>            <td>
-              
-            </td>
-            <td>::</td>
-            <td><strong>tensor</strong></td>
-            <td>
-<p>Input tensor</p>
-            </td>
-        </tr>
-    </tbody>
-  </table>
-
-    <h4>
-    Return Value
-    <small>integer(kind=c_int)</small>
-    </h4>
-    <p>Device index of tensor</p>
-
-    </div>
-  </div>
-
-              <div class="card">
-    <div class="card-header codesum"><span class="anchor" id="proc-torch_tensor_ones"></span> <h3>public  function <a href='../proc/torch_tensor_ones.html'>torch_tensor_ones</a>(ndims, tensor_shape, dtype, device_type, device_index, requires_grad_opt) result(tensor)  
+    <div class="card-header codesum"><span class="anchor" id="proc-torch_tensor_ones"></span> <h3>public  subroutine <a href='../proc/torch_tensor_ones.html'>torch_tensor_ones</a>(tensor, ndims, tensor_shape, dtype, device_type, device_index, requires_grad)  
 </h3></div>
     <div class="card-body">
           
@@ -5942,6 +6784,21 @@
         <th scope="col"></th>
     </thead>
     <tbody>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-tensor~3"></span>
+              type(<a href='../type/torch_tensor.html'>torch_tensor</a>),
+            </td>
+<td>intent(out)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>tensor</strong></td>
+            <td>
+<p>Returned tensor</p>
+            </td>
+        </tr>
         <tr>
             <td>
               <span class="anchor" id="variable-ndims~4"></span>
@@ -6019,7 +6876,7 @@
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-requires_grad_opt~2"></span>
+              <span class="anchor" id="variable-requires_grad~4"></span>
               logical(kind=c_bool),
             </td>
 <td>intent(in),</td>
@@ -6027,7 +6884,7 @@
               
             </td>
             <td>::</td>
-            <td><strong>requires_grad_opt</strong></td>
+            <td><strong>requires_grad</strong></td>
             <td>
 <p>Whether gradients need to be computed for the created tensor</p>
             </td>
@@ -6035,17 +6892,52 @@
     </tbody>
   </table>
 
-    <h4>
-    Return Value
-    <small>type(<a href='../type/torch_tensor.html'>torch_tensor</a>)</small>
-    </h4>
-    <p>Returned tensor</p>
 
     </div>
   </div>
 
               <div class="card">
-    <div class="card-header codesum"><span class="anchor" id="proc-torch_tensor_zeros"></span> <h3>public  function <a href='../proc/torch_tensor_zeros.html'>torch_tensor_zeros</a>(ndims, tensor_shape, dtype, device_type, device_index, requires_grad_opt) result(tensor)  
+    <div class="card-header codesum"><span class="anchor" id="proc-torch_tensor_print"></span> <h3>public  subroutine <a href='../proc/torch_tensor_print.html'>torch_tensor_print</a>(tensor)  
+</h3></div>
+    <div class="card-body">
+          
+  <p>Prints the contents of a tensor.</p>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-tensor~6"></span>
+              type(<a href='../type/torch_tensor.html'>torch_tensor</a>),
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>tensor</strong></td>
+            <td>
+<p>Input tensor</p>
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+
+    </div>
+  </div>
+
+              <div class="card">
+    <div class="card-header codesum"><span class="anchor" id="proc-torch_tensor_zeros"></span> <h3>public  subroutine <a href='../proc/torch_tensor_zeros.html'>torch_tensor_zeros</a>(tensor, ndims, tensor_shape, dtype, device_type, device_index, requires_grad)  
 </h3></div>
     <div class="card-body">
           
@@ -6062,6 +6954,21 @@
         <th scope="col"></th>
     </thead>
     <tbody>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-tensor"></span>
+              type(<a href='../type/torch_tensor.html'>torch_tensor</a>),
+            </td>
+<td>intent(out)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>tensor</strong></td>
+            <td>
+<p>Returned tensor</p>
+            </td>
+        </tr>
         <tr>
             <td>
               <span class="anchor" id="variable-ndims~2"></span>
@@ -6139,7 +7046,7 @@
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-requires_grad_opt"></span>
+              <span class="anchor" id="variable-requires_grad~2"></span>
               logical(kind=c_bool),
             </td>
 <td>intent(in),</td>
@@ -6147,224 +7054,9 @@
               
             </td>
             <td>::</td>
-            <td><strong>requires_grad_opt</strong></td>
+            <td><strong>requires_grad</strong></td>
             <td>
 <p>Whether gradients need to be computed for the created tensor</p>
-            </td>
-        </tr>
-    </tbody>
-  </table>
-
-    <h4>
-    Return Value
-    <small>type(<a href='../type/torch_tensor.html'>torch_tensor</a>)</small>
-    </h4>
-    <p>Returned tensor</p>
-
-    </div>
-  </div>
-
-        </section>
-        <br>
-
-        <section>
-          <h2>Subroutines</h2>
-              <div class="card">
-    <div class="card-header codesum"><span class="anchor" id="proc-torch_module_delete"></span> <h3>public  subroutine <a href='../proc/torch_module_delete.html'>torch_module_delete</a>(module)  
-</h3></div>
-    <div class="card-body">
-          
-  <p>Deallocates a TorchScript module</p>
-
-  <h4>Arguments</h4>
-      <table class="table table-striped varlist">
-    <thead>
-      <tr>
-        <th scope="col">Type</th>
-<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
-        <th scope="col"></th>
-        <th scope="col">Name</th>
-        <th scope="col"></th>
-    </thead>
-    <tbody>
-        <tr>
-            <td>
-              <span class="anchor" id="variable-module~5"></span>
-              type(<a href='../type/torch_module.html'>torch_module</a>),
-            </td>
-<td>intent(in)</td>
-              <td></td>            <td>
-              
-            </td>
-            <td>::</td>
-            <td><strong>module</strong></td>
-            <td>
-<p>Module to deallocate</p>
-            </td>
-        </tr>
-    </tbody>
-  </table>
-
-
-    </div>
-  </div>
-
-              <div class="card">
-    <div class="card-header codesum"><span class="anchor" id="proc-torch_module_forward"></span> <h3>public  subroutine <a href='../proc/torch_module_forward.html'>torch_module_forward</a>(module, input_tensors, output_tensors, requires_grad_opt)  
-</h3></div>
-    <div class="card-body">
-          
-  <p>Performs a forward pass of the module with the input tensors</p>
-
-  <h4>Arguments</h4>
-      <table class="table table-striped varlist">
-    <thead>
-      <tr>
-        <th scope="col">Type</th>
-<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
-        <th scope="col"></th>
-        <th scope="col">Name</th>
-        <th scope="col"></th>
-    </thead>
-    <tbody>
-        <tr>
-            <td>
-              <span class="anchor" id="variable-module~3"></span>
-              type(<a href='../type/torch_module.html'>torch_module</a>),
-            </td>
-<td>intent(in)</td>
-              <td></td>            <td>
-              
-            </td>
-            <td>::</td>
-            <td><strong>module</strong></td>
-            <td>
-<p>Module</p>
-            </td>
-        </tr>
-        <tr>
-            <td>
-              <span class="anchor" id="variable-input_tensors"></span>
-              type(<a href='../type/torch_tensor.html'>torch_tensor</a>),
-            </td>
-<td>intent(in),</td>
-              <td></td>            <td>
-              dimension(:)
-            </td>
-            <td>::</td>
-            <td><strong>input_tensors</strong></td>
-            <td>
-<p>Array of Input tensors</p>
-            </td>
-        </tr>
-        <tr>
-            <td>
-              <span class="anchor" id="variable-output_tensors"></span>
-              type(<a href='../type/torch_tensor.html'>torch_tensor</a>),
-            </td>
-<td>intent(in),</td>
-              <td></td>            <td>
-              dimension(:)
-            </td>
-            <td>::</td>
-            <td><strong>output_tensors</strong></td>
-            <td>
-<p>Returned output tensors</p>
-            </td>
-        </tr>
-        <tr>
-            <td>
-              <span class="anchor" id="variable-requires_grad_opt~5"></span>
-              logical,
-            </td>
-<td>intent(in),</td>
-              <td>optional</td>            <td>
-              
-            </td>
-            <td>::</td>
-            <td><strong>requires_grad_opt</strong></td>
-            <td>
-<p>Whether gradients need to be computed for the created tensor</p>
-            </td>
-        </tr>
-    </tbody>
-  </table>
-
-
-    </div>
-  </div>
-
-              <div class="card">
-    <div class="card-header codesum"><span class="anchor" id="proc-torch_tensor_delete"></span> <h3>public  subroutine <a href='../proc/torch_tensor_delete.html'>torch_tensor_delete</a>(tensor)  
-</h3></div>
-    <div class="card-body">
-          
-  <p>Deallocates a tensor.</p>
-
-  <h4>Arguments</h4>
-      <table class="table table-striped varlist">
-    <thead>
-      <tr>
-        <th scope="col">Type</th>
-<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
-        <th scope="col"></th>
-        <th scope="col">Name</th>
-        <th scope="col"></th>
-    </thead>
-    <tbody>
-        <tr>
-            <td>
-              <span class="anchor" id="variable-tensor~10"></span>
-              type(<a href='../type/torch_tensor.html'>torch_tensor</a>),
-            </td>
-<td>intent(in)</td>
-              <td></td>            <td>
-              
-            </td>
-            <td>::</td>
-            <td><strong>tensor</strong></td>
-            <td>
-<p>Input tensor</p>
-            </td>
-        </tr>
-    </tbody>
-  </table>
-
-
-    </div>
-  </div>
-
-              <div class="card">
-    <div class="card-header codesum"><span class="anchor" id="proc-torch_tensor_print"></span> <h3>public  subroutine <a href='../proc/torch_tensor_print.html'>torch_tensor_print</a>(tensor)  
-</h3></div>
-    <div class="card-body">
-          
-  <p>Prints the contents of a tensor.</p>
-
-  <h4>Arguments</h4>
-      <table class="table table-striped varlist">
-    <thead>
-      <tr>
-        <th scope="col">Type</th>
-<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
-        <th scope="col"></th>
-        <th scope="col">Name</th>
-        <th scope="col"></th>
-    </thead>
-    <tbody>
-        <tr>
-            <td>
-              <span class="anchor" id="variable-tensor~6"></span>
-              type(<a href='../type/torch_tensor.html'>torch_tensor</a>),
-            </td>
-<td>intent(in)</td>
-              <td></td>            <td>
-              
-            </td>
-            <td>::</td>
-            <td><strong>tensor</strong></td>
-            <td>
-<p>Input tensor</p>
             </td>
         </tr>
     </tbody>
